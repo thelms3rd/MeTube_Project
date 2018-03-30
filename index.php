@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
  
 <head>
@@ -20,22 +20,8 @@
 <!---------------------------------- BEGINNING OF THE BODY ------------------------------->
 <body>
 	
-<?php
-echo "<h1> Welcome to Metube! </h1>";
-?>
-
-<form action="login.php" method="post">
-	
-	<input type="submit" class="button"  VALUE = "Log in" >
-</form>
-
-<form action="register.php" method="post">
-	
-	<input type="submit" class="button"  VALUE = "Register" >
-</form>	
-	
-	
-<!-- Navigation Bar -->	
+<!--------------------------- Navigation Bar -------------------------------------------->	
+  <div id="Navigation_Bar">
   <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
   <div class="container-fluid">
 		
@@ -63,13 +49,13 @@ echo "<h1> Welcome to Metube! </h1>";
 	<ul class="nav navbar-nav navbar-right">
 		
 		<!-- Search bar -->
-		<form class="navbar-form navbar-right" action="/action_page.php" style="padding-right: 20px">
+		<form class="navbar-form navbar-right" action="#" style="padding-right: 20px; width: 450px">
       <div class="input-group">
         <input type="text" class="form-control" placeholder="Search" name="search">
         <div class="input-group-btn">
           <button class="btn btn-default" type="submit">
 				 <i class="fas fa-search"></i>
-       </button>
+       	 </button>
         </div>
       </div>
     </form>
@@ -79,11 +65,33 @@ echo "<h1> Welcome to Metube! </h1>";
 	  </li>
 	  <li class="nav-item"> 
 		  <a class="nav-link" href="#"> Login</a>
-	  </li>
+		</li>
  </ul>
 	
 </div>
 </nav>
+</div>
+
+<!----------------------------MIDDLE SECTION ----------------------->
+	
+<div id="Middle" class="container-fluid">
+
+
+<!---  Display the Most Viewed Media --->
+<br>
+<h5> MOST VIEWED: </h5>	
+
+<hr>
+
+<!--- Display the New Uploads ---->
+<br>
+<h5>  NEW UPLOADS: </h5>
+	
+</div>
+	
+	
+<!---------------------------------------------------------------------->
+
 
 
     <!-- Optional JavaScript -->
@@ -93,5 +101,4 @@ echo "<h1> Welcome to Metube! </h1>";
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 
-</html>	
-	
+</html>
