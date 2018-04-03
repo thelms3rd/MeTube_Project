@@ -49,7 +49,7 @@ if(isset($_POST['submit'])) {
 
 <!-----Previous HTML that is commented currently ---->
 
-	<!---<table width="100%">
+	<table width="100%">
 		<tr>
 			<td  width="20%">Username:</td>
 			<td width="80%"><input class="text"  type="text" name="username"><br /></td>
@@ -66,7 +66,7 @@ if(isset($_POST['submit'])) {
 	</form>--->
 
 
-<!---------------- Navigation Bar --------->	
+<!---------------- Navigation Bar ---------
 
  <div id="Navigation_Bar">
   <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
@@ -74,9 +74,9 @@ if(isset($_POST['submit'])) {
 		
   
  
-  <!-- Links that are located on the Navagation Bar -->
+  <!-- Links that are located on the Navagation Bar --
   
-	<!-- Left Nav Bar Elements -->
+	<!-- Left Nav Bar Elements --
 		
   <ul class="navbar-nav navbar-left">
 	  <a class="navbar-brand" href="#">METUBE</a>
@@ -92,10 +92,10 @@ if(isset($_POST['submit'])) {
    </ul>
 	    
 	
-	  <!-- Right Nav Bar Elements -->
+	  <!-- Right Nav Bar Elements --
 	<ul class="nav navbar-nav navbar-right">
 		
-		<!-- Search bar -->
+		<!-- Search bar --
 		<form class="navbar-form navbar-right" action="#" style="padding-right: 20px; width: 450px">
       <div class="input-group">
         <input type="text" class="form-control" placeholder="Search" name="search">
@@ -118,7 +118,7 @@ if(isset($_POST['submit'])) {
 </div>
 </nav>
 </div>
-
+--->
 <?php
   if(isset($login_error))
    {  echo "<div id='passwd_result'>".$login_error."</div>";}
