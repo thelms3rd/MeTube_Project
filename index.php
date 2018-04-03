@@ -85,10 +85,10 @@ echo "<h1> Welcome to Metube! </h1>";
     </form>
 	  
 		<li class="nav-item">
-		  <a class="nav-link" href="#"> Sign Up</a>
+		  <a class="nav-link" href="register.php"> Register</a>
 	  </li>
 	  <li class="nav-item"> 
-		  <a class="nav-link" href="#"> Login</a>
+		  <a class="nav-link" href="login.php"> Login</a>
 		</li>
  </ul>
 	
@@ -126,4 +126,7 @@ echo "<h1> Welcome to Metube! </h1>";
 </body>
 
 </html>
+<<<<<<< HEAD
 ---->
+=======
+>>>>>>> 1c7db542a9c9ce28a365ed8de888f6abf3a43499
