@@ -111,19 +111,19 @@ if(isset($_POST['submit'])) {
 <!---- Username Form Group ---->
 <div class="form-group">
   <label>Username:</label>
-  <input type="text" class="form-control" name="username">
+  <input type="text" class="form-control" name="username" required>
 </div>
 
 <!---- Password Form Group --->
 <div class="form-group">
   <label>Password:</label>
-  <input type="password" class="form-control" name="password1">
+  <input type="password" class="form-control" name="password1" required>
 	</div>
 
 <!----- Confirm Password --->
 <div class="form-group">
   <label>Confirm Password:</label>
-  <input type="password" class="form-control" name="password2">
+  <input type="password" class="form-control" name="password2" required>
 </div>
 	
 <!--- Button Form Group -->
