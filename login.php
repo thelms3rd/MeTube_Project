@@ -114,13 +114,14 @@ if(isset($_POST['submit'])) {
 <div style="width: 300px; height: 200px; padding: 15px; background-color: #f1f1f1; box-shadow: 1px 1px 1px 1px grey; margin: auto;">
 
 <div class="form-group">
-  <label for="user">Username:</label>
+  <label>Username:</label>
   <input type="text" class="form-control" name="username">
 </div>
 <div class="form-group">
-  <label for="pwd">Password:</label>
+  <label>Password:</label>
   <input type="password" class="form-control" name="password">
-	<input name="submit" type="submit" value="Login"><input name="reset" type="reset" value="Reset">
+	
+	<button name="submit" type="submit" class="btn btn-primary">Sign In</button>
 		</div>
 	</div>
 </div>
