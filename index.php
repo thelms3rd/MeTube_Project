@@ -80,43 +80,7 @@
 <!---  Display the Most Viewed Media --->
 <br>
 <h5> MOST VIEWED: </h5>
-<br/><br/>
-<?php
 
-	$query = "SELECT * from media";
-	$result = mysql_query( $query );
-	if (!$result){
-	   die ("Could not query the media table in the database: <br />". mysql_error());
-	}
-?>
-
-    <div style="background:#339900;color:#FFFFFF; width:150px;">Uploaded Media</div>
-	<table width="50%" cellpadding="0" cellspacing="0">
-		<?php
-			while ($result_row = mysql_fetch_row($result)) //filename, username, type, mediaid, path
-			{
-				$mediaid = $result_row[3];
-				$filename = $result_row[0];
-				$filenpath = $result_row[4];
-		?>
-        	 <tr valign="top">
-			<td>
-					<?php
-						echo $mediaid;  //mediaid
-					?>
-			</td>
-                        <td>
-            	            <a href="media.php?id=<?php echo $mediaid;?>" target="_blank"><?php echo $filename;?></a>
-                        </td>
-                        <td>
-            	            <a href="<?php echo $filenpath;?>" target="_blank"> <img src="<?php echo $filenpath;?>" alt="test" style="width:150:px"> <onclick="javascript:saveDownload(<?php echo $result_row[4];?>);">Download</a>
-                        </td>
-		</tr>
-        	<?php
-			}
-		?>
-	</table>
-   </div>
 <hr>
 
 <!--- Display the New Uploads ---->
