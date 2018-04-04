@@ -15,7 +15,47 @@
 	
     <title>METUBE</title>
 </head>
+	
+<!----------------------- THE PHP CODE ------------------------>
 
+<link rel="stylesheet" type="text/css" href="css/default.css" />
+<?php
+session_start();
+
+include_once "function.php";
+
+//define variables
+$usrname = $passwrd = "";
+	
+//if(isset($_POST['submit'])) {
+		//if($_POST['username'] == "" || $_POST['password'] == "") {
+			//$login_error = "One or more fields are missing.";
+		//}
+	if($_SERVER["REQUEST_METHOD"] == "POST") {
+		if(empty($_POST['username']))
+		{
+			$usrname = "Username is Required";
+		}
+		if(empty($_POST['password']))
+		{
+			$passwrd = "Password is Required";
+		}
+		else {
+			$check = user_pass_check($_POST['username'],$_POST['password']); // Call functions from function.php
+			if($check == 1) {
+				$login_error = "User ".$_POST['username']." not found.";
+			}
+			elseif($check==2) {
+				$login_error = "Incorrect password.";
+			}
+			else if($check==0){
+				$_SESSION['username']=$_POST['username']; //Set the $_SESSION['username']
+				header('Location: browse.php');
+			}		
+		}
+}
+?>
+	
 <!---------------- Navigation Bar --------->
 <body>
 	
@@ -108,46 +148,6 @@
 </form> 
 
 	
-<!----------------------- THE PHP CODE ------------------------>
-
-<link rel="stylesheet" type="text/css" href="css/default.css" />
-<?php
-session_start();
-
-include_once "function.php";
-
-//define variables
-$usrname = $passwrd = "";
-	
-//if(isset($_POST['submit'])) {
-		//if($_POST['username'] == "" || $_POST['password'] == "") {
-			//$login_error = "One or more fields are missing.";
-		//}
-	if($_SERVER["REQUEST_METHOD"] == "POST") {
-		if(empty($_POST['username']))
-		{
-			$usrname = "Username is Required";
-		}
-		if(empty($_POST['password']))
-		{
-			$passwrd = "Password is Required";
-		}
-		else {
-			$check = user_pass_check($_POST['username'],$_POST['password']); // Call functions from function.php
-			if($check == 1) {
-				$login_error = "User ".$_POST['username']." not found.";
-			}
-			elseif($check==2) {
-				$login_error = "Incorrect password.";
-			}
-			else if($check==0){
-				$_SESSION['username']=$_POST['username']; //Set the $_SESSION['username']
-				header('Location: browse.php');
-			}		
-		}
-}
-
-
 
 ?>
 <?php
