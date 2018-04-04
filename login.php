@@ -29,7 +29,7 @@
 	<!-- Left Nav Bar Elements -->
 		
   <ul class="navbar-nav navbar-left">
-	  <a class="navbar-brand" href="#">METUBE</a>
+	  <a class="navbar-brand" href="index.php">METUBE</a>
     <li class="nav-item">
       <a class="nav-link" href="#">IMAGE</a>
     </li>
