@@ -99,10 +99,25 @@ if(isset($_POST['submit'])) {
 
  
 ?>
-	<form method="post" action="<?php echo "login.php"; ?>">
 
-<!-----Previous HTML that is commented currently ---->
+<form method="post" action="<?php echo "login.php"; ?>">
 
+<div class="container"> 
+<br>
+<br>
+<br>
+<h4 class="text-center">Welcome back</h4>
+
+<div style="width: 300px; height: 200px; padding: 15px; background-color: #f1f1f1; box-shadow: 1px 1px 1px 1px grey; margin: auto;">
+<div class="form-group">
+  <label for="usr">Name:</label>
+  <input type="text" class="form-control" id="usr">
+</div>
+<div class="form-group">
+  <label for="pwd">Password:</label>
+  <input type="password" class="form-control" id="pwd">
+
+<!----		 
 	<table width="100%">
 		<tr>
 			<td  width="20%">Username:</td>
@@ -113,13 +128,15 @@ if(isset($_POST['submit'])) {
 			<td width="80%"><input class="text"  type="password" name="password"><br /></td>
 		</tr>
 		<tr>
-        
 			<td><input name="submit" type="submit" value="Login"><input name="reset" type="reset" value="Reset"><br /></td>
 		</tr>
-	</table>
-	</form>
-
-
+	</table> --->
+		 
+		 
+		</div>
+	</div>
+</div>
+</form> 
 
 <?php
   if(isset($login_error))
