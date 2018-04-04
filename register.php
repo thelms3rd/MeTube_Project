@@ -30,15 +30,15 @@
 	<!-- Left Nav Bar Elements -->
 		
   <ul class="navbar-nav navbar-left">
-	  <a class="navbar-brand" href="index.php">METUBE</a>
+	  <a class="navbar-brand" href="index.php">MeTube</a>
     <li class="nav-item">
-      <a class="nav-link" href="#">IMAGE</a>
+      <a class="nav-link" href="#">Image</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">VIDEO</a>
+      <a class="nav-link" href="#">Video</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">AUDIO</a>
+      <a class="nav-link" href="#">Audio</a>
     </li>
    </ul>
 	    
@@ -103,7 +103,7 @@ if(isset($_POST['submit'])) {
 <br>
 <br>
 <br>
-<h4 class="text-center">Welcome to MeTube</h4>
+<h4 class="text-center">Create MeTube Account</h4>
 
 <!------- This is the style of the shadowed box containing username and password ---->	
 <div style="width: 300px; height: 320px; padding: 15px; background-color: #f1f1f1; box-shadow: 1px 1px 1px 1px grey; margin: auto;">

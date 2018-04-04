@@ -29,15 +29,15 @@
 	<!-- Left Nav Bar Elements -->
 		
   <ul class="navbar-nav navbar-left">
-	  <a class="navbar-brand" href="index.php">METUBE</a>
+	  <a class="navbar-brand" href="index.php">MeTube</a>
     <li class="nav-item">
-      <a class="nav-link" href="#">IMAGE</a>
+      <a class="nav-link" href="#">Image</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">VIDEO</a>
+      <a class="nav-link" href="#">Video</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">AUDIO</a>
+      <a class="nav-link" href="#">Audio</a>
     </li>
    </ul>
 	    
@@ -70,40 +70,8 @@
 </div>
 <!------------- END OF NAVIGATION BAR ----------->
 	
-	
-<link rel="stylesheet" type="text/css" href="css/default.css" />
-<?php
-session_start();
-
-include_once "function.php";
-
-if(isset($_POST['submit'])) {
-		if($_POST['username'] == "" || $_POST['password'] == "") {
-			$login_error = "One or more fields are missing.";
-		}
-		else {
-			$check = user_pass_check($_POST['username'],$_POST['password']); // Call functions from function.php
-			if($check == 1) {
-				$login_error = "User ".$_POST['username']." not found.";
-			}
-			elseif($check==2) {
-				$login_error = "Incorrect password.";
-			}
-			else if($check==0){
-				$_SESSION['username']=$_POST['username']; //Set the $_SESSION['username']
-				header('Location: browse.php');
-			}		
-		}
-}
-
-
- 
-?>
-
-<form method="post" action="<?php echo "login.php"; ?>">
-
 <!----------------------------- HTML for the Body of login.php -------------------->
-	
+<form method="post" action="<?php echo "login.php"; ?>">
 <div class="container"> 
 <br>
 <br>
@@ -134,6 +102,37 @@ if(isset($_POST['submit'])) {
 </div>
 </form> 
 
+	
+<!----------------------- THE PHP CODE ------------------------>
+
+<link rel="stylesheet" type="text/css" href="css/default.css" />
+<?php
+session_start();
+
+include_once "function.php";
+
+if(isset($_POST['submit'])) {
+		if($_POST['username'] == "" || $_POST['password'] == "") {
+			$login_error = "One or more fields are missing.";
+		}
+		else {
+			$check = user_pass_check($_POST['username'],$_POST['password']); // Call functions from function.php
+			if($check == 1) {
+				$login_error = "User ".$_POST['username']." not found.";
+			}
+			elseif($check==2) {
+				$login_error = "Incorrect password.";
+			}
+			else if($check==0){
+				$_SESSION['username']=$_POST['username']; //Set the $_SESSION['username']
+				header('Location: browse.php');
+			}		
+		}
+}
+
+
+ 
+?>
 <?php
   if(isset($login_error))
    {  echo "<div id='passwd_result'>".$login_error."</div>";}
