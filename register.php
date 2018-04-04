@@ -1,17 +1,89 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+	<!-- Font_Awesome -->
+	<script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+	
+    <title>METUBE</title>
+</head>
+
+<!---------------------------------- BEGINNING OF THE BODY ------------------------------->
 <body>
 
+<!--------------------------- Navigation Bar -------------------------------------------->
+  <div id="Navigation_Bar">
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <div class="container-fluid">
+		
+  
+ 
+  <!-- Links that are located on the Navagation Bar -->
+  
+	<!-- Left Nav Bar Elements -->
+		
+  <ul class="navbar-nav navbar-left">
+	  <a class="navbar-brand" href="#">METUBE</a>
+    <li class="nav-item">
+      <a class="nav-link" href="#">IMAGE</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">VIDEO</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">AUDIO</a>
+    </li>
+   </ul>
+	    
+	
+	  <!-- Right Nav Bar Elements -->
+	<ul class="nav navbar-nav navbar-right">
+		
+		<!-- Search bar -->
+		<form class="navbar-form navbar-right" action="#" style="padding-right: 20px; width: 450px">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search" name="search">
+        <div class="input-group-btn">
+          <button class="btn btn-default" type="submit">
+				 <i class="fas fa-search"></i>
+       	 </button>
+        </div>
+      </div>
+    </form>
+	  
+		<li class="nav-item">
+		  <a class="nav-link" href="register.php"> Register</a>
+	  </li>
+	  <li class="nav-item"> 
+		  <a class="nav-link" href="login.php"> Login</a>
+		</li>
+ </ul>
+	
+</div>
+</nav>
+</div>
+	
+	
+	
+<!------------------ PHP Code ----------------------->
 <?php
 session_start();
 
 include_once "function.php";
 
 if(isset($_POST['submit'])) {
-	if( $_POST['passowrd1'] != $_POST['passowrd2']) {
+	if( $_POST['password1'] != $_POST['password2']) {
 		$register_error = "Passwords don't match. Try again?";
 	}
 	else {
-		$check = user_exist_check($_POST['username'], $_POST['passowrd1']);	
+		$check = user_exist_check($_POST['username'], $_POST['password1']);	
 		if($check == 1){
 			//echo "Rigister succeeds";
 			$_SESSION['username']=$_POST['username'];
@@ -22,19 +94,56 @@ if(isset($_POST['submit'])) {
 		}
 	}
 }
-
 ?>
+	
+<!------------------ HTML Code ----------------------->
 <form action="register.php" method="post">
-	Username: <input type="text" name="username"> <br>
-	Create Password: <input  type="password" name="passowrd1"> <br>
-	Repeat password: <input type="password" name="passowrd2"> <br>
-	<input name="submit" type="submit" value="Submit">
-</form>
+	
+<div class="container"> 
+<br>
+<br>
+<br>
+<h4 class="text-center">Welcome to MeTube</h4>
 
+<!------- This is the style of the shadowed box containing username and password ---->	
+<div style="width: 300px; height: 320px; padding: 15px; background-color: #f1f1f1; box-shadow: 1px 1px 1px 1px grey; margin: auto;">
+
+<!---- Username Form Group ---->
+<div class="form-group">
+  <label>Username:</label>
+  <input type="text" class="form-control" name="username">
+</div>
+
+<!---- Password Form Group --->
+<div class="form-group">
+  <label>Password:</label>
+  <input type="password" class="form-control" name="password1">
+	</div>
+
+<!----- Confirm Password --->
+<div class="form-group">
+  <label>Confirm Password:</label>
+  <input type="password" class="form-control" name="password2">
+</div>
+	
+<!--- Button Form Group -->
+<div class="form-group">
+	<button name="submit" type="submit" class="btn btn-primary btn-md" style="width: 125px; margin-right: 15px">Sign In</button>
+</div>
+</div>
+</div>
+</form> 
+
+<!------------------ PHP Code ----------------------->
 <?php
   if(isset($register_error))
    {  echo "<div id='passwd_result'> register_error:".$register_error."</div>";}
 ?>
 
+<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>
