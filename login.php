@@ -111,19 +111,26 @@ if(isset($_POST['submit'])) {
 <h4 class="text-center">Welcome back</h4>
 
 <!------- This is the style of the shadowed box containing username and password ---->	
-<div style="width: 300px; height: 200px; padding: 15px; background-color: #f1f1f1; box-shadow: 1px 1px 1px 1px grey; margin: auto;">
+<div style="width: 300px; height: 235px; padding: 15px; background-color: #f1f1f1; box-shadow: 1px 1px 1px 1px grey; margin: auto;">
 
+<!---- Username Form Group ---->
 <div class="form-group">
   <label>Username:</label>
   <input type="text" class="form-control" name="username">
 </div>
+
+<!---- Password Form Group --->
 <div class="form-group">
   <label>Password:</label>
   <input type="password" class="form-control" name="password">
-	
-	<button name="submit" type="submit" class="btn btn-primary">Sign In</button>
-		</div>
 	</div>
+
+<!--- Button Form Group -->
+<div class="form-group">
+	<button name="submit" type="submit" class="btn btn-primary btn-md" style="width: 125px; margin-right: 15px">Sign In</button>
+	<button name="reset" type="reset" class="btn btn-danger btn-md" style="width: 125px">Reset</button>
+</div>
+</div>
 </div>
 </form> 
 
