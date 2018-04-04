@@ -128,7 +128,7 @@ if(isset($_POST['submit'])) {
 	
 <!--- Button Form Group -->
 <div class="form-group">
-	<button name="submit" type="submit" class="btn btn-primary btn-md" style="width: 125px; margin-right: 15px">Sign In</button>
+	<button name="submit" type="submit" class="btn btn-primary btn-md" style="width: 125px; margin-right: 15px">Submit</button>
 	<button name="reset" type="reset" class="btn btn-danger btn-md" style="width: 125px">Reset</button>
 </div>
 </div>
