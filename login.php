@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
  
+<!--------- HEAD Section ------------->
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -70,8 +71,9 @@
 </div>
 <!------------- END OF NAVIGATION BAR ----------->
 	
+	
 <!----------------------------- HTML for the Body of login.php -------------------->
-<form method="post" action="<?php echo "login.php"; ?>">
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 <div class="container"> 
 <br>
 <br>
@@ -130,8 +132,6 @@ if(isset($_POST['submit'])) {
 		}
 }
 
-
- 
 ?>
 <?php
   if(isset($login_error))
