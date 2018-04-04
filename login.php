@@ -87,12 +87,15 @@
 <div class="form-group">
   <label>Username:</label>
   <input type="text" class="form-control" name="username">
+	<span class="error">* <?php echo $usrname;?></span>
 </div>
 
 <!---- Password Form Group --->
 <div class="form-group">
   <label>Password:</label>
   <input type="password" class="form-control" name="password">
+  <span class="error">* <?php echo $passwrd;?></span>
+
 	</div>
 
 <!--- Button Form Group -->
@@ -113,9 +116,21 @@ session_start();
 
 include_once "function.php";
 
-if(isset($_POST['submit'])) {
-		if($_POST['username'] == "" || $_POST['password'] == "") {
-			$login_error = "One or more fields are missing.";
+//define variables
+$usrname = $passwrd = "";
+	
+//if(isset($_POST['submit'])) {
+		//if($_POST['username'] == "" || $_POST['password'] == "") {
+			//$login_error = "One or more fields are missing.";
+		//}
+	if($_SERVER["REQUEST_METHOD"] == "POST") {
+		if(empty($_POST['username']))
+		{
+			$usrname = "Username is Required";
+		}
+		if(empty($_POST['password']))
+		{
+			$passwrd = "Password is Required";
 		}
 		else {
 			$check = user_pass_check($_POST['username'],$_POST['password']); // Call functions from function.php
@@ -131,6 +146,8 @@ if(isset($_POST['submit'])) {
 			}		
 		}
 }
+
+
 
 ?>
 <?php
