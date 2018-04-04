@@ -126,16 +126,13 @@ $usrname = $passwrd = "";
 <!---- Username Form Group ---->
 <div class="form-group">
   <label>Username:</label>
-  <input type="text" class="form-control" name="username">
-	<span class="error"><?php echo $usrname;?></span>
+  <input type="text" class="form-control" name="username" required>
 </div>
 
 <!---- Password Form Group --->
 <div class="form-group">
   <label>Password:</label>
-  <input type="password" class="form-control" name="password">
-  <span class="error"><?php echo $passwrd;?></span>
-
+  <input type="password" class="form-control" name="password" required>
 	</div>
 
 <!--- Button Form Group -->
