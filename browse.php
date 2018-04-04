@@ -57,11 +57,11 @@
       </div>
     </form>
 
-		<li class="nav-item">
+		<!--<li class="nav-item">
 		  <a class="nav-link" href="register.php"> Register</a>
-	  </li>
+	  </li>-->
 	  <li class="nav-item">
-		  <a class="nav-link" href="login.php"> Login</a>
+		  <a class="nav-link" href="index.php"> Logout</a>
 		</li>
  </ul>
 
@@ -70,9 +70,9 @@
 </div>
 
 
+<!--nav bar ends-->
 
 
-<!--
 <body>
 <p>Welcome <?php echo $_SESSION['username'];?></p>
 <a href='media_upload.php'  style="color:#FF9900;">Upload File</a>
@@ -123,5 +123,5 @@ include_once "function.php";
 	</table>
    </div>
 </body>
--->
+
 </html>
