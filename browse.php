@@ -13,6 +13,16 @@
 	<script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
 
     <title>METUBE3</title>
+
+    <style>
+    img {
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding: 5px;
+        width: 150px;
+    }
+    </style>
+
 </head>
 
 <!---------------- Navigation Bar --------->
@@ -71,8 +81,10 @@
 
 
 <!--nav bar ends-->
-
-
+<?php
+session_start();
+include_once "function.php";
+?>
 <body>
 <p>Welcome <?php echo $_SESSION['username'];?></p>
 <a href='media_upload.php'  style="color:#FF9900;">Upload File</a>
@@ -86,8 +98,7 @@
 </div>
 <br/><br/>
 <?php
-session_start();
-include_once "function.php";
+
 	$query = "SELECT * from media";
 	$result = mysql_query( $query );
 	if (!$result){
@@ -114,7 +125,7 @@ include_once "function.php";
             	            <a href="media.php?id=<?php echo $mediaid;?>" target="_blank"><?php echo $filename;?></a>
                         </td>
                         <td>
-            	            <a href="<?php echo $filenpath;?>" target="_blank" onclick="javascript:saveDownload(<?php echo $result_row[4];?>);">Download</a>
+            	            <a href="<?php echo $filenpath;?>" target="_blank"> <img src="<?php echo $filenpath;?>" alt="test" style="width:150:px"> <onclick="javascript:saveDownload(<?php echo $result_row[4];?>);">Download</a>
                         </td>
 		</tr>
         	<?php
