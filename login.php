@@ -120,6 +120,7 @@ if(isset($_POST['submit'])) {
 <div class="form-group">
   <label for="pwd">Password:</label>
   <input type="password" class="form-control" name="password">
+	<input name="submit" type="submit" value="Login"><input name="reset" type="reset" value="Reset">
 		</div>
 	</div>
 </div>
