@@ -97,7 +97,7 @@ if(isset($_POST['submit'])) {
 ?>
 	
 <!------------------ HTML Code ----------------------->
-<form action="register.php" method="post">
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 	
 <div class="container"> 
 <br>
