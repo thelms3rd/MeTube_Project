@@ -127,14 +127,14 @@ $usrname = $passwrd = "";
 <div class="form-group">
   <label>Username:</label>
   <input type="text" class="form-control" name="username">
-	<span class="error"> <?php echo $usrname;?></span>
+	<span class="error"><?php echo $usrname;?></span>
 </div>
 
 <!---- Password Form Group --->
 <div class="form-group">
   <label>Password:</label>
   <input type="password" class="form-control" name="password">
-  <span class="error">* <?php echo $passwrd;?></span>
+  <span class="error"><?php echo $passwrd;?></span>
 
 	</div>
 
@@ -149,13 +149,8 @@ $usrname = $passwrd = "";
 
 <br>
 <br>
-	
-<span class = "error">
-<div class="alert alert-warning alert-dismissible fade in">
-    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-    <strong>Warning!</strong> Username and Password are Required Fields
-  </div>	
-</span>
+
+
 	
 <?php
   if(isset($login_error))
