@@ -12,9 +12,9 @@
 	<!-- Font_Awesome -->
 	<script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
 
-    <title>METUBE</title>
+    <title>METUBE2</title>
 </head>
-
+<!--
 <body>
 <p>Welcome <?php echo $_SESSION['username'];?></p>
 <a href='media_upload.php'  style="color:#FF9900;">Upload File</a>
@@ -65,4 +65,5 @@ include_once "function.php";
 	</table>
    </div>
 </body>
+-->
 </html>
