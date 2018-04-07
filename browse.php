@@ -12,7 +12,7 @@
 	<!-- Font_Awesome -->
 	<script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
 
-    <title>METUBE3</title>
+    <title>METUBE</title>
 
     <style>
     img {
@@ -107,31 +107,43 @@ include_once "function.php";
 ?>
 
     <div style="background:#339900;color:#FFFFFF; width:150px;">Uploaded Media</div>
-	<table width="50%" cellpadding="0" cellspacing="0">
+
 		<?php
-			while ($result_row = mysql_fetch_row($result)) //filename, username, type, mediaid, path
+			while ($result_row = mysql_fetch_row($result)) //filename, username, type, mediaid, path, title
 			{
 				$mediaid = $result_row[3];
 				$filename = $result_row[0];
 				$filenpath = $result_row[4];
+        $title = $result_row[5];
+        $date = $result_row[6];
 		?>
-        	 <tr valign="top">
-			<td>
-					<?php
-						echo $mediaid;  //mediaid
-					?>
-			</td>
-                        <td>
-            	            <a href="media.php?id=<?php echo $mediaid;?>" target="_blank"><?php echo $filename;?></a>
-                        </td>
-                        <td>
-            	            <a href="<?php echo $filenpath;?>" target="_blank"> <img src="<?php echo $filenpath;?>" alt="test" style="width:150:px"> <onclick="javascript:saveDownload(<?php echo $result_row[4];?>);">Download</a>
-                        </td>
-		</tr>
-        	<?php
-			}
-		?>
-	</table>
+
+
+
+          <div class="row text-center">
+
+                      <div class="col-sm-4 col-md-4 col-lg-4 col-xs-6">
+                          <div class = "panel panel-default">
+                			   <div class="img-thumbnail"> <a href="<?php echo $filenpath;?>"><img src="<?php echo $filenpath;?>" class="img-responsive" width = "400" height="200"><onclick="javascript:saveDownload(<?php echo $result_row[4];?>);">Download</a></div>
+                			   <p> <?php echo $title ?> </p>
+                              <h6>views: </h6>
+                              <h6>upload date: <?php echo $date ?> </h6>
+                            <br>
+                            <br>
+              		  </div>
+                      </div>
+          </div>
+
+
+
+
+
+    <?php
+  }
+
+      ?>
+
+
    </div>
 </body>
 
