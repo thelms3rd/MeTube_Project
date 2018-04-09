@@ -97,10 +97,7 @@ include_once "function.php";
 </div>
 <!------------- END OF NAVIGATION BAR ----------->
 	
-	
-	
-<?php	}	?>
-	
+		
 <!----------------------------MIDDLE SECTION ----------------------->
 
 <div id="Middle" class="container-fluid">
