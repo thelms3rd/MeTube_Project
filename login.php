@@ -23,10 +23,10 @@
 session_start();
 
 include_once "function.php";
-
-//define variables
-$usrname = $passwrd = "";
 	
+//Define Variables
+
+
 //if(isset($_POST['submit'])) {
 		//if($_POST['username'] == "" || $_POST['password'] == "") {
 			//$login_error = "One or more fields are missing.";
@@ -44,9 +44,8 @@ $usrname = $passwrd = "";
 				header('Location: browse.php');
 			}		
 		}
-
 ?>
-	
+
 <!---------------- Navigation Bar --------->
 <body>
 	
@@ -101,6 +100,7 @@ $usrname = $passwrd = "";
 </nav>
 </div>
 <!------------- END OF NAVIGATION BAR ----------->
+
 	
 	
 <!----------------------------- HTML for the Body of login.php -------------------->

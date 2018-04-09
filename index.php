@@ -22,19 +22,22 @@ text-align: center;
 }
 </style>
 
-
-
-
-
 </head>
 
+<?php
+session_start();
+include_once "function.php";
 
+	
+if(isset($_SESSION['username'])) {
+?>
 
-<!---------------------------------- BEGINNING OF THE BODY ------------------------------->
+<!--------- LOGGED IN HTML ----------!> 	
+
+<!---------------- LOGGED IN Navigation Bar --------->
 <body>
 
-<!--------------------------- Navigation Bar -------------------------------------------->
-  <div id="Navigation_Bar">
+ <div id="Navigation_Bar">
   <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
   <div class="container-fluid">
 
@@ -45,15 +48,15 @@ text-align: center;
 	<!-- Left Nav Bar Elements -->
 
   <ul class="navbar-nav navbar-left">
-	  <a class="navbar-brand" href="index.php">MeTube</a>
+	  <a class="navbar-brand" href="#">METUBE</a>
     <li class="nav-item">
-      <a class="nav-link" href="#">Image</a>
+      <a class="nav-link" href="#">IMAGE</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">Video</a>
+      <a class="nav-link" href="#">VIDEO</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">Audio</a>
+      <a class="nav-link" href="#">AUDIO</a>
     </li>
    </ul>
 
@@ -73,11 +76,11 @@ text-align: center;
       </div>
     </form>
 
-		<li class="nav-item">
+		<!--<li class="nav-item">
 		  <a class="nav-link" href="register.php"> Register</a>
-	  </li>
+	  </li>-->
 	  <li class="nav-item">
-		  <a class="nav-link" href="login.php"> Login</a>
+		  <a class="nav-link" href="index.php"> Logout</a>
 		</li>
  </ul>
 
@@ -85,12 +88,72 @@ text-align: center;
 </nav>
 </div>
 
-<!----------------------------MIDDLE SECTION ----------------------->
-
-<?php
-session_start();
-include_once "function.php";
+	
+<?php 
+} else{
 ?>
+<!---------------- Navigation Bar --------->
+<body>
+	
+ <div id="Navigation_Bar">
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <div class="container-fluid">
+		
+  
+ 
+  <!-- Links that are located on the Navagation Bar -->
+  
+	<!-- Left Nav Bar Elements -->
+		
+  <ul class="navbar-nav navbar-left">
+	  <a class="navbar-brand" href="index.php">MeTube</a>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Image</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Video</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Audio</a>
+    </li>
+   </ul>
+	    
+	
+	  <!-- Right Nav Bar Elements -->
+	<ul class="nav navbar-nav navbar-right">
+		
+		<!-- Search bar -->
+		<form class="navbar-form navbar-right" action="#" style="padding-right: 20px; width: 450px">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search" name="search">
+        <div class="input-group-btn">
+          <button class="btn btn-default" type="submit">
+				 <i class="fas fa-search"></i>
+       	 </button>
+        </div>
+      </div>
+    </form>
+	  
+		<li class="nav-item">
+		  <a class="nav-link" href="register.php"> Register</a>
+	  </li>
+	  <li class="nav-item"> 
+		  <a class="nav-link" href="login.php"> Login</a>
+		</li>
+ </ul>
+	
+</div>
+</nav>
+</div>
+<!------------- END OF NAVIGATION BAR ----------->
+	
+	
+	
+<?php	
+	}	
+?>
+	
+<!----------------------------MIDDLE SECTION ----------------------->
 
 <div id="Middle" class="container-fluid">
   <?php
