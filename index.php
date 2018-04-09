@@ -84,7 +84,7 @@ include_once "function.php";
 		</li>
 <?php else: ?>
 		<li class="nav-item">
-		  <a class="nav-link" href="index.php" name="logout"> Logout</a>
+		  <a class="nav-link" href="logout.php" name="logout"> Logout</a>
 		</li>
 
 <?php endif; ?>
