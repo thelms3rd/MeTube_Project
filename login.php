@@ -40,9 +40,8 @@ include_once "function.php";
 				$login_error = "Incorrect password.";
 			}
 			else if($check==0){
-				$tempUser=$_POST['username'];
-				$_SESSION['username']=$tempUser;//Set the $_SESSION['username']
-				header('Location: browse.php');
+				$_SESSION['username']=$_POST['username'];//Set the $_SESSION['username']
+				header('Location: https://webapp.cs.clemson.edu/~jlhelms/MeTube_Project/index.php');
 			}		
 		}
 ?>
