@@ -41,8 +41,7 @@ include_once "function.php";
 			}
 			else if($check==0){
 				$tempUser=$_POST['username'];
-				$_SESSION['username']=$tempUser//Set the $_SESSION['username']
-				
+				$_SESSION['username']=$tempUser;//Set the $_SESSION['username']
 				header('Location: browse.php');
 			}		
 		}
