@@ -40,7 +40,9 @@ include_once "function.php";
 				$login_error = "Incorrect password.";
 			}
 			else if($check==0){
-				$_SESSION['username']=$_POST['username']; //Set the $_SESSION['username']
+				$tempUser=$_POST['username'];
+				$_SESSION['username']=$tempUser//Set the $_SESSION['username']
+				
 				header('Location: browse.php');
 			}		
 		}

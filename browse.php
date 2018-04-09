@@ -84,6 +84,7 @@
 <?php
 session_start();
 include_once "function.php";
+	$_SESSION['username']
 ?>
 <body>
 <p>Welcome <?php echo $_SESSION['username'];?></p>
