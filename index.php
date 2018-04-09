@@ -28,6 +28,7 @@ text-align: center;
 session_start();
 include_once "function.php";
 
+echo $_SESSION['username'];
 	
 if(isset($_SESSION['username'])) {
 ?>
