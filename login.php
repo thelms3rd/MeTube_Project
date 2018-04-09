@@ -41,7 +41,7 @@ include_once "function.php";
 			}
 			else if($check==0){
 				$_SESSION['username']=$_POST['username'];//Set the $_SESSION['username']
-				header('Location: https://webapp.cs.clemson.edu/~jlhelms/MeTube_Project/index.php');
+				header('Location: https://webapp.cs.clemson.edu/~jlhelms/MeTube_Project/browse.php');
 			}		
 		}
 ?>
