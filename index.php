@@ -76,13 +76,12 @@ include_once "function.php";
     </form>
 		
 <?php if(isset($_SESSION['username'])): ?>
-	  <li class="nav-item"> 
-		  <a class="nav-link" href="login.php"> Login</a>
-		</li>
 		<li class="nav-item">
 		  <a class="nav-link" href="register.php"> Register</a>
 	  </li>
-	
+	<li class="nav-item"> 
+		  <a class="nav-link" href="login.php"> Login</a>
+		</li>
 <?php else: ?>
 		<li class="nav-item">
 		  <a class="nav-link" href="index.php" name="logout"> Logout</a>
