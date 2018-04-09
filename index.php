@@ -28,8 +28,6 @@ text-align: center;
 session_start();
 include_once "function.php";
 
-echo $_SESSION['username'];
-
 if(isset($_SESSION['username'])) {
 ?>
 
@@ -81,7 +79,7 @@ if(isset($_SESSION['username'])) {
 		  <a class="nav-link" href="register.php"> Register</a>
 	  </li>-->
 	  <li class="nav-item">
-		  <a class="nav-link" href="index.php"> Logout</a>
+		  <a class="nav-link" href="index.php" name="logout"> Logout</a>
 		</li>
  </ul>
 
@@ -171,6 +169,12 @@ if(isset($_SESSION['username'])) {
   	{
   		echo upload_error($_REQUEST['result']);
   	}
+	
+	if(isset($_POST['logout']))
+	{
+		session_unset();
+		session_destroy();
+	}
   ?>
 
 
