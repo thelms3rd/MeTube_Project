@@ -32,15 +32,6 @@ $usrname = $passwrd = "";
 			//$login_error = "One or more fields are missing.";
 		//}
 	if($_SERVER["REQUEST_METHOD"] == "POST") {
-		if(empty($_POST['username']))
-		{
-			$usrname = "Username is Required";
-		}
-		if(empty($_POST['password']))
-		{
-			$passwrd = "Password is Required";
-		}
-		else {
 			$check = user_pass_check($_POST['username'],$_POST['password']); // Call functions from function.php
 			if($check == 1) {
 				$login_error = "User ".$_POST['username']." not found.";
