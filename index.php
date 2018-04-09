@@ -24,12 +24,15 @@ text-align: center;
 
 </head>
 
+	
+<!------------------ Beginning of Body ---------->
 <?php
 session_start();
 include_once "function.php";
-	
-if(isset($_SESSION['username'])) {
+
 ?>
+	
+<?php if(isset($_SESSION['username'])) {?>
 
 <!--------- LOGGED IN HTML ----------!> 	
 
@@ -88,9 +91,8 @@ if(isset($_SESSION['username'])) {
 </div>
 
 	
-<?php 
-} else{
-?>
+<?php } else{ ?>
+	
 <!---------------- Navigation Bar --------->
 <body>
 	
@@ -148,9 +150,7 @@ if(isset($_SESSION['username'])) {
 	
 	
 	
-<?php	
-	}	
-?>
+<?php	}	?>
 	
 <!----------------------------MIDDLE SECTION ----------------------->
 
