@@ -32,66 +32,6 @@ include_once "function.php";
 
 ?>
 	
-<?php if(($_SESSION['username'] == "")) {?>
-
-<!--------- LOGGED IN HTML ----------!> 	
-
-<!---------------- LOGGED IN Navigation Bar --------->
-<body>
-
- <div id="Navigation_Bar">
-  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-  <div class="container-fluid">
-
-
-
-  <!-- Links that are located on the Navagation Bar -->
-
-	<!-- Left Nav Bar Elements -->
-
-  <ul class="navbar-nav navbar-left">
-	  <a class="navbar-brand" href="index.php">METUBE</a>
-    <li class="nav-item">
-      <a class="nav-link" href="#">IMAGE</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">VIDEO</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">AUDIO</a>
-    </li>
-   </ul>
-
-
-	  <!-- Right Nav Bar Elements -->
-	<ul class="nav navbar-nav navbar-right">
-
-		<!-- Search bar -->
-		<form class="navbar-form navbar-right" action="#" style="padding-right: 20px; width: 450px">
-      <div class="input-group">
-        <input type="text" class="form-control" placeholder="Search" name="search">
-        <div class="input-group-btn">
-          <button class="btn btn-default" type="submit">
-				 <i class="fas fa-search"></i>
-       	 </button>
-        </div>
-      </div>
-    </form>
-
-		<!--<li class="nav-item">
-		  <a class="nav-link" href="register.php"> Register</a>
-	  </li>-->
-	  <li class="nav-item">
-		  <a class="nav-link" href="index.php" name="logout"> Logout</a>
-		</li>
- </ul>
-
-</div>
-</nav>
-</div>
-
-	
-<?php } else{ ?>
 	
 <!---------------- Navigation Bar --------->
 <body>
@@ -109,7 +49,7 @@ include_once "function.php";
   <ul class="navbar-nav navbar-left">
 	  <a class="navbar-brand" href="index.php">MeTube</a>
     <li class="nav-item">
-      <a class="nav-link" href="#">Image</a>
+      <a class="nav-link" href="https://webapp.cs.clemson.edu/~jlhelms/MeTube_Project/index.php">Image</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="#">Video</a>
@@ -134,13 +74,22 @@ include_once "function.php";
         </div>
       </div>
     </form>
-	  
-		<li class="nav-item">
-		  <a class="nav-link" href="register.php"> Register</a>
-	  </li>
+		
+<?php if(isset($_$_SESSION['username'])): ?>
 	  <li class="nav-item"> 
 		  <a class="nav-link" href="login.php"> Login</a>
 		</li>
+		<li class="nav-item">
+		  <a class="nav-link" href="register.php"> Register</a>
+	  </li>
+	
+<?php else: ?>
+		<li class="nav-item">
+		  <a class="nav-link" href="index.php" name="logout"> Logout</a>
+		</li>
+
+<?php endif; ?>
+			
  </ul>
 	
 </div>
