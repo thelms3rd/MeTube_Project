@@ -75,7 +75,7 @@ include_once "function.php";
       </div>
     </form>
 		
-<?php if(isset($_SESSION['username'])): ?>
+<?php if(empty($_SESSION['username'])): ?>
 		<li class="nav-item">
 		  <a class="nav-link" href="register.php"> Register</a>
 	  </li>
