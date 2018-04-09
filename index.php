@@ -175,7 +175,7 @@ if(isset($_SESSION['username'])) {
 		session_unset();
 		session_destroy();
 		header('Location: https://webapp.cs.clemson.edu/~jlhelms/MeTube_Project/index.php');
-		echo $_SESSION['username']
+		echo $_SESSION['username'];
 	}
   ?>
 
