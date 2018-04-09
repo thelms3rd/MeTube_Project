@@ -32,7 +32,7 @@ include_once "function.php";
 
 ?>
 	
-<?php if(!($_SESSION['username'] == "")) {?>
+<?php if(($_SESSION['username'] == "")) {?>
 
 <!--------- LOGGED IN HTML ----------!> 	
 
