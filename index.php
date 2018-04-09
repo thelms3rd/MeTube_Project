@@ -75,7 +75,7 @@ include_once "function.php";
       </div>
     </form>
 		
-<?php if(isset($_$_SESSION['username'])): ?>
+<?php if(isset($_SESSION['username'])): ?>
 	  <li class="nav-item"> 
 		  <a class="nav-link" href="login.php"> Login</a>
 		</li>
