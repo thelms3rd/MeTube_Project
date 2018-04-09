@@ -44,7 +44,7 @@ $usrname = $passwrd = "";
 				header('Location: browse.php');
 			}		
 		}
-}
+
 ?>
 	
 <!---------------- Navigation Bar --------->
