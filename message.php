@@ -134,7 +134,17 @@ include_once "function.php";
 </form> 
 	
 	
+<!------------------ PHP Code ----------------------->
+<?php
+
+if(isset($_POST['submit'])) {
 	
+		//call the message function
+		message_user($_SESSION['username'],$_POST['username'], $_POST['message']);
+	}
+	
+
+?>
 	
 	
 <!---------------------------------------------------------------------->

@@ -96,5 +96,25 @@ function update_Account($username, $updatedPassword)
 		echo "<br> <br> Your Account has been Updated!";
 	}
 }
+
+function message_user($fromUsername, $toUsername, $message)
+{
+	$query = "select * from account where username='$username'";
+	$result = mysql_query( $query );
+	if (!$result){
+		die ("user_exist_check() failed. Could not query the database: <br />". mysql_error());
+	}	
+	else {
+		
+		$query = "INSERT INTO message (`username_fk`, `sentFrom`, `message_content`) VALUES ($toUsername,$fromUsername,$message)";
+			echo "insert query:" . $query;
+			$insert = mysql_query( $query );
+			if($insert)
+				echo "<br> <br> Message Sent!";
+			else
+				die ("Could not insert into the database: <br />". mysql_error());		
+		
+	}
+}
 	
 ?>
