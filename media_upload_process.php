@@ -43,7 +43,7 @@ if(!file_exists($dirfile))
 					$queryresult = mysql_query($insert)
 						  or die("Insert into Media error in media_upload_process.php " .mysql_error());
 					$result="0";
-					chmod($upfile, 0644);
+					chmod($upfile, 644);
 				}
 			}
 			else
