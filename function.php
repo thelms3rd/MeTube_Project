@@ -105,7 +105,8 @@ function message_user($fromUsername, $toUsername, $message)
 		die ("user_exist_check() failed. Could not query the database: <br />". mysql_error());
 	}	
 	else {
-		
+		$row = mysql_fetch_assoc($result);
+		if($row == 0){
 		$query2 = "INSERT INTO message (`username_fk`, `sentFrom`, `message_content`) VALUES ('$toUsername','$fromUsername','$message')";
 			echo "insert query:" . $query2;
 			$insert = mysql_query( $query2 );
@@ -113,8 +114,13 @@ function message_user($fromUsername, $toUsername, $message)
 				echo "<br> <br> Message Sent!";
 			else
 				die ("Could not insert into the database: <br />". mysql_error());		
-		
+		}
+		else{
+			return 2;
+		}
 	}
 }
+	
+	
 	
 ?>
