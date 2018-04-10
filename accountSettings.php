@@ -90,76 +90,7 @@ include_once "function.php";
 </div>
 <!------------- END OF NAVIGATION BAR ----------->
 	
-<!------------------ PHP Code ----------------------->
-<?php
 
-if(isset($_POST['submit'])) {
-	//check if the two passwords are correct
-	if( $_POST['password1'] != $_POST['password2']) {
-		//$register_error = "Passwords don't match. Try again?";
-	}
-	else {
-		//update the account 
-		//update_Account($_SESSION['username'], $_POST['password1']);
-	}
-	
-?>
-	
-<!------------------ HTML Code ----------------------->
-<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-	
-<div class="container"> 
-<br>
-<br>
-<br>
-<h4 class="text-center">Create MeTube Account</h4>
-
-<!------- This is the style of the shadowed box containing username and password ---->	
-<div style="width: 300px; height: 320px; padding: 15px; background-color: #f1f1f1; box-shadow: 1px 1px 1px 1px grey; margin: auto;">
-
-<!---- Password Form Group --->
-<div class="form-group">
-  <label>Password:</label>
-  <input type="password" class="form-control" name="password1" required>
-	</div>
-
-<!----- Confirm Password --->
-<div class="form-group">
-  <label>Confirm Password:</label>
-  <input type="password" class="form-control" name="password2" required>
-</div>
-	
-<!--- Button Form Group -->
-<div class="form-group">
-	<button name="submit" type="submit" class="btn btn-primary btn-md" style="width: 125px; margin-right: 15px">Submit</button>
-	<button name="reset" type="reset" class="btn btn-danger btn-md" style="width: 125px">Reset</button>
-</div>
-</div>
-</div>
-</form> 
-
-
-<!------------------ PHP Code ----------------------->
-<?php
-
-if(isset($_POST['submit'])) {
-	//check if the two passwords are correct
-	if( $_POST['password1'] != $_POST['password2']) {
-		$register_error = "Passwords don't match. Try again?";
-	}
-	else {
-		//update the account 
-		//update_Account($_SESSION['username'], $_POST['password1']);
-	}
-	
-	if(isset($register_error))
-   {  echo "<div id='passwd_result'> register_error:".$register_error."</div>";}
-?>
-	
-	
-	
-	
-	
 <!---------------------------------------------------------------------->
 
     <!-- Optional JavaScript -->
