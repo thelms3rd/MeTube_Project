@@ -132,7 +132,7 @@ include_once "function.php";
 
 <!--- Button Form Group -->
 <div class="form-group">
-	<button name="reset" type="reset" class="btn btn-danger btn-md" style="width: 125px">Reset</button>
+	<button name="clear" type="clear" class="btn btn-danger btn-md" style="width: 125px">Clear</button>
 </div>
 	
 </div>
