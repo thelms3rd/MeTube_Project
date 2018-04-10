@@ -155,7 +155,7 @@ include_once "function.php";
     $filenpath = $result_row[4];
     $title = $result_row[5];
     $date = $result_row[6];
-
+    $description = $result_row[7];
 ?>
 
 <!-- Display uploads -->
