@@ -106,7 +106,7 @@ function message_user($fromUsername, $toUsername, $message)
 	}	
 	else {
 		
-		$query = "INSERT INTO message (`username_fk`, `sentFrom`, `message_content`) VALUES ($toUsername,$fromUsername,$message)";
+		$query = "INSERT INTO message (`username_fk`, `sentFrom`, `message_content`) VALUES ('$toUsername','$fromUsername','$message')";
 			echo "insert query:" . $query;
 			$insert = mysql_query( $query );
 			if($insert)
