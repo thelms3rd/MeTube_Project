@@ -137,7 +137,7 @@ include_once "function.php";
 <!------------------ PHP Code ----------------------->
 <?php
 
-if(isset($_POST['submit'])) {
+	if($_SERVER["REQUEST_METHOD"] == "POST") {
 	
 		//call the message function
 		message_user($_SESSION['username'],$_POST['username'], $_POST['message']);
