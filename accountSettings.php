@@ -96,7 +96,7 @@ if(isset($_POST['submit'])) {
 	}
 	else {
 		//update the account 
-		update_Account($_SESSION['username'], $_POST['password1']);
+		//update_Account($_SESSION['username'], $_POST['password1']);
 }
 ?>
 	
