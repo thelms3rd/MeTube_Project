@@ -19,7 +19,7 @@
 
 <?php
 session_start();
-	
+
 include_once "function.php";
 ?>
 
@@ -105,14 +105,14 @@ include_once "function.php";
    <input  name="file" type="file" size="50" />
 <h4 style="margin-bottom:0px; margin-top: 20px;">Title</h4><input maxlength="40" id="title" name="title" type="text" class="form-control" style="width: 550px;">
 <br>
-<h4 style="margin-bottom:0px; margin-top: 20px;">Description (500 character max)</h5><input maxlength="500" id="description" name="description" type="text" class="form-control" rows="5" style="resize: none; width: 550px;"></textarea>
-<br>
+<!--<h4 style="margin-bottom:0px; margin-top: 20px;">Description (500 character max)</h5><input maxlength="500" id="description" name="description" type="text" class="form-control" rows="5" style="resize: none; width: 550px;"></textarea>
+<br>-->
   <input value="Upload" name="submit" type="submit" />
   </p>
 
 
 </form>
-	
+
 <!---------------------------------------------------------------------->
 
 
