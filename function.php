@@ -99,7 +99,7 @@ function update_Account($username, $updatedPassword)
 
 function message_user($fromUsername, $toUsername, $message)
 {
-	$query = "select * from account where username='$username'";
+	$query = "select * from account where username='$toUsername'";
 	$result = mysql_query( $query );
 	if (!$result){
 		die ("user_exist_check() failed. Could not query the database: <br />". mysql_error());
