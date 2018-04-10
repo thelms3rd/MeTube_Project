@@ -106,8 +106,7 @@ include_once "function.php";
 <div class="container"> 
 <br>
 <div class="container">
-  <p>Large:</p>
-  <ul class="pagination pagination-lg">
+  <ul class="pagination"  class="text-center">
     <li class="page-item"><a class="page-link" href="#" style="width: 300px">Send Message</a></li>
     <li class="page-item"><a class="page-link" href="#" style="width: 300px">My Messages</a></li>
   </ul>
