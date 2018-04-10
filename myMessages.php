@@ -142,7 +142,7 @@ include_once "function.php";
 	
 if($_SERVER["REQUEST_METHOD"] == "POST") {
 	
-	delete_messages($username);
+	delete_messages($_SESSION['loggedIn']);
 	}
 	
 ?>	
