@@ -156,6 +156,7 @@ include_once "function.php";
     $title = $result_row[5];
     $date = $result_row[6];
     $description = $result_row[7];
+    $category = $result_row[8];
 ?>
 
 <!-- Display uploads -->
@@ -169,6 +170,7 @@ include_once "function.php";
                     <h6>views: </h6>
                     <h6>upload date: <?php echo $date ?> </h6>
                     <h6>description: <?php echo $description ?> </h6>
+                    <h6>category: <?php echo $category ?> </h6>
                   <br>
                   <br>
     		  </div>
