@@ -121,6 +121,27 @@ function message_user($fromUsername, $toUsername, $message)
 	}
 	
 }
+
+function my_messages($username)
+{
+	$query = "select * message where username_fk='$username'";
+	$result = mysql_query( $query );
+	if (!$result){
+		die ("user_exist_check() failed. Could not query the database: <br />". mysql_error());
+	}	
+	else {
+		
+		//cycle through the rows to print
+		while ($row=mysql_fetch_row($result))
+		{
+			echo "Sent from: $row[2]";
+			echo "Message: $row[3]";
+			
+			
+		}
+		
+	}
+}
 	
 	
 ?>

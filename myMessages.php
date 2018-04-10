@@ -135,7 +135,7 @@ include_once "function.php";
   </div>
 </div>
 
-	
+	my_messages($_SESSION['username']);
 	
 	
 	
