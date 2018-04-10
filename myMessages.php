@@ -99,3 +99,24 @@ include_once "function.php";
 </div>
 <!------------- END OF NAVIGATION BAR ----------->
 
+
+<!------------------ MIDDLE HTML Code ----------------------->
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+	
+<div class="container"> 
+<br>
+<div class="container">
+  <ul class="pagination"  class="text-center">
+    <li class="page-item"><a class="page-link" href="message.php" style="width: 300px">Send Message</a></li>
+    <li class="page-item"><a class="page-link" href="myMessages.php" style="width: 300px">My Messages</a></li>
+  </ul>
+	</div>
+<br>
+<br>
+<h4 class="text-center">Your Messages:</h4>
+	
+<!------- This is the style of the shadowed box containing username and password ---->	
+<div style="width: 600px; height: 600px; padding: 15px; background-color:rgb(240, 240, 240); box-shadow: 1px 1px 1px 1px grey; margin: auto;">
+
+
+	
