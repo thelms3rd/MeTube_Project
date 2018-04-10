@@ -90,6 +90,10 @@ function update_Account($username, $updatedPassword)
 	{
 	   die ("User_Update failed. Could not query the database: <br />". mysql_error());
 	}
+	else
+	{
+		echo "Your Account has been Updated!"
+	}
 }
 	
 ?>
