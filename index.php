@@ -168,7 +168,7 @@ include_once "function.php";
       			   <p> <?php echo $title ?> </p>
                     <h6>views: </h6>
                     <h6>upload date: <?php echo $date ?> </h6>
-                    <!--<h6>description: <?php echo $description ?> </h6>-->
+                    <h6>description: <?php echo $description ?> </h6>
                   <br>
                   <br>
     		  </div>
