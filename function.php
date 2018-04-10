@@ -93,7 +93,7 @@ function update_Account($username, $updatedPassword)
 	else
 	{
 		
-		echo " \n \n Your Account has been Updated!";
+		echo "<br> <br> Your Account has been Updated!";
 	}
 }
 	
