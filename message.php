@@ -140,7 +140,12 @@ include_once "function.php";
 	if($_SERVER["REQUEST_METHOD"] == "POST") {
 	
 		//call the message function
+		echo "From User: $_SESSION['username']";
+		echo <br>
+		echo "To User: $_POST['username']";
+		
 		message_user($_SESSION['username'],$_POST['username'], $_POST['message']);
+	
 	}
 	
 
