@@ -124,7 +124,7 @@ function message_user($fromUsername, $toUsername, $message)
 
 function my_messages($username)
 {
-	$query = "select * message where username_fk='$username'";
+	$query = "select * from message where username_fk='$username'";
 	$result = mysql_query( $query );
 	echo $query;
 	if (!$result){
