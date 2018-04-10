@@ -80,9 +80,21 @@ function upload_error($result)
 	}
 }
 
-function other()
+function update_Account($username, $updatedPassword)
 {
-	//You can write your own functions here.
+	$query = "select * from account where username='$username'";
+	echo  $query;
+	$result = mysql_query( $query );
+		
+	if (!$result)
+	{
+	   die ("user_pass_check() failed. Could not query the database: <br />". mysql_error());
+	}
+	else{
+		$update = "UPDATE account SET password='$updatedPassword'' WHERE username='$username'";
+		echo $update;
+		$updateResult = mysql_query( $update );
+	}	
 }
 	
 ?>
