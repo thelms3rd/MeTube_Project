@@ -133,9 +133,12 @@ include_once "function.php";
 	  </tbody>
 	</table>
   </div>
+
+	
+my_messages($_SESSION['username']);	
 </div>
 
-	my_messages($_SESSION['username']);
+
 	
 	
 	
