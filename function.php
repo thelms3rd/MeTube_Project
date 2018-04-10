@@ -151,6 +151,19 @@ function my_messages($username)
 		
 	}
 }
-	
+
+function delete_messages($username)
+{
+	$query = "DELETE FROM message where username_fk='$username'";
+	$result = mysql_query( $query );
+
+	if (!$result){
+		die ("user_exist_check() failed. Could not query the database: <br />". mysql_error());
+	}	
+	else {
+		
+		echo "Messages have been deleted!";
+	}
+}
 	
 ?>

@@ -129,6 +129,12 @@ include_once "function.php";
 	  </tbody>
 	</table>
   </div>
+
+<!--- Button Form Group -->
+<div class="form-group">
+	<button name="reset" type="reset" class="btn btn-danger btn-md" style="width: 125px">Reset</button>
+</div>
+	
 </div>
 
 
