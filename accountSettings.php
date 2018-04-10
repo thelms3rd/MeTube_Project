@@ -97,7 +97,7 @@ include_once "function.php";
 <br>
 <br>
 <br>
-<h4 class="text-center">Create MeTube Account</h4>
+<h4 class="text-center">Update MeTube Account</h4>
 
 <!------- This is the style of the shadowed box containing username and password ---->	
 <div style="width: 300px; height: 320px; padding: 15px; background-color: #f1f1f1; box-shadow: 1px 1px 1px 1px grey; margin: auto;">
