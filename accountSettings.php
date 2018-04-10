@@ -26,12 +26,6 @@ text-align: center;
 
 	
 <!------------------ Beginning of Body ---------->
-<?php
-session_start();
-include_once "function.php";
-
-?>
-	
 	
 <!---------------- Navigation Bar --------->
 <body>
