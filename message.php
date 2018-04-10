@@ -141,7 +141,7 @@ include_once "function.php";
 	
 		//call the message function
 		echo "From User: $_SESSION['username']";
-		echo <br>
+		echo <br>;
 		echo "To User: $_POST['username']";
 		
 		message_user($_SESSION['username'],$_POST['username'], $_POST['message']);
