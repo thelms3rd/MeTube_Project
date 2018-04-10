@@ -145,6 +145,9 @@ include_once "function.php";
 		echo "To User: $_POST[username]";
 		
 		message_user($_SESSION['username'],$_POST['username'], $_POST['message']);
+		
+		
+		
 	
 	}
 	
