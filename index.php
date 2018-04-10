@@ -155,7 +155,7 @@ include_once "function.php";
     $filenpath = $result_row[4];
     $title = $result_row[5];
     $date = $result_row[6];
-    $description = $result_row[7];
+
 ?>
 
 <!-- Display uploads -->
@@ -168,7 +168,7 @@ include_once "function.php";
       			   <p> <?php echo $title ?> </p>
                     <h6>views: </h6>
                     <h6>upload date: <?php echo $date ?> </h6>
-                    <h6>description: <?php echo $description ?> </h6>
+                    <!--<h6>description: <?php echo $description ?> </h6>-->
                   <br>
                   <br>
     		  </div>
