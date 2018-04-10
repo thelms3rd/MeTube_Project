@@ -90,8 +90,6 @@ include_once "function.php";
 </div>
 <!------------- END OF NAVIGATION BAR ----------->
 	
-<!-------------- BEGINNING OF THE MIDDLE -------->
-	
 <!------------------ HTML Code ----------------------->
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 	
@@ -125,6 +123,29 @@ include_once "function.php";
 </div>
 </form> 
 
+
+<!------------------ PHP Code ----------------------->
+<?php
+
+if(isset($_POST['submit'])) {
+	//check if the two passwords are correct
+	if( $_POST['password1'] != $_POST['password2']) {
+		$register_error = "Passwords don't match. Try again?";
+	}
+	else {
+		//update the account 
+		update_Account($_SESSION['username'], $_POST['password1']);
+	}
+	
+	if(isset($register_error))
+   {  echo "<div id='passwd_result'> register_error:".$register_error."</div>";}
+}
+?>
+	
+	
+	
+	
+	
 <!---------------------------------------------------------------------->
 
     <!-- Optional JavaScript -->
