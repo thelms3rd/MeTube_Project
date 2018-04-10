@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
- 
+
 <!--------- HEAD Section ------------->
 <head>
     <!-- Required meta tags -->
@@ -12,10 +12,10 @@
 
 	<!-- Font_Awesome -->
 	<script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
-	
+
     <title>METUBE</title>
 </head>
-	
+
 
 <?php
 session_start();
@@ -26,17 +26,17 @@ session_start();
 
 <!---------------- Navigation Bar --------->
 <body>
-	
+
  <div id="Navigation_Bar">
   <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
   <div class="container-fluid">
-		
-  
- 
+
+
+
   <!-- Links that are located on the Navagation Bar -->
-  
+
 	<!-- Left Nav Bar Elements -->
-		
+
   <ul class="navbar-nav navbar-left">
 	  <a class="navbar-brand" href="index.php">MeTube</a>
     <li class="nav-item">
@@ -49,11 +49,11 @@ session_start();
       <a class="nav-link" href="#">Audio</a>
     </li>
    </ul>
-	    
-	
+
+
 	  <!-- Right Nav Bar Elements -->
 	<ul class="nav navbar-nav navbar-right">
-		
+
 		<!-- Search bar -->
 		<form class="navbar-form navbar-right" action="#" style="padding-right: 20px; width: 450px">
       <div class="input-group">
@@ -83,9 +83,9 @@ session_start();
 		</li>
 
 
-			
+
  </ul>
-	
+
 </div>
 </nav>
 </div>
@@ -103,7 +103,7 @@ session_start();
    <input  name="file" type="file" size="50" />
 <h4 style="margin-bottom:0px; margin-top: 20px;">Title</h4><input maxlength="40" id="title" name="title" type="text" class="form-control" style="width: 550px;">
 <br>
-<h4 style="margin-bottom:0px; margin-top: 20px;">Description (500 character max)</h5><input maxlength="500" id="description" name="description" type="text" class="form-control" style="width: 550px;">
+<h4 style="margin-bottom:0px; margin-top: 20px;">Description (500 character max)</h5><input maxlength="500" id="description" name="description" type="text" class="form-control" rows="5" style="resize: none; width: 550px;"></textarea>
 <br>
   <input value="Upload" name="submit" type="submit" />
   </p>
