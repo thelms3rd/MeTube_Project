@@ -126,7 +126,7 @@ function my_messages($username)
 {
 	$query = "select * from message where username_fk='$username'";
 	$result = mysql_query( $query );
-	echo $query;
+
 	if (!$result){
 		die ("user_exist_check() failed. Could not query the database: <br />". mysql_error());
 	}	
@@ -135,10 +135,18 @@ function my_messages($username)
 		//cycle through the rows to print
 		while ($row=mysql_fetch_row($result))
 		{
-			echo "Sent from: $row[2]";
-			echo "Message: $row[3]";
+			?> 
+			<tr> 
+				<td>  
+					<?php echo "$row[2]"; ?> 
+				
+				</td> 
+				<td> 
+					<?php echo "$row[3]"; ?> 
+				</td> 
+			<tr>
 			
-			
+			<?php
 		}
 		
 	}

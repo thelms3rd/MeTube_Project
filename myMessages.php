@@ -125,17 +125,10 @@ include_once "function.php";
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>John</td>
-        <td>Hello my name is John</td>
-        
-      </tr>
+      <?php my_messages($_SESSION['username']);	?>
 	  </tbody>
 	</table>
   </div>
-
-	
-<?php $check = my_messages($_SESSION['username']);	?>
 </div>
 
 
