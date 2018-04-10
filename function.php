@@ -126,6 +126,7 @@ function my_messages($username)
 {
 	$query = "select * message where username_fk='$username'";
 	$result = mysql_query( $query );
+	echo $query;
 	if (!$result){
 		die ("user_exist_check() failed. Could not query the database: <br />". mysql_error());
 	}	
