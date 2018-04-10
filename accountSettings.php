@@ -26,6 +26,11 @@ text-align: center;
 
 	
 <!------------------ Beginning of Body ---------->
+<?php
+session_start();
+include_once "function.php";
+
+?>
 	
 <!---------------- Navigation Bar --------->
 <body>
@@ -70,11 +75,13 @@ text-align: center;
     </form>
 
 		<li class="nav-item">
-		  <a class="nav-link" href="#" name="accountSetting"> Account </a>
+		  <a class="nav-link" href="accountSettings.php" name="accountSetting"> Account </a>
 		</li>
 		<li class="nav-item">
 		  <a class="nav-link" href="logout.php" name="logout"> Logout</a>
 		</li>
+
+
 			
  </ul>
 	
@@ -82,17 +89,14 @@ text-align: center;
 </nav>
 </div>
 <!------------- END OF NAVIGATION BAR ----------->
-
+	
 <!------------------ PHP Code ----------------------->
 <?php
-session_start();
-
-include_once "function.php";
 
 if(isset($_POST['submit'])) {
 	//check if the two passwords are correct
 	if( $_POST['password1'] != $_POST['password2']) {
-		$register_error = "Passwords don't match. Try again?";
+		//$register_error = "Passwords don't match. Try again?";
 	}
 	else {
 		//update the account 
@@ -134,10 +138,22 @@ if(isset($_POST['submit'])) {
 </div>
 </form> 
 
+
 <!------------------ PHP Code ----------------------->
 <?php
-  //if(isset($register_error))
-   //{  echo "<div id='passwd_result'> register_error:".$register_error."</div>";}
+
+if(isset($_POST['submit'])) {
+	//check if the two passwords are correct
+	if( $_POST['password1'] != $_POST['password2']) {
+		$register_error = "Passwords don't match. Try again?";
+	}
+	else {
+		//update the account 
+		//update_Account($_SESSION['username'], $_POST['password1']);
+	}
+	
+	if(isset($register_error))
+   {  echo "<div id='passwd_result'> register_error:".$register_error."</div>";}
 ?>
 	
 	
