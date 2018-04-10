@@ -74,7 +74,8 @@ include_once "function.php";
         </div>
       </div>
     </form>
-		
+
+<!---- if the user is not logged in display register and Login Links ---->
 <?php if(!(isset($_SESSION['loggedIn']))): ?>
 		<li class="nav-item">
 		  <a class="nav-link" href="register.php"> Register</a>
@@ -82,7 +83,12 @@ include_once "function.php";
 	<li class="nav-item"> 
 		  <a class="nav-link" href="login.php"> Login</a>
 		</li>
+
+<!----- else (the user is logged in) then display the account and register links ---->
 <?php else: ?>
+		<li class="nav-item">
+		  <a class="nav-link" href="#" name="accountSetting"> Account </a>
+		</li>
 		<li class="nav-item">
 		  <a class="nav-link" href="logout.php" name="logout"> Logout</a>
 		</li>
