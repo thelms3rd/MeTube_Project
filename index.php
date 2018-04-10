@@ -24,28 +24,28 @@ text-align: center;
 
 </head>
 
-	
+
 <!------------------ Beginning of Body ---------->
 <?php
 session_start();
 include_once "function.php";
 
 ?>
-	
-	
+
+
 <!---------------- Navigation Bar --------->
 <body>
-	
+
  <div id="Navigation_Bar">
   <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
   <div class="container-fluid">
-		
-  
- 
+
+
+
   <!-- Links that are located on the Navagation Bar -->
-  
+
 	<!-- Left Nav Bar Elements -->
-		
+
   <ul class="navbar-nav navbar-left">
 	  <a class="navbar-brand" href="index.php">MeTube</a>
     <li class="nav-item">
@@ -58,11 +58,11 @@ include_once "function.php";
       <a class="nav-link" href="#">Audio</a>
     </li>
    </ul>
-	    
-	
+
+
 	  <!-- Right Nav Bar Elements -->
 	<ul class="nav navbar-nav navbar-right">
-		
+
 		<!-- Search bar -->
 		<form class="navbar-form navbar-right" action="#" style="padding-right: 20px; width: 450px">
       <div class="input-group">
@@ -80,14 +80,14 @@ include_once "function.php";
 		<li class="nav-item">
 		  <a class="nav-link" href="register.php"> Register</a>
 	  </li>
-	<li class="nav-item"> 
+	<li class="nav-item">
 		  <a class="nav-link" href="login.php"> Login</a>
 		</li>
 
 <!----- else (the user is logged in) then display the account and register links ---->
 <?php else: ?>
 		<li class="nav-item">
-		  
+
 			<div class="dropdown">
     			<button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
       			Account
@@ -99,21 +99,21 @@ include_once "function.php";
     			</div>
   			</div>
 		</li>
-		
+
 		<li class="nav-item">
 		  <a class="nav-link" href="logout.php" name="logout"> Logout</a>
 		</li>
 
 <?php endif; ?>
-			
+
  </ul>
-	
+
 </div>
 </nav>
 </div>
 <!------------- END OF NAVIGATION BAR ----------->
-	
-		
+
+
 <!----------------------------MIDDLE SECTION ----------------------->
 
 <div id="Middle" class="container-fluid">
@@ -131,7 +131,7 @@ include_once "function.php";
   	{
   		echo upload_error($_REQUEST['result']);
   	}
-	
+
 	if(isset($_POST['logout']))
 	{
 		session_unset();
@@ -155,6 +155,7 @@ include_once "function.php";
     $filenpath = $result_row[4];
     $title = $result_row[5];
     $date = $result_row[6];
+    $description = $result_row[7];
 ?>
 
 <!-- Display uploads -->
@@ -167,6 +168,7 @@ include_once "function.php";
       			   <p> <?php echo $title ?> </p>
                     <h6>views: </h6>
                     <h6>upload date: <?php echo $date ?> </h6>
+                    <h6>description: <?php echo $description ?> </h6>
                   <br>
                   <br>
     		  </div>
