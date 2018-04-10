@@ -81,8 +81,8 @@ include_once "function.php";
     			</button>
     			<div class="dropdown-menu">
       			<a class="dropdown-item" href="accountSettings.php" name="accountSetting">Update Account</a>
-      			<a class="dropdown-item" href="#">Link 2</a>
-      			<a class="dropdown-item" href="#">Link 3</a>
+      			<a class="dropdown-item" href="#">Upload</a>
+      			<a class="dropdown-item" href="#">Message</a>
     			</div>
   			</div>
 		</li>
