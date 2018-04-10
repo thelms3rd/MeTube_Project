@@ -107,6 +107,19 @@ include_once "function.php";
 <br>
 <h4 style="margin-bottom:0px; margin-top: 20px;">Description (500 character max)</h5><input maxlength="500" id="description" name="description" type="text" class="form-control" rows="5" style="resize: none; width: 550px;"></textarea>
 <br>
+
+<h5 style="margin-bottom:0px; margin-top: 20px;">Category</h5>
+		<select name="category"class="form-control" style="width: 175px;">
+			<option>Comedy</option>
+			<option>Music</option>
+			<option>Sports</option>
+			<option>Educational</option>
+			<option>Other</option>
+		</select>
+
+
+
+
   <input value="Upload" name="submit" type="submit" />
   </p>
 
