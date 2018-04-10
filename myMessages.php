@@ -116,7 +116,7 @@ include_once "function.php";
 <h4 class="text-center">Your Messages:</h4>
 	
 <!------- This is the style of the shadowed box containing username and password ---->	
-<div style="width: 600px; height: 600px; padding: 15px; background-color:rgb(240, 240, 240); box-shadow: 1px 1px 1px 1px grey; margin: auto;">
+<div style="width: 600px; height: 500px; padding: 15px; background-color:rgb(240, 240, 240); box-shadow: 1px 1px 1px 1px grey; margin: auto;">
 
 
 	
