@@ -110,16 +110,28 @@ include_once "function.php";
     <li class="page-item"><a class="page-link" href="message.php" style="width: 300px">Send Message</a></li>
     <li class="page-item"><a class="page-link" href="myMessages.php" style="width: 300px">My Messages</a></li>
   </ul>
-	</div>
+</div>
 <br>
 <br>
-<h4 class="text-center">Your Messages:</h4>
 	
-<!------- This is the Panel that contains Messages ---->	
+<!------- This is the Table that contains Messages ---->	
 <div class="container">
-  <div class="panel panel-default text-center">
-    <div class="panel-heading text-center">Your Messages</div>
-    <div class="panel-body">Panel Content</div>
+  <h4 class="text-center">Your Messages:</h4>          
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Username</th>
+        <th>Message</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>John</td>
+        <td>Hello my name is John</td>
+        
+      </tr>
+	  </tbody>
+	</table>
   </div>
 </div>
 
