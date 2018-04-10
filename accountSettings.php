@@ -75,7 +75,16 @@ include_once "function.php";
     </form>
 
 		<li class="nav-item">
-		  <a class="nav-link" href="accountSettings.php" name="accountSetting"> Account </a>
+		  <div class="dropdown">
+    			<button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
+      			Account
+    			</button>
+    			<div class="dropdown-menu">
+      			<a class="dropdown-item" href="accountSettings.php" name="accountSetting">Update Account</a>
+      			<a class="dropdown-item" href="#">Link 2</a>
+      			<a class="dropdown-item" href="#">Link 3</a>
+    			</div>
+  			</div>
 		</li>
 		<li class="nav-item">
 		  <a class="nav-link" href="logout.php" name="logout"> Logout</a>
