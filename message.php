@@ -100,6 +100,39 @@ include_once "function.php";
 <!------------- END OF NAVIGATION BAR ----------->
 
 	
+<!------------------ HTML Code ----------------------->
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+	
+<div class="container"> 
+<br>
+<br>
+<br>
+<h4 class="text-center">Message another User</h4>
+
+<!------- This is the style of the shadowed box containing username and password ---->	
+<div style="width: 300px; height: 320px; padding: 15px; background-color: #f1f1f1; box-shadow: 1px 1px 1px 1px grey; margin: auto;">
+
+<!---- Password Form Group --->
+<div class="form-group">
+  <label>Send to (Username):</label>
+  <input type="username" class="form-control" name="username" required>
+	</div>
+
+<!----- Confirm Password --->
+<div class="form-group">
+  <label> Enter the Message: </label>
+  <input type="message" class="form-control" name="message" required>
+</div>
+	
+<!--- Button Form Group -->
+<div class="form-group">
+	<button name="submit" type="submit" class="btn btn-primary btn-md" style="width: 125px; margin-right: 15px">Submit</button>
+	<button name="reset" type="reset" class="btn btn-danger btn-md" style="width: 125px">Reset</button>
+</div>
+</div>
+</div>
+</form> 
+	
 	
 	
 	
