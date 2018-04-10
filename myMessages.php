@@ -132,14 +132,20 @@ include_once "function.php";
 
 <!--- Button Form Group -->
 <div class="form-group">
-	<button name="clear" type="clear" class="btn btn-danger btn-md" style="width: 125px">Clear</button>
+	<button name="clear" class="btn btn-danger btn-md" style="width: 125px">Clear</button>
 </div>
 	
 </div>
 
-
+<!------------ Start of PHP ----------->
+<?php
 	
+if($_SERVER["REQUEST_METHOD"] == "POST") {
 	
+	delete_messages($username);
+	}
+	
+?>	
 	
 	
 	
