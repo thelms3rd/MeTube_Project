@@ -143,6 +143,7 @@ include_once "function.php";
 if($_SERVER["REQUEST_METHOD"] == "POST") {
 	
 	delete_messages($_SESSION['loggedIn']);
+	header('Location: https://webapp.cs.clemson.edu/~jlhelms/MeTube_Project/myMessages.php');
 	}
 	
 ?>	
