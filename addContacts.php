@@ -99,57 +99,50 @@ include_once "function.php";
 </nav>
 </div>
 <!------------- END OF NAVIGATION BAR ----------->
-
-
-<!------------------ MIDDLE HTML Code ----------------------->
+	
+<!------------------ HTML Code ----------------------->
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 	
 <div class="container"> 
 <br>
 <div class="container">
   <ul class="pagination"  class="text-center">
-    <li class="page-item"><a class="page-link" href="message.php" style="width: 300px">Send Message</a></li>
-    <li class="page-item"><a class="page-link" href="myMessages.php" style="width: 300px">My Messages</a></li>
+    <li class="page-item"><a class="page-link" href="message.php" style="width: 300px">Add Contact</a></li>
+    <li class="page-item"><a class="page-link" href="myMessages.php" style="width: 300px">My Contacts</a></li>
   </ul>
-</div>
+	</div>
 <br>
 <br>
-	
-<!------- This is the Table that contains Messages ---->	
-<div class="container">
-  <h4 class="text-center">Your Messages:</h4>          
-  <table class="table">
-    <thead>
-      <tr>
-        <th>Username</th>
-        <th>Message</th>
-      </tr>
-    </thead>
-    <tbody>
-      <?php my_messages($_SESSION['username']);	?>
-	  </tbody>
-	</table>
-  </div>
+<h4 class="text-center">Message another User</h4>
 
+<!------- This is the style of the shadowed box containing username and password ---->	
+<div style="width: 300px; height: 320px; padding: 15px; background-color: #f1f1f1; box-shadow: 1px 1px 1px 1px grey; margin: auto;">
+
+<!---- Add Contact Form Group --->
+<div class="form-group">
+  <label>Add Contact:</label>
+  <input type="username" class="form-control" name="username" required>
+	</div>
+
+<!----- Contact Organization --->
+ <div class="form-group">
+      <label for="sel1">Contact Organization (select one):</label>
+      <select class="form-control" id="contact_organization">
+        <option>Favorite</option>
+        <option>Family</option>
+        <option>Friend</option>
+        <option>Other</option>
+      </select>
+	
 <!--- Button Form Group -->
 <div class="form-group">
-	<button name="clear" class="btn btn-danger btn-md float-right" style="width: 125px">Clear</button>
+	<button name="submit" type="submit" class="btn btn-primary btn-md" style="width: 125px; margin-right: 15px">Submit</button>
+	<button name="reset" type="reset" class="btn btn-danger btn-md" style="width: 125px">Reset</button>
 </div>
-	
 </div>
-
-<!------------ Start of PHP ----------->
-<?php
-	
-if($_SERVER["REQUEST_METHOD"] == "POST") {
-	
-	delete_messages($_SESSION['loggedIn']);
-	header('Location: https://webapp.cs.clemson.edu/~jlhelms/MeTube_Project/myMessages.php');
-	}
-	
-?>	
-	
-	
+</div>
+</form> 
+		
 	
 	
 	
@@ -162,5 +155,4 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>
-	
 	

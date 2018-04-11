@@ -76,7 +76,7 @@ include_once "function.php";
     			<div class="dropdown-menu">
       			<a class="dropdown-item" href="accountSettings.php" name="accountSetting">Update Account</a>
       			<a class="dropdown-item" href="media_upload.php">Upload</a>
-					<a class="dropdown-item" href="contacts.php">Contacts</a>
+					<a class="dropdown-item" href="addContacts.php">Contacts</a>
       			<a class="dropdown-item" href="message.php">Message</a>
     			</div>
   			</div>
