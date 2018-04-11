@@ -107,13 +107,13 @@ include_once "function.php";
 <br>
 <div class="container">
   <ul class="pagination"  class="text-center">
-    <li class="page-item"><a class="page-link" href="message.php" style="width: 300px">Add Contact</a></li>
-    <li class="page-item"><a class="page-link" href="myMessages.php" style="width: 300px">My Contacts</a></li>
+    <li class="page-item"><a class="page-link" href="addContacts.php" style="width: 300px">Add Contact</a></li>
+    <li class="page-item"><a class="page-link" href="myContacts.php" style="width: 300px">My Contacts</a></li>
   </ul>
 	</div>
 <br>
 <br>
-<h4 class="text-center">Message another User</h4>
+<h4 class="text-center">Add a Contact</h4>
 
 <!------- This is the style of the shadowed box containing username and password ---->	
 <div style="width: 300px; height: 320px; padding: 15px; background-color: #f1f1f1; box-shadow: 1px 1px 1px 1px grey; margin: auto;">
@@ -133,6 +133,8 @@ include_once "function.php";
         <option>Friend</option>
         <option>Other</option>
       </select>
+
+<br>
 	
 <!--- Button Form Group -->
 <div class="form-group">

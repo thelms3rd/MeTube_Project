@@ -82,7 +82,7 @@ include_once "function.php";
     			<div class="dropdown-menu">
       			<a class="dropdown-item" href="accountSettings.php" name="accountSetting">Update Account</a>
       			<a class="dropdown-item" href="media_upload.php">Upload</a>
-					<a class="dropdown-item" href="contacts.php">Contacts</a>
+					<a class="dropdown-item" href="addContacts.php">Contacts</a>
       			<a class="dropdown-item" href="message.php">Message</a>
     			</div>
   			</div>
@@ -100,6 +100,25 @@ include_once "function.php";
 </div>
 <!------------- END OF NAVIGATION BAR ----------->
 	
+<!------------------ HTML Code ----------------------->
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+	
+<div class="container"> 
+<br>
+<div class="container">
+  <ul class="pagination"  class="text-center">
+    <li class="page-item"><a class="page-link" href="addContacts.php" style="width: 300px">Add Contact</a></li>
+    <li class="page-item"><a class="page-link" href="myContacts.php" style="width: 300px">My Contacts</a></li>
+  </ul>
+	</div>
+<br>
+<br>
+<h4 class="text-center">Add a Contact</h4>
+	
+
+	
+</div>
+</form>
 	
 <!---------------------------------------------------------------------->
 
