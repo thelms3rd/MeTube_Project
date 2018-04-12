@@ -194,7 +194,7 @@ function add_contact($fromUser, $contact, $organization)
 			echo "insert query:" . $query3;
 			$insert = mysql_query( $query3 );
 			if($insert)
-				echo "<br> <br> Message Sent!";
+				echo "<br> <br> Contact Added!";
 			else
 				die ("Could not insert into the database: <br />". mysql_error());		
 		}
@@ -207,7 +207,7 @@ function my_favorites($username)
 	$result = mysql_query( $query );
 
 	if (!$result){
-		die ("user_exist_check() failed. Could not query the database: <br />". mysql_error());
+		die ("my_favorites query failed. Could not query the database: <br />". mysql_error());
 	} else {
 			
 		//cycle through the rows to print
@@ -232,7 +232,7 @@ function my_family($username)
 	$result = mysql_query( $query );
 
 	if (!$result){
-		die ("user_exist_check() failed. Could not query the database: <br />". mysql_error());
+		die ("my_family query failed. Could not query the database: <br />". mysql_error());
 	} else {
 			
 		//cycle through the rows to print
@@ -257,7 +257,7 @@ function my_friends($username)
 	$result = mysql_query( $query );
 
 	if (!$result){
-		die ("user_exist_check() failed. Could not query the database: <br />". mysql_error());
+		die ("my_friends query failed. Could not query the database: <br />". mysql_error());
 	} else {
 			
 		//cycle through the rows to print
@@ -282,7 +282,7 @@ function my_others($username)
 	$result = mysql_query( $query );
 
 	if (!$result){
-		die ("user_exist_check() failed. Could not query the database: <br />". mysql_error());
+		die ("my_others query failed. Could not query the database: <br />". mysql_error());
 	} else {
 			
 		//cycle through the rows to print
