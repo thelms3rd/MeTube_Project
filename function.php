@@ -168,7 +168,26 @@ function delete_messages($username)
 
 function add_contact($fromUser, $contact, $organization)
 {
-	
+	$query = "select * from account where username='$contact'";
+	$result = mysql_query( $query );
+	if (!$result){
+		die ("user_exist_check() failed. Could not query the database: <br />". mysql_error());
+	}	
+	else {
+		$row = mysql_fetch_assoc($result);
+		if($row == 0){
+		echo "<br> <br> User does not Exist!";
+		}
+		else{
+			$query2 = "INSERT INTO message (`username_fk`, `mycontact`, `organization`) VALUES ('$fromUser','$contact','$organization')";
+			echo "insert query:" . $query2;
+			$insert = mysql_query( $query2 );
+			if($insert)
+				echo "<br> <br> Message Sent!";
+			else
+				die ("Could not insert into the database: <br />". mysql_error());		
+		}
+	}
 }
 	
 ?>
