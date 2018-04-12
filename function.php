@@ -179,7 +179,7 @@ function add_contact($fromUser, $contact, $organization)
 		echo "<br> <br> User does not Exist!";
 		}
 		else{
-			$query2 = "INSERT INTO message (`username_fk`, `mycontact`, `organization`) VALUES ('$fromUser','$contact','$organization')";
+			$query2 = "INSERT INTO contact (`username_fk`, `mycontact`, `organization`) VALUES ('$fromUser','$contact','$organization')";
 			echo "insert query:" . $query2;
 			$insert = mysql_query( $query2 );
 			if($insert)
