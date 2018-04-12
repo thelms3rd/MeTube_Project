@@ -167,5 +167,8 @@ function delete_messages($username)
 }
 
 function add_contact($fromUser, $contact, $organization)
+{
+	
+}
 	
 ?>
