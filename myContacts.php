@@ -112,8 +112,8 @@ include_once "function.php";
   </ul>
 	</div>
 <br>
-<br>
 <h4 class="text-center">Your Contacts </h4>
+<br>
 	
 <!------- This is the Table that contains Favorite ---->	
 <div class="container">
