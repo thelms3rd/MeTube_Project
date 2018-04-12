@@ -186,7 +186,7 @@ function add_contact($fromUser, $contact, $organization)
 		if($row_result == 0){
 		echo "<br> <br> User does not Exist!";
 		}
-		else if (!empty($row_result2){
+		else if (!empty($row_result2)){
 				echo "<br> <br> User is already a contact!";
 					}
 		else{
