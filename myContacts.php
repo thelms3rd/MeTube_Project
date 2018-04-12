@@ -113,7 +113,66 @@ include_once "function.php";
 	</div>
 <br>
 <br>
-<h4 class="text-center">Your Contacts: </h4>
+<h4 class="text-center">Your Contacts </h4>
+	
+<!------- This is the Table that contains Favorite ---->	
+<div class="container">
+	<div class="row">
+		<div class="col">
+  			<h4 class="text-center">Favorites:</h4>          
+				<table class="table">
+    				<thead>
+						<tr>
+							<th>Username</th>
+      				</tr>
+					</thead>
+					<tbody>
+						<?//php my_messages($_SESSION['username']);	?>
+					</tbody>
+				</table>
+		</div>
+		<div class="col">
+  			<h4 class="text-center">Family:</h4>          
+				<table class="table">
+    				<thead>
+						<tr>
+							<th>Username</th>
+      				</tr>
+					</thead>
+					<tbody>
+						<?//php my_messages($_SESSION['username']);	?>
+					</tbody>
+				</table>
+		</div>
+		<div class="col">
+  			<h4 class="text-center">Friend:</h4>          
+				<table class="table">
+    				<thead>
+						<tr>
+							<th>Username</th>
+      				</tr>
+					</thead>
+					<tbody>
+						<?//php my_messages($_SESSION['username']);	?>
+					</tbody>
+				</table>
+		</div>
+		<div class="col">
+  			<h4 class="text-center">Other:</h4>          
+				<table class="table">
+    				<thead>
+						<tr>
+							<th>Username</th>
+      				</tr>
+					</thead>
+					<tbody>
+						<?//php my_messages($_SESSION['username']);	?>
+					</tbody>
+				</table>
+		</div>
+	</div>
+</div>
+
 
 	
 

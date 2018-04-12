@@ -189,5 +189,18 @@ function add_contact($fromUser, $contact, $organization)
 		}
 	}
 }
+
+function my_contacts($username)
+{
+	$query = "select * from contact where username_fk='$username'";
+	$result = mysql_query( $query );
+	if (!$result){
+		die ("user_exist_check() failed. Could not query the database: <br />". mysql_error());
+	} else {
+			
+	}	
+	
+	
+}
 	
 ?>
