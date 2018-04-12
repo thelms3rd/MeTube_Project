@@ -156,7 +156,7 @@ include_once "function.php";
 		echo "<br>";
 		echo "Organization: $_POST[contact_organization]";
 		
-		//add_contact($_SESSION['username'],$_POST['username'], $_POST['message']);
+		add_contact($_SESSION['username'],$_POST['username'], $_POST['message']);
 		
 		
 		
