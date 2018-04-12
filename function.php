@@ -169,19 +169,30 @@ function delete_messages($username)
 function add_contact($fromUser, $contact, $organization)
 {
 	$query = "select * from account where username='$contact'";
+	$query2 = "select * from contact where username_fk='$fromUser' AND mycontact='$contact'";
 	$result = mysql_query( $query );
+	$result2 = mysql_query( $query2 );
+	
 	if (!$result){
-		die ("user_exist_check() failed. Could not query the database: <br />". mysql_error());
-	}	
+		die ("query1 failed. Could not query the database: <br />". mysql_error());
+	}
+	else if (!$result2){
+		die ("query2 failed. Could not query the database: <br />". mysql_error());
+	}
 	else {
-		$row = mysql_fetch_assoc($result);
-		if($row == 0){
+		$row_result = mysql_fetch_assoc($result);
+		$row_result2 = mysql_fetch_assoc($result2);
+		
+		if($row_result == 0){
 		echo "<br> <br> User does not Exist!";
 		}
+		else if (!empty($row_result2){
+				echo "<br> <br> User is already a contact!";
+					}
 		else{
-			$query2 = "INSERT INTO contact (`username_fk`, `mycontact`, `organization`) VALUES ('$fromUser','$contact','$organization')";
-			echo "insert query:" . $query2;
-			$insert = mysql_query( $query2 );
+			$query3 = "INSERT INTO contact (`username_fk`, `mycontact`, `organization`) VALUES ('$fromUser','$contact','$organization')";
+			echo "insert query:" . $query3;
+			$insert = mysql_query( $query3 );
 			if($insert)
 				echo "<br> <br> Message Sent!";
 			else
