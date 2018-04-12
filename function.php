@@ -165,5 +165,7 @@ function delete_messages($username)
 		echo "Messages have been deleted!";
 	}
 }
+
+function add_contact($fromUser, $contact, $organization)
 	
 ?>

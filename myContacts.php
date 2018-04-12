@@ -113,7 +113,8 @@ include_once "function.php";
 	</div>
 <br>
 <br>
-<h4 class="text-center">Add a Contact</h4>
+<h4 class="text-center">Your Contacts: </h4>
+
 	
 
 	

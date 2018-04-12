@@ -127,7 +127,7 @@ include_once "function.php";
 <!----- Contact Organization --->
  <div class="form-group">
       <label for="sel1">Contact Organization (select one):</label>
-      <select class="form-control" id="contact_organization">
+      <select class="form-control" name="contact_organization">
         <option>Favorite</option>
         <option>Family</option>
         <option>Friend</option>
@@ -146,7 +146,25 @@ include_once "function.php";
 </form> 
 		
 	
+<!------------------ PHP Code ----------------------->
+<?php
+
+	if($_SERVER["REQUEST_METHOD"] == "POST") {
 	
+		//call the message function
+		echo "Add Contact: $_POST[username]";
+		echo "<br>";
+		echo "Organization: $_POST[contact_organization]";
+		
+		//add_contact($_SESSION['username'],$_POST['username'], $_POST['message']);
+		
+		
+		
+	
+	}
+	
+
+?>
 	
 <!---------------------------------------------------------------------->
 
