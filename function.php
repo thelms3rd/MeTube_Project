@@ -192,8 +192,9 @@ function add_contact($fromUser, $contact, $organization)
 
 function my_favorites($username)
 {
-	$query = "select * from contact where username_fk='$username' AND organization='Favorite";
+	$query = "select * from contact where username_fk='$username' AND organization='Favorite'";
 	$result = mysql_query( $query );
+
 	if (!$result){
 		die ("user_exist_check() failed. Could not query the database: <br />". mysql_error());
 	} else {

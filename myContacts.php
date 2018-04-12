@@ -127,7 +127,7 @@ include_once "function.php";
       				</tr>
 					</thead>
 					<tbody>
-						<?php  //my_favorites($_SESSION['username']);	?>
+						<?php  my_favorites($_SESSION['username']);	?>
 					</tbody>
 				</table>
 		</div>
