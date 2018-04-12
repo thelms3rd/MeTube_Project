@@ -119,7 +119,7 @@ include_once "function.php";
 <div class="container">
 	<div class="row">
 		<div class="col">
-  			<h4 class="text-center">Favorites:</h4>          
+  			<h5 class="text-center">Favorites:</h5>          
 				<table class="table">
     				<thead>
 						<tr>
@@ -132,7 +132,7 @@ include_once "function.php";
 				</table>
 		</div>
 		<div class="col">
-  			<h4 class="text-center">Family:</h4>          
+  			<h5 class="text-center">Family:</h5>          
 				<table class="table">
     				<thead>
 						<tr>
@@ -145,7 +145,7 @@ include_once "function.php";
 				</table>
 		</div>
 		<div class="col">
-  			<h4 class="text-center">Friend:</h4>          
+  			<h5 class="text-center">Friend:</h5>          
 				<table class="table">
     				<thead>
 						<tr>
@@ -158,7 +158,7 @@ include_once "function.php";
 				</table>
 		</div>
 		<div class="col">
-  			<h4 class="text-center">Other:</h4>          
+  			<h5 class="text-center">Other:</h5>          
 				<table class="table">
     				<thead>
 						<tr>
