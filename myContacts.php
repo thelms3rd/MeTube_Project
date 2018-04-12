@@ -140,7 +140,7 @@ include_once "function.php";
       				</tr>
 					</thead>
 					<tbody>
-						<?//php my_messages($_SESSION['username']);	?>
+						<?php my_family($_SESSION['username']);	?>
 					</tbody>
 				</table>
 		</div>
@@ -153,7 +153,7 @@ include_once "function.php";
       				</tr>
 					</thead>
 					<tbody>
-						<?//php my_messages($_SESSION['username']);	?>
+						<?php my_friends($_SESSION['username']);	?>
 					</tbody>
 				</table>
 		</div>
@@ -166,7 +166,7 @@ include_once "function.php";
       				</tr>
 					</thead>
 					<tbody>
-						<?//php my_messages($_SESSION['username']);	?>
+						<?php my_others($_SESSION['username']);	?>
 					</tbody>
 				</table>
 		</div>

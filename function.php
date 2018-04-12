@@ -212,11 +212,83 @@ function my_favorites($username)
 			
 			<?php
 		}
-		
-		
-		
-	}	
-	
+	}		
 }
+
+function my_family($username)
+{
+	$query = "select * from contact where username_fk='$username' AND organization='Family'";
+	$result = mysql_query( $query );
+
+	if (!$result){
+		die ("user_exist_check() failed. Could not query the database: <br />". mysql_error());
+	} else {
+			
+		//cycle through the rows to print
+		while ($row=mysql_fetch_row($result))
+		{
+			?> 
+			<tr> 
+				<td>  
+					<?php echo "$row[2]"; ?> 
+				
+				</td> 
+			<tr>
+			
+			<?php
+		}
+	}		
+}
+
+function my_friends($username)
+{
+	$query = "select * from contact where username_fk='$username' AND organization='Friend'";
+	$result = mysql_query( $query );
+
+	if (!$result){
+		die ("user_exist_check() failed. Could not query the database: <br />". mysql_error());
+	} else {
+			
+		//cycle through the rows to print
+		while ($row=mysql_fetch_row($result))
+		{
+			?> 
+			<tr> 
+				<td>  
+					<?php echo "$row[2]"; ?> 
+				
+				</td> 
+			<tr>
+			
+			<?php
+		}
+	}		
+}
+
+function my_others($username)
+{
+	$query = "select * from contact where username_fk='$username' AND organization='Other'";
+	$result = mysql_query( $query );
+
+	if (!$result){
+		die ("user_exist_check() failed. Could not query the database: <br />". mysql_error());
+	} else {
+			
+		//cycle through the rows to print
+		while ($row=mysql_fetch_row($result))
+		{
+			?> 
+			<tr> 
+				<td>  
+					<?php echo "$row[2]"; ?> 
+				
+				</td> 
+			<tr>
+			
+			<?php
+		}
+	}		
+}
+	
 	
 ?>
