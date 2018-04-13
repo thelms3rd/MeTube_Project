@@ -322,7 +322,7 @@ function delete_contact($logged_user, $delete_user)
 				echo "<br> <br> Contact Added!";
 			else
 				die ("Could not insert into the database: <br />". mysql_error());		
-			}
+			
 			
 		}
 	}
