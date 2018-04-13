@@ -113,9 +113,10 @@ include_once "function.php";
 	<br>
 	<br>
 	<div class="row">
-		<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+		
 		<!---- Add a contact ----->
 		<div class="col">
+			<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 			<h4 class="text-center">Add a Contact</h4>
 
 			<!------- This is the style of the shadowed box containing username and password ---->	
@@ -145,11 +146,12 @@ include_once "function.php";
 					<button name="reset" type="reset" class="btn btn-danger btn-md" style="width: 125px">Reset</button>
 				</div>
 			</div>
+			</form>
 		</div>
-		</form>
-		<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+		
 		<!------------- Delete a contact ------------->
 		<div class="col">
+			<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 			<h4 class="text-center">Delete a Contact</h4>
 
 			<!------- This is the style of the shadowed box containing username and password ---->	
@@ -168,8 +170,8 @@ include_once "function.php";
 					<button name="submit_delete" type="submit" class="btn btn-primary btn-md" style="width: 125px; margin-right: 15px">Submit</button>
 				</div>
 			</div>
-		</div>
 		</form>
+		</div>
 	</div>
 </div>
 
