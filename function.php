@@ -303,7 +303,7 @@ function my_others($username)
 
 function delete_contact($logged_user, $delete_user)
 {
-	$query = "select * from account where username='$delete_user'";
+	$query = "select * from contact where username='$delete_user'";
 	$result = mysql_query( $query );
 	if (!$result){
 		die ("query1 failed. Could not query the database: <br />". mysql_error());
@@ -319,9 +319,9 @@ function delete_contact($logged_user, $delete_user)
 			$delete = mysql_query( $query2 );
 	
 			if($delete)
-				echo "<br> <br> Contact Added!";
+				echo "<br> <br> Contact Deleted!";
 			else
-				die ("Could not insert into the database: <br />". mysql_error());		
+				die ("Could not delete record in the database: <br />". mysql_error());		
 			
 			
 		}
