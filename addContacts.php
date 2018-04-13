@@ -101,7 +101,6 @@ include_once "function.php";
 <!------------- END OF NAVIGATION BAR ----------->
 	
 <!------------------ HTML Code ----------------------->
-<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 	
 <div class="container"> 
 	<br>
@@ -114,7 +113,7 @@ include_once "function.php";
 	<br>
 	<br>
 	<div class="row">
-		<form>
+		<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 		<!---- Add a contact ----->
 		<div class="col">
 			<h4 class="text-center">Add a Contact</h4>
@@ -148,7 +147,7 @@ include_once "function.php";
 			</div>
 		</div>
 		</form>
-		<form>
+		<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 		<!------------- Delete a contact ------------->
 		<div class="col">
 			<h4 class="text-center">Delete a Contact</h4>
@@ -173,7 +172,7 @@ include_once "function.php";
 		</form>
 	</div>
 </div>
-</form>
+
 		
 <!------------------ PHP Code ----------------------->
 <?php
