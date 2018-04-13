@@ -104,48 +104,75 @@ include_once "function.php";
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 	
 <div class="container"> 
-<br>
-<div class="container">
-  <ul class="pagination"  class="text-center">
-    <li class="page-item"><a class="page-link" href="addContacts.php" style="width: 300px">Add Contact</a></li>
-    <li class="page-item"><a class="page-link" href="myContacts.php" style="width: 300px">My Contacts</a></li>
-  </ul>
+	<br>
+	<div class="container">
+  		<ul class="pagination"  class="text-center">
+    		<li class="page-item"><a class="page-link" href="addContacts.php" style="width: 300px">Add Contact/Delete Contact</a></li>
+    		<li class="page-item"><a class="page-link" href="myContacts.php" style="width: 300px">My Contacts</a></li>
+  		</ul>
 	</div>
-<br>
-<br>
-<h4 class="text-center">Add a Contact</h4>
-
-<!------- This is the style of the shadowed box containing username and password ---->	
-<div style="width: 300px; height: 320px; padding: 15px; background-color: #f1f1f1; box-shadow: 1px 1px 1px 1px grey; margin: auto;">
-
-<!---- Add Contact Form Group --->
-<div class="form-group">
-  <label>Add Contact:</label>
-  <input type="username" class="form-control" name="username" required>
-	</div>
-
-<!----- Contact Organization --->
- <div class="form-group">
-      <label for="sel1">Contact Organization (select one):</label>
-      <select class="form-control" name="contact_organization">
-        <option>Favorite</option>
-        <option>Family</option>
-        <option>Friend</option>
-        <option>Other</option>
-      </select>
-
-<br>
-	
-<!--- Button Form Group -->
-<div class="form-group">
-	<button name="submit" type="submit" class="btn btn-primary btn-md" style="width: 125px; margin-right: 15px">Submit</button>
-	<button name="reset" type="reset" class="btn btn-danger btn-md" style="width: 125px">Reset</button>
-</div>
-</div>
-</div>
-</form> 
+	<br>
+	<br>
+	<div class="row">
 		
-	
+		<!---- Add a contact ----->
+		<div class="col">
+			<h4 class="text-center">Add a Contact</h4>
+
+			<!------- This is the style of the shadowed box containing username and password ---->	
+			<div style="width: 300px; height: 320px; padding: 15px; background-color: #f1f1f1; box-shadow: 1px 1px 1px 1px grey; margin: auto;">
+
+				<!---- Add Contact Form Group --->
+				<div class="form-group">
+					<label>Add Contact:</label>
+					<input type="username" class="form-control" name="username" required>
+				</div>
+
+				<!----- Contact Organization --->
+				<div class="form-group">
+					<label>Contact Organization (select one):</label>
+					<select class="form-control" name="contact_organization">
+						<option>Favorite</option>
+						<option>Family</option>
+						<option>Friend</option>
+						<option>Other</option>
+					</select>
+				</div>
+				<br>
+
+				<!--- Button Form Group -->
+				<div class="form-group">
+					<button name="submit" type="submit" class="btn btn-primary btn-md" style="width: 125px; margin-right: 15px">Submit</button>
+					<button name="reset" type="reset" class="btn btn-danger btn-md" style="width: 125px">Reset</button>
+				</div>
+			</div>
+		</div>
+		
+		<!------------- Delete a contact ------------->
+		<div class="col">
+			<h4 class="text-center">Delete a Contact</h4>
+
+			<!------- This is the style of the shadowed box containing username and password ---->	
+			<div style="width: 300px; height: 320px; padding: 15px; background-color: #f1f1f1; box-shadow: 1px 1px 1px 1px grey; margin: auto;">
+
+				<!---- Delete contact Form Group --->
+				<div class="form-group">
+					<label>Delete Contact:</label>
+					<input type="username" class="form-control" name="username" required>
+				</div>
+
+				<br>
+
+				<!--- Button Form Group -->
+				<div class="form-group">
+					<button name="submit" type="submit" class="btn btn-primary btn-md" style="width: 125px; margin-right: 15px">Submit</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</form>
+		
 <!------------------ PHP Code ----------------------->
 <?php
 
