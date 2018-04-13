@@ -310,13 +310,12 @@ function delete_contact($logged_user, $delete_user)
 		die ("delete_contact failed. Could not query the database: <br />". mysql_error());
 	}	
 	else {
-		$row_result = mysql_fetch_row($result);
-		if($row_result == 0)
+		if($result == 0)
 		{
 			echo "Contact Not Found!";
 		}
 		else {
-			echo "Contacts have been deleted!";
+			echo "Contact has been deleted!";
 		}
 	}
 }
