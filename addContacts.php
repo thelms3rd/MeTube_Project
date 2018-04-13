@@ -142,7 +142,7 @@ include_once "function.php";
 
 				<!--- Button Form Group -->
 				<div class="form-group">
-					<button name="submit" type="submit" class="btn btn-primary btn-md" style="width: 125px; margin-right: 15px">Submit</button>
+					<button name="submit_contact" type="submit" class="btn btn-primary btn-md" style="width: 125px; margin-right: 15px">Submit</button>
 					<button name="reset" type="reset" class="btn btn-danger btn-md" style="width: 125px">Reset</button>
 				</div>
 			</div>
@@ -166,7 +166,7 @@ include_once "function.php";
 
 				<!--- Button Form Group -->
 				<div class="form-group">
-					<button name="submit" type="submit" class="btn btn-primary btn-md" style="width: 125px; margin-right: 15px">Submit</button>
+					<button name="submit_delete" type="submit" class="btn btn-primary btn-md" style="width: 125px; margin-right: 15px">Submit</button>
 				</div>
 			</div>
 		</div>
@@ -179,15 +179,18 @@ include_once "function.php";
 <?php
 
 	if($_SERVER["REQUEST_METHOD"] == "POST") {
-	
-		//call the message function
-		echo "Add Contact: $_POST[username]";
-		echo "<br>";
-		echo "Organization: $_POST[contact_organization]";
+		if(isset($_POST['submit_contact'])) {
+			//call the add_contact function
+			echo "Add Contact: $_POST[username]";
+			echo "<br>";
+			echo "Organization: $_POST[contact_organization]";
 		
-		add_contact($_SESSION['username'],$_POST['username'], $_POST['contact_organization']);
-		
-		
+			add_contact($_SESSION['username'],$_POST['username'], $_POST['contact_organization']);
+		}
+		if(isset($_POST['submit_delete'])) {
+			
+			echo "Delete submit is working!";
+		}
 		
 	
 	}
