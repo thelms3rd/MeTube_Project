@@ -316,13 +316,12 @@ function delete_contact($logged_user, $delete_user)
 		}
 		else{
 			$query2 = "DELETE FROM contact WHERE username_fk='$logged_user' AND mycontact='$delete_user'";
-			$result2 = mysql_query( $query2 );
+			$delete = mysql_query( $query2 );
 	
-			if (!$result2){
-			die ("delete_contact failed. Could not query the database: <br />". mysql_error());
-			}
-			else {
-				echo "Contact has been deleted!";
+			if($delete)
+				echo "<br> <br> Contact Added!";
+			else
+				die ("Could not insert into the database: <br />". mysql_error());		
 			}
 			
 		}
