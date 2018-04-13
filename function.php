@@ -322,7 +322,7 @@ function delete_contact($logged_user, $delete_user)
 			die ("delete_contact failed. Could not query the database: <br />". mysql_error());
 			}
 			else {
-				echo "Contact has been deleted!"
+				echo "Contact has been deleted!";
 			}
 			
 		}
