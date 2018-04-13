@@ -191,7 +191,7 @@ include_once "function.php";
 			
 			echo "Delete submit is working!";
 		}
-		
+		echo "Delete submit is not working!";
 	
 	}
 	
