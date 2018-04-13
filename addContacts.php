@@ -160,7 +160,7 @@ include_once "function.php";
 				<!---- Delete contact Form Group --->
 				<div class="form-group">
 					<label>Delete Contact:</label>
-					<input type="username" class="form-control" name="username" required>
+					<input type="username" class="form-control" name="user_delete" required>
 				</div>
 
 				<br>
@@ -190,10 +190,8 @@ include_once "function.php";
 		}
 		if(isset($_POST['submit_delete'])) {
 			
-			echo "Delete submit is working!";
-		}
-		echo "Delete submit is not working!";
-	
+			delete_contact($_SESSION['username'],$_POST['user_delete']);
+		}	
 	}
 	
 

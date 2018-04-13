@@ -300,6 +300,19 @@ function my_others($username)
 		}
 	}		
 }
+
+function delete_contact($logged_user, $delete_user)
+{
+	$query = "DELETE FROM contact WHERE username_fk='$logged_user' AND mycontact='$delete_user'";
+	$result = mysql_query( $query );
+	
+	if (!$result){
+		die ("delete_contact failed. Could not query the database: <br />". mysql_error());
+	}	
+	else {
+		echo "Contacts have been deleted!";
+	}
+}
 	
 	
 ?>
