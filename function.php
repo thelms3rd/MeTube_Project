@@ -303,19 +303,28 @@ function my_others($username)
 
 function delete_contact($logged_user, $delete_user)
 {
-	$query = "DELETE FROM contact WHERE username_fk='$logged_user' AND mycontact='$delete_user'";
+	$query = "select * from account where username='$delete_user'";
 	$result = mysql_query( $query );
-	
 	if (!$result){
-		die ("delete_contact failed. Could not query the database: <br />". mysql_error());
-	}	
+		die ("query1 failed. Could not query the database: <br />". mysql_error());
+	}
 	else {
-		if($result == 0)
-		{
-			echo "Contact Not Found!";
+		$row_result = mysql_fetch_assoc($result);
+		
+		if($row_result == 0){
+		echo "<br> <br> Contact Not Found!";
 		}
-		else {
-			echo "Contact has been deleted!";
+		else{
+			$query2 = "DELETE FROM contact WHERE username_fk='$logged_user' AND mycontact='$delete_user'";
+			$result2 = mysql_query( $query2 );
+	
+			if (!$result2){
+			die ("delete_contact failed. Could not query the database: <br />". mysql_error());
+			}
+			else {
+				echo "Contact has been deleted!"
+			}
+			
 		}
 	}
 }
