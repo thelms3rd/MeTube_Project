@@ -165,7 +165,7 @@ include_once "function.php";
 
 				<!--- Button Form Group -->
 				<div class="form-group">
-					<button name="submit" type="submit" class="btn btn-primary btn-md" style="width: 125px; margin-right: 15px">Submit</button>
+					<button name="submit" type="submit" class="btn btn-primary btn-md text-center" style="width: 125px; margin-right: 15px">Submit</button>
 				</div>
 			</div>
 		</div>
