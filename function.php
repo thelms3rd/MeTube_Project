@@ -455,6 +455,61 @@ function browse_files($category, $type)
 	}
 }
 
+function search_files($search)
+{
+	$query = "SELECT * FROM media WHERE title LIKE '%$search%' OR desription LIKE '%$search%' OR keywords LIKE '%$search%'";
+	$result = mysql_query( $query );
+	
+	if(!$result)
+	{
+		die ("query failed. Could not query the database: <br />". mysql_error());	
+	}
+	else{
+		
+		?>
+		<div class="container">
+		
+		<?php
+		while ($row = mysql_fetch_row($result))
+		{
+			//$row = mysql_fetch_row($result);
+			$mediaid = $row[3];
+			$filename = $row[0];
+			$filenpath = $row[4];
+			$title = $row[5];
+			$date = $row[6];
+			$description = $row[7];
+			$category = $row[8];
+			$keywords = $row[9];
+			$views = $row[10];
+			
+			$url = 'https://webapp.cs.clemson.edu/~jlhelms/MeTube_Project/image.php?id='.$mediaid;
+			
+			?>
+			<div class="row text-center">
+
+            <div class="col-sm-4 col-md-4 col-lg-4 col-xs-6">
+                <div class = "panel panel-default">
+						 <div class="img-thumbnail"> <a href="<?php echo $url;?>"><img src="<?php echo $filenpath;?>" class="img-responsive" width = "250" height="200"></a></div>
+      			   <p> <?php echo $title ?> </p>
+                    <h6>views: <?php echo $views ?></h6>
+                    <h6>upload date: <?php echo $date ?> </h6>
+							<h6>keywords: <?php echo $keywords ?></h6>
+                    <h6>description: <?php echo $description ?> </h6>
+                    <h6>category: <?php echo $category ?> </h6>
+                  <br>
+                  <br>
+    		  </div>
+           </div>
+			</div>
+			
+			<?php
+		}
+		
+	}
+	
+}
+
 	
 	
 ?>

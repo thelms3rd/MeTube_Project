@@ -151,7 +151,7 @@ if (!$result){
 	
 	?>
 <div class="container">
-	<h4> <?php echo $filename ?> </h4>
+	<h4> <?php echo $title ?> </h4>
 	<div class="row text-center">
             <div class="col-sm-4 col-md-4 col-lg-4 col-xs-6">
                 <div class = "panel panel-default">
