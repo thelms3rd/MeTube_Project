@@ -218,12 +218,14 @@ include_once "function.php";
 					</div>
 				</div>
 			</div>
+		<div class = "col">
+			<!--- Button Form Group -->
+			<div class="form-group">
+				<button name="submit" type="submit" class="btn btn-primary btn-md" style="width: 125px; margin-right: 15px">Filter</button>
+			</div>
 		</div>
-		<br>
-		<!--- Button Form Group -->
-		<div class="form-group">
-		<button name="submit" type="submit" class="btn btn-primary btn-md" style="width: 125px; margin-right: 15px; text-align: center">Filter</button>
-		</div>
+	</div>
+</div>
 </div>
 </div>
 
