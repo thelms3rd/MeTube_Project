@@ -147,8 +147,7 @@ include_once "function.php";
 	if(isset($_GET['search']))
 	{
 		$searchValue = $_GET['search'];
-		echo $searchValue;
-		$url = 'https://webapp.cs.clemson.edu/~jlhelms/MeTube_Project/image.php?id=';
+		header('Location: https://webapp.cs.clemson.edu/~jlhelms/MeTube_Project/browse.php?search='.$searchValue);
 	}
   ?>
 
