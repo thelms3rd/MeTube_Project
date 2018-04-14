@@ -142,6 +142,12 @@ if(isset($_POST['submit'])) {
 <?php
   if(isset($register_error))
    {  echo "<div id='passwd_result'> register_error:".$register_error."</div>";}
+	
+	if(isset($_GET['search']))
+	{
+		$searchValue = $_GET['search'];
+		header('Location: https://webapp.cs.clemson.edu/~jlhelms/MeTube_Project/browse.php?search='.$searchValue);
+	}
 ?>
 
 <!-- Optional JavaScript -->

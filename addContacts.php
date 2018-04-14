@@ -194,7 +194,12 @@ include_once "function.php";
 		if(isset($_POST['submit_delete'])) {
 			
 			delete_contact($_SESSION['username'],$_POST['user_delete']);
-		}	
+		}
+		if(isset($_GET['search']))
+		{
+			$searchValue = $_GET['search'];
+			header('Location: https://webapp.cs.clemson.edu/~jlhelms/MeTube_Project/browse.php?search='.$searchValue);
+		}
 	}
 	
 

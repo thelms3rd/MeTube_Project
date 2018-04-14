@@ -157,8 +157,11 @@ include_once "function.php";
 		message_user($_SESSION['username'],$_POST['username'], $_POST['message']);
 		
 		
-		
-	
+		}
+	if(isset($_GET['search']))
+	{
+		$searchValue = $_GET['search'];
+		header('Location: https://webapp.cs.clemson.edu/~jlhelms/MeTube_Project/browse.php?search='.$searchValue);
 	}
 	
 
