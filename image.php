@@ -121,7 +121,9 @@ include_once "function.php";
 session_start();
 include_once "function.php";	
 
+?>	
 <br>
+<?php
 $id = $_GET['id'];
 $query = "SELECT * FROM media WHERE mediaid='$id'";
 echo $query;
