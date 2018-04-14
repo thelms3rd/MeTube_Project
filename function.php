@@ -386,14 +386,15 @@ function most_views()
 
 function browse_files($category, $type)
 {
-	if (($category='All') and ($type='All'))
+		
+	if (($category=='All') and ($type=='All'))
 	{
 		$query = "SELECT * FROM media";
 		echo $query;
 	}
-	else if(($category='All') or ($type='All'))
+	else if(($category=='All') or ($type=='All'))
 	{
-		if (($category='All'))
+		if (($category=='All'))
 		{
 			$query = "SELECT * FROM media WHERE media_type='$type'";
 			echo $query;
