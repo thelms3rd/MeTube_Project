@@ -177,7 +177,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 		}
 		if(isset($_GET['search'])) {
 		
-		echo $_GET['search'];
+		//echo $_GET['search'];
 		
 		}
 ?>	
@@ -193,4 +193,3 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 </body>
 
 </html>
-
