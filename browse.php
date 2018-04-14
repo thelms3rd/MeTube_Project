@@ -187,16 +187,16 @@ include_once "function.php";
 	*/ ?>
 <div class = "panel panel-default" style="width: 500; text-align: center;">
 	<div class = "panel-body">
-		<div class = "panel panel-default" style="width: 200; text-align: center;">
+		<div class = "panel panel-default" style="width: 200;">
 			<div class = "panel-body">
-			<h5 style="margin-bottom:0px; margin-top: 20px;">Category</h5>
+				<h5 style="margin-bottom:0px; margin-top: 20px;">Category</h5>
 				<select name="category"class="form-control" style="width: 175px;">
 				<option>Comedy</option>
 				<option>Music</option>
 				<option>Sports</option>
 				<option>Educational</option>
 				<option>Other</option>
-			</select>
+				</select>
 			</div>
 		</div>
 	</div>
