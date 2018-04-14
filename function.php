@@ -386,6 +386,69 @@ function most_views()
 
 function browse_files($category, $type)
 {
+	if (($category='All') && ($type='All'))
+	{
+		$query = "SELECT * FROM media";		 
+	}
+	else if(($category='All') || ($type='All'))
+	{
+		if (($category='All'))
+		{
+			$query = "SELECT * FROM media WHERE media_type='$type'";
+		}
+		else {
+			$query = "SELECT * FROM media WHERE category='$category'";
+		}
+	}
+	else {
+		$query = "SELECT * FROM media WHERE category='$category' AND media_type='$type'";
+	}
+	
+	$result = mysql_query( $query );
+	if (!$result){
+		die ("query failed. Could not query the database: <br />". mysql_error());
+	}
+	else {
+	
+		?>
+		<div class="container">
+		
+		<?php
+		while ($row = mysql_query($result))
+		{
+			$row = mysql_fetch_row($result);
+			$mediaid = $row[3];
+			$filename = $row[0];
+			$filenpath = $row[4];
+			$title = $row[5];
+			$date = $row[6];
+			$description = $row[7];
+			$category = $row[8];
+			$keywords = $row[9];
+			$views = $row[10];
+			
+			?>
+			<div class="row text-center">
+
+            <div class="col-sm-4 col-md-4 col-lg-4 col-xs-6">
+                <div class = "panel panel-default">
+						 <div class="img-thumbnail"> <a href="<?php echo $filenpath;?>"><img src="<?php echo $filenpath;?>" class="img-responsive" width = "400" height="200"><onclick="javascript:saveDownload(<?php echo $result_row[4];?>);">Download</onclick></a></div>
+      			   <p> <?php echo $title ?> </p>
+                    <h6>views: <?php echo $views ?></h6>
+                    <h6>upload date: <?php echo $date ?> </h6>
+							<h6>keywords: <?php echo $keywords ?></h6>
+                    <h6>description: <?php echo $description ?> </h6>
+                    <h6>category: <?php echo $category ?> </h6>
+                  <br>
+                  <br>
+    		  </div>
+           </div>
+			</div>
+			
+			<?php
+		}
+	
+	}
 	
 }
 
