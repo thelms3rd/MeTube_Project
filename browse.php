@@ -238,11 +238,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 			echo "Category:" .$_POST['category'];
 			echo "<br>";
 			echo "fileType:" .$_POST['fileType'];
-			$category=$_POST['category'];
-			$fileType=$_POST['fileType'];
+			
 			//add_contact($_SESSION['username'],$_POST['username'], $_POST['contact_organization']);
 			
-			browse_files($category, $fileType);
+			browse_files($_POST['category'], $_POST['fileType']);
 		}
 }
 ?>	
