@@ -185,7 +185,8 @@ include_once "function.php";
 
    </div>
 	*/ ?>
-	
+<div class = "panel panel-default" style="width: 500; text-align: center;">	
+	<div class = "panel panel-default" style="width: 200; text-align: center;">	
 <h5 style="margin-bottom:0px; margin-top: 20px;">Category</h5>
 		<select name="category"class="form-control" style="width: 175px;">
 			<option>Comedy</option>
@@ -194,6 +195,8 @@ include_once "function.php";
 			<option>Educational</option>
 			<option>Other</option>
 		</select>
+	</div>
+	</div>
 	
 	
 </body>
