@@ -185,7 +185,8 @@ include_once "function.php";
 
    </div>
 	*/ ?>
-<div class = "panel panel-default" style="width: 500; text-align: center;">
+<div class="container">
+<div class = "panel panel-default" style="width: 500;">
 	<div class = "panel-body">
 		<div class = "panel panel-default" style="width: 200;">
 			<div class = "panel-body">
@@ -201,6 +202,7 @@ include_once "function.php";
 		</div>
 	</div>
 </div>
+	</div>
 
 	
 	
