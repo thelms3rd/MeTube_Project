@@ -40,6 +40,9 @@
     <li class="nav-item">
       <a class="nav-link" href="#">Audio</a>
     </li>
+	  <li class="nav-item">
+      <a class="nav-link" href="browse.php">Browse</a>
+    </li>
    </ul>
 	    
 	
