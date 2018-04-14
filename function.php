@@ -457,7 +457,7 @@ function browse_files($category, $type)
 
 function search_files($search)
 {
-	$query = "SELECT * FROM media WHERE title LIKE '%$search%' OR desription LIKE '%$search%' OR keywords LIKE '%$search%'";
+	$query = "SELECT * FROM media WHERE title LIKE '%$search%' OR description LIKE '%$search%' OR keywords LIKE '%$search%'";
 	$result = mysql_query( $query );
 	
 	if(!$result)
