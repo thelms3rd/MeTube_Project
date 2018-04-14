@@ -235,7 +235,7 @@ include_once "function.php";
 if($_SERVER["REQUEST_METHOD"] == "POST") {	
 		if(isset($_POST['filter'])) {
 			//call the add_contact function
-			echo "Category:" $_POST['category'];
+			echo "Category:" .$_POST['category'].;
 			echo "<br>";
 			echo "fileType:" $_POST['fileType'];
 			$category=$_POST['category'];
