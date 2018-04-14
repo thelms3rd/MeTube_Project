@@ -414,9 +414,9 @@ function browse_files($category, $type)
 		<div class="container">
 		
 		<?php
-		while ($row = mysql_query($result))
+		while ($row = mysql_fetch_row($result))
 		{
-			$row = mysql_fetch_row($result);
+			//$row = mysql_fetch_row($result);
 			$mediaid = $row[3];
 			$filename = $row[0];
 			$filenpath = $row[4];
