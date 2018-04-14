@@ -123,6 +123,8 @@ include_once "function.php";
 
 ?>	
 <br>
+
+<!-------------------------- MIDDLE OF PHP------------------->
 <?php
 $id = $_GET['id'];
 $query = "SELECT * FROM media WHERE mediaid='$id'";
@@ -162,11 +164,18 @@ if (!$result){
                   </div>
             	</div>
 		</div>
-	
-	<?php
+<?php
+
+//increment the files number of views	
+increment_view($mediaid);
 }
 
+
 ?>
+	
+
+
+
 <!---------------------------------------------------------------------->
 
 
