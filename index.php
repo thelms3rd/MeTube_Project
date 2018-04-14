@@ -172,7 +172,7 @@ include_once "function.php";
       			   <p> <?php echo $title ?> </p>
                     <h6>views: <?php echo $views ?></h6>
                     <h6>upload date: <?php echo $date ?> </h6>
-							<h6>views: <?php echo $keywords ?></h6>
+							<h6>keywords: <?php echo $keywords ?></h6>
                     <h6>description: <?php echo $description ?> </h6>
                     <h6>category: <?php echo $category ?> </h6>
                   <br>
