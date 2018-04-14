@@ -187,7 +187,7 @@ include_once "function.php";
 	*/ ?>
 <br>
 <div class="container">
-<div class = "card" style="width: 550px;">
+<div class = "card" style="width: 700px;">
 	<div class = "card-body">
 		<div class="row">
 			<div class="col">
