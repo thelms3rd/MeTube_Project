@@ -185,6 +185,7 @@ include_once "function.php";
 
    </div>
 	*/ ?>
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 <br>
 <div class="container">
 <div class = "card" style="width: 700px;">
@@ -228,17 +229,18 @@ include_once "function.php";
 </div>
 </div>
 </div>
+</form>
 
 <?php 
 if($_SERVER["REQUEST_METHOD"] == "POST") {	
-		//if(isset($_POST['filter'])) {
+		if(isset($_POST['filter'])) {
 			//call the add_contact function
 			echo "Category: $_POST[category]";
 			echo "<br>";
 			echo "FileType: $_POST[fileType]";
 		
 			//add_contact($_SESSION['username'],$_POST['username'], $_POST['contact_organization']);
-		//}
+		}
 }
 ?>	
 <!---------------------------------------------------------------------->
