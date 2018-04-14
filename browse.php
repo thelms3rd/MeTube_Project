@@ -186,6 +186,15 @@ include_once "function.php";
    </div>
 	*/ ?>
 	
+<h5 style="margin-bottom:0px; margin-top: 20px;">Category</h5>
+		<select name="category"class="form-control" style="width: 175px;">
+			<option>Comedy</option>
+			<option>Music</option>
+			<option>Sports</option>
+			<option>Educational</option>
+			<option>Other</option>
+		</select>
+	
 	
 </body>
 
