@@ -456,9 +456,7 @@ function browse_files($category, $type)
 		}
 	
 	}
-	
 }
-
 
 	
 	
