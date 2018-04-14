@@ -148,7 +148,7 @@ include_once "function.php";
 <br>
 <h5> MOST VIEWED: </h5>
 
-<?php
+<?php/*
   while ($result_row = mysql_fetch_row($result)) //filename, username, type, mediaid, path
   {
     $mediaid = $result_row[3];
@@ -181,10 +181,11 @@ include_once "function.php";
             </div>
 </div>
 
+*/ 
+most_views();	
 <?php
 }
 ?>
-
 <hr>
 
 <!--- Display the New Uploads ---->

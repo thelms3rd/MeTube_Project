@@ -338,11 +338,42 @@ function most_views()
 	else {
 		
 		$count = 0;
-		while (count < 6)
+		
+		?>
+		<div class="container">
+			<div class="row">
+		<?php		
+		while (count < 3)
 		{
 			$row = mysql_fetch_row($result);
+			$mediaid = $result_row[3];
+			$filename = $result_row[0];
+			$filenpath = $result_row[4];
+			$title = $result_row[5];
+			$date = $result_row[6];
+			$description = $result_row[7];
+			$category = $result_row[8];
+			$keywords = $result_row[9];
+			$views = $result_row[10];
 			
+			?> 
+					<div class="col">
+						<div class = "panel panel-default">
+							<div class="img-thumbnail"> <a href="<?php echo $filenpath;?>"><img src="<?php echo $filenpath;?>" class="img-responsive" width = "400" height="200"><onclick="javascript:saveDownload(<?php echo $result_row[4];?>);">Download</onclick></a></div>
+							<p> <?php echo $title ?> </p>
+                    	<h6>views: <?php echo $views ?></h6>
+                    	<h6>upload date: <?php echo $date ?> </h6>
+							<h6>keywords: <?php echo $keywords ?></h6>
+                    	<h6>description: <?php echo $description ?> </h6>
+                    	<h6>category: <?php echo $category ?> </h6>
+                  </div>
+            	</div>
+			<?php
 		}
+	?> 
+			</div>
+		</div>
+	<?php
 	}
 }
 	
