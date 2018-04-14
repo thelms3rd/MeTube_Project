@@ -346,15 +346,15 @@ function most_views()
 		while ($count < 3)
 		{
 			$row = mysql_fetch_row($result);
-			$mediaid = $result_row[3];
-			$filename = $result_row[0];
-			$filenpath = $result_row[4];
-			$title = $result_row[5];
-			$date = $result_row[6];
-			$description = $result_row[7];
-			$category = $result_row[8];
-			$keywords = $result_row[9];
-			$views = $result_row[10];
+			$mediaid = $row[3];
+			$filename = $row[0];
+			$filenpath = $row[4];
+			$title = $row[5];
+			$date = $row[6];
+			$description = $row[7];
+			$category = $row[8];
+			$keywords = $row[9];
+			$views = $row[10];
 			
 			?> 
 					<div class="col">
