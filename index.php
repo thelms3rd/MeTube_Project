@@ -144,9 +144,9 @@ include_once "function.php";
 		echo $_SESSION['username'];
 	}
 	
-	if(isset($_POST['search']))
+	if(isset($_GET['search']))
 	{
-		$searchValue = $_POST['search'];
+		$searchValue = $_GET['search'];
 		echo $searchValue;
 		$url = 'https://webapp.cs.clemson.edu/~jlhelms/MeTube_Project/image.php?id=';
 	}
