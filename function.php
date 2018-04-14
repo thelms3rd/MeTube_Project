@@ -388,20 +388,24 @@ function browse_files($category, $type)
 {
 	if (($category='All') && ($type='All'))
 	{
-		$query = "SELECT * FROM media";		 
+		$query = "SELECT * FROM media";
+		echo $query;
 	}
 	else if(($category='All') || ($type='All'))
 	{
 		if (($category='All'))
 		{
 			$query = "SELECT * FROM media WHERE media_type='$type'";
+			echo $query;
 		}
 		else {
 			$query = "SELECT * FROM media WHERE category='$category'";
+			echo $query;
 		}
 	}
 	else {
 		$query = "SELECT * FROM media WHERE category='$category' AND media_type='$type'";
+		echo $query;
 	}
 	
 	$result = mysql_query( $query );
