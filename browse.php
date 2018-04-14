@@ -240,7 +240,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 			echo "FileType: $_POST[fileType]";
 		
 			//add_contact($_SESSION['username'],$_POST['username'], $_POST['contact_organization']);
-			//browse_files($_POST['category'], $_POST['fileType']);
+			
+			browse_files($_POST[category], $_POST[fileType]);
 		}
 }
 ?>	
