@@ -183,7 +183,6 @@ include_once "function.php";
 
 */ 
 	
-<?php
 	most_views();	
 }
 ?>
