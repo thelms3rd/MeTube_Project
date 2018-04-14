@@ -242,7 +242,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 			//add_contact($_SESSION['username'],$_POST['username'], $_POST['contact_organization']);
 			
 			browse_files($_POST['category'], $_POST['fileType']);
-			header('Location: https://webapp.cs.clemson.edu/~jlhelms/MeTube_Project/browse.php');
+			//header('Location: https://webapp.cs.clemson.edu/~jlhelms/MeTube_Project/browse.php');
 		}
 }
 ?>	
