@@ -343,7 +343,7 @@ function most_views()
 		<div class="container">
 			<div class="row">
 		<?php		
-		while (count < 3)
+		while ($count < 3)
 		{
 			$row = mysql_fetch_row($result);
 			$mediaid = $result_row[3];
@@ -369,6 +369,7 @@ function most_views()
                   </div>
             	</div>
 			<?php
+			$count++;
 		}
 	?> 
 			</div>
