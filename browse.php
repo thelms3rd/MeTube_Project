@@ -189,6 +189,8 @@ include_once "function.php";
 <div class="container">
 <div class = "card" style="width: 500px;">
 	<div class = "card-body">
+		<div class="row">
+			<div class="col">
 		<div class = "card" style="width: 200px;">
 			<div class = "card-body">
 				<h5 style="margin-bottom:0px; margin-top: 20px;">Category</h5>
@@ -201,7 +203,9 @@ include_once "function.php";
 				</select>
 			</div>
 		</div>
+	</div>
 		<div class = "card" style="width: 200px;">
+			<div class="col">
 			<div class = "card-body">
 				<h5 style="margin-bottom:0px; margin-top: 20px;">Media File Type</h5>
 				<select name="category"class="form-control" style="width: 175px;">
@@ -210,9 +214,11 @@ include_once "function.php";
 				<option>Video</option>
 				</select>
 			</div>
+			</div>
 		</div>
 	</div>
 </div>
+	</div>
 	</div>
 
 	
