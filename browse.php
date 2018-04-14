@@ -40,15 +40,15 @@
 	<!-- Left Nav Bar Elements -->
 
   <ul class="navbar-nav navbar-left">
-	  <a class="navbar-brand" href="index.php">METUBE</a>
+	  <a class="navbar-brand" href="index.php">MeTube</a>
     <li class="nav-item">
-      <a class="nav-link" href="#">IMAGE</a>
+      <a class="nav-link" href="https://webapp.cs.clemson.edu/~jlhelms/MeTube_Project/index.php">Image</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">VIDEO</a>
+      <a class="nav-link" href="#">Video</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">AUDIO</a>
+      <a class="nav-link" href="#">Audio</a>
     </li>
    </ul>
 
@@ -68,17 +68,45 @@
       </div>
     </form>
 
-		<!--<li class="nav-item">
+<!---- if the user is not logged in display register and Login Links ---->
+<?php if(!(isset($_SESSION['loggedIn']))): ?>
+		<li class="nav-item">
 		  <a class="nav-link" href="register.php"> Register</a>
-	  </li>-->
-	  <li class="nav-item">
-		  <a class="nav-link" href="index.php"> Logout</a>
+	  </li>
+	<li class="nav-item">
+		  <a class="nav-link" href="login.php"> Login</a>
 		</li>
+
+<!----- else (the user is logged in) then display the account and register links ---->
+<?php else: ?>
+		<li class="nav-item">
+
+			<div class="dropdown">
+    			<button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
+      			Account
+    			</button>
+    			<div class="dropdown-menu">
+      			<a class="dropdown-item" href="accountSettings.php" name="accountSetting">Update Account</a>
+      			<a class="dropdown-item" href="media_upload.php">Upload</a>
+					<a class="dropdown-item" href="addContacts.php">Contacts</a>
+      			<a class="dropdown-item" href="message.php">Message</a>
+    			</div>
+  			</div>
+		</li>
+
+		<li class="nav-item">
+		  <a class="nav-link" href="logout.php" name="logout"> Logout</a>
+		</li>
+
+<?php endif; ?>
+
  </ul>
 
 </div>
 </nav>
 </div>
+<!------------- END OF NAVIGATION BAR ----------->
+
 
 
 <!--nav bar ends-->
