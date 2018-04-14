@@ -169,8 +169,6 @@ if (!$result){
 		</div>
 <?php
 
-//increment the files number of views	
-increment_view($mediaid);
 }
 
 
