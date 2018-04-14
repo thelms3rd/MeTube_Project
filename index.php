@@ -143,6 +143,13 @@ include_once "function.php";
 		header('Location: https://webapp.cs.clemson.edu/~jlhelms/MeTube_Project/index.php');
 		echo $_SESSION['username'];
 	}
+	
+	if(isset($_POST['search']))
+	{
+		$searchValue = $_POST['search'];
+		echo $searchValue;
+		$url = 'https://webapp.cs.clemson.edu/~jlhelms/MeTube_Project/image.php?id=';
+	}
   ?>
 
 
