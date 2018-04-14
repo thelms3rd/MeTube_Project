@@ -122,10 +122,10 @@ include_once "function.php";
 <!--nav bar ends-->
 <?php
 
-	$_SESSION['username']
-?>
+
+/*
 <body>
-<p>Welcome <?php echo $_SESSION['username'];?></p>
+
 <a href='media_upload.php'  style="color:#FF9900;">Upload File</a>
 <div id='upload_result'>
 <?php
@@ -184,6 +184,9 @@ include_once "function.php";
 
 
    </div>
+	*/ ?>
+	
+	
 </body>
 
 </html>
