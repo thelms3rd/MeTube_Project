@@ -107,20 +107,14 @@ include_once "function.php";
   <input type="hidden" name="MAX_FILE_SIZE" value="10485760" />
    Add a Media: <label style="color:#663399"><em> (Each file limit 10M)</em></label><br/> 
    <input  name="file" type="file" size="50">
-	  
-	<form>
-   	<label class="radio-inline" style="padding-right: 10px;">
-      	<input type="radio" name="image">Image
-    	</label>
-    	<label class="radio-inline" style="padding-right: 10px;">
-      	<input type="radio" name="video">Video
-    	</label>
-    	<label class="radio-inline">
-      	<input type="radio" name="audio">Audio
-    	</label>
-  </form>
+ 
 <h4 style="margin-bottom:0px; margin-top: 20px;">Title</h4><input maxlength="40" id="title" name="title" type="text" class="form-control" style="width: 550px;">
 <br>
+	<select name="mediaType"class="form-control" style="width: 175px;">
+			<option>Image</option>
+			<option>Audio</option>
+			<option>Video</option>
+		</select>
 	
 	<h4 style="margin-bottom:0px; margin-top: 20px;">Keywords</h4><input maxlength="40" id="keywords" name="keywords" type="text" class="form-control" style="width: 550px;">
 <br>
