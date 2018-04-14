@@ -126,7 +126,7 @@ include_once "function.php";
 <?php
 $id = $_GET['id'];
 $query = "SELECT * FROM media WHERE mediaid='$id'";
-echo $query;
+//echo $query;
 
 $result = mysql_query( $query );
 if (!$result){
@@ -145,6 +145,8 @@ if (!$result){
 	$views = $row[10];
 	
 	?>
+<div class="container">
+	<h4> <?php echo $filename ?> </h4>
 	<div class="row text-center">
 
             <div class="col-sm-4 col-md-4 col-lg-4 col-xs-6">
@@ -160,6 +162,7 @@ if (!$result){
                   </div>
             	</div>
 		</div>
+	</div>
 	</div>
 	<?php
 }
