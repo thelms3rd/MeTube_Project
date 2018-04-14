@@ -28,6 +28,13 @@
 
 <!---------------- Navigation Bar --------->
 <body>
+	
+<?php
+session_start();
+include_once "function.php";
+
+?>
+	
 
  <div id="Navigation_Bar">
   <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
@@ -114,8 +121,7 @@
 
 <!--nav bar ends-->
 <?php
-session_start();
-include_once "function.php";
+
 	$_SESSION['username']
 ?>
 <body>
