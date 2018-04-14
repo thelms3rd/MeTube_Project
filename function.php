@@ -327,6 +327,24 @@ function delete_contact($logged_user, $delete_user)
 		}
 	}
 }
+
+function most_views()
+{
+	$query = "SELECT * FROM MEDIA ORDER BY views DESC";
+	$result = mysql_query( $query );
+	if (!$result){
+		die ("query failed. Could not query the database: <br />". mysql_error());
+	}
+	else {
+		
+		$count = 0;
+		while (count < 6)
+		{
+			$row = mysql_fetch_row($result);
+			
+		}
+	}
+}
 	
 	
 ?>

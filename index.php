@@ -158,6 +158,8 @@ include_once "function.php";
     $date = $result_row[6];
     $description = $result_row[7];
     $category = $result_row[8];
+	 $keywords = $result_row[9];
+	 $views = $result_row[10];
 ?>
 
 <!-- Display uploads -->
@@ -168,8 +170,9 @@ include_once "function.php";
                 <div class = "panel panel-default">
       			   <div class="img-thumbnail"> <a href="<?php echo $filenpath;?>"><img src="<?php echo $filenpath;?>" class="img-responsive" width = "400" height="200"><onclick="javascript:saveDownload(<?php echo $result_row[4];?>);">Download</a></div>
       			   <p> <?php echo $title ?> </p>
-                    <h6>views: </h6>
+                    <h6>views: <?php echo views ?></h6>
                     <h6>upload date: <?php echo $date ?> </h6>
+							<h6>views: <?php echo keywords ?></h6>
                     <h6>description: <?php echo $description ?> </h6>
                     <h6>category: <?php echo $category ?> </h6>
                   <br>
