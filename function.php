@@ -362,10 +362,12 @@ function most_views()
 			$keywords = $row[9];
 			$views = $row[10];
 			
+			$url = 'https://webapp.cs.clemson.edu/~jlhelms/MeTube_Project/image.php?id='.$mediaid;
+			
 			?> 
 					<div class="col">
 						<div class = "panel panel-default">
-							<div class="img-thumbnail"> <a href="<?php echo $filenpath;?>"><img src="<?php echo $filenpath;?>" class="img-responsive" width = "250" height="200"><onclick="javascript:saveDownload(<?php echo $result_row[4]; ?>); "><br>Download</onclick></a></div>
+							<div class="img-thumbnail"> <a href="<?php echo $url;?>"><img src="<?php echo $filenpath;?>" class="img-responsive" width = "250" height="200"><onclick="javascript:saveDownload(<?php echo $url; ?>); "><br>Download</onclick></a></div>
 							<p> <?php echo $title ?> </p>
                     	<h6>views: <?php echo $views ?></h6>
                     	<h6>upload date: <?php echo $date ?> </h6>
