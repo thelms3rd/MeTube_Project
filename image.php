@@ -130,6 +130,9 @@ $id = $_GET['id'];
 $query = "SELECT * FROM media WHERE mediaid='$id'";
 //echo $query;
 
+//increment the files number of views	
+increment_view($id);
+	
 $result = mysql_query( $query );
 if (!$result){
 		die ("media query failed. Could not query the database: <br />". mysql_error());
