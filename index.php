@@ -182,8 +182,9 @@ include_once "function.php";
 </div>
 
 */ 
-most_views();	
+	
 <?php
+	most_views();	
 }
 ?>
 <hr>
