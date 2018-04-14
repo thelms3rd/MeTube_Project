@@ -155,7 +155,7 @@ if (!$result){
 	<div class="row text-center">
             <div class="col-sm-4 col-md-4 col-lg-4 col-xs-6">
                 <div class = "panel panel-default">
-							<div class="img-thumbnail"> <a href="<?php echo $filenpath;?>"><img src="<?php echo $filenpath;?>" class="img-responsive" width = "400" height="200"><onclick="javascript:saveDownload(<?php echo $result_row[4];?>);">Download</onclick></a></div>
+							<div class="img-thumbnail"> <a href="<?php echo $filenpath;?>"><img src="<?php echo $filenpath;?>" class="img-responsive" width = "375" height="200"><onclick="javascript:saveDownload(<?php echo $result_row[4];?>);">Download</onclick></a></div>
 						 </div>
 					</div>
 					<div class="col">
