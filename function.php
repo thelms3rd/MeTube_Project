@@ -328,6 +328,12 @@ function delete_contact($logged_user, $delete_user)
 	}
 }
 
+function increment_view($file_id)
+{
+	$query = "UPDATE media SET views = views + 1 WHERE mediaid='$file_id'";
+	$result = mysql_query( $query );
+}
+
 function most_views()
 {
 	$query = "SELECT * FROM media ORDER BY views DESC";
@@ -359,7 +365,7 @@ function most_views()
 			?> 
 					<div class="col">
 						<div class = "panel panel-default">
-							<div class="img-thumbnail"> <a href="<?php echo $filenpath;?>"><img src="<?php echo $filenpath;?>" class="img-responsive" width = "250" height="200"><onclick="javascript:saveDownload(<?php echo $result_row[4];?>);"><br>Download</onclick></a></div>
+							<div class="img-thumbnail"> <a href="<?php echo $filenpath;?>"><img src="<?php echo $filenpath;?>" class="img-responsive" width = "250" height="200"><onclick="javascript:saveDownload(<?php echo $result_row[4]; increment_view($mediaid);?>); "><br>Download</onclick></a></div>
 							<p> <?php echo $title ?> </p>
                     	<h6>views: <?php echo $views ?></h6>
                     	<h6>upload date: <?php echo $date ?> </h6>
@@ -377,6 +383,8 @@ function most_views()
 	<?php
 	}
 }
+
+
 	
 	
 ?>
