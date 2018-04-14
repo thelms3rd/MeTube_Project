@@ -181,8 +181,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 if(isset($_GET['search']))
 {
- 	
 	search_files($_GET['search']);
+}
 
 ?>	
 <!---------------------------------------------------------------------->
