@@ -119,7 +119,6 @@ include_once "function.php";
 
 
 
-
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 <br>
 <div class="container">
@@ -180,6 +179,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 			//header('Location: https://webapp.cs.clemson.edu/~jlhelms/MeTube_Project/browse.php');
 		}
 }
+if(isset($_GET['search']))
+{
+	echo $_GET['search'];
+}
+
 ?>	
 <!---------------------------------------------------------------------->
 
