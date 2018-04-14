@@ -99,7 +99,7 @@ function update_Account($username, $updatedPassword)
 
 function message_user($fromUsername, $toUsername, $message)
 {
-	$query = "select * from account where username='$toUsername'";
+	$query = "select * from contact where username_fk='$fromUsername' AND mycontact='$toUsername'";
 	$result = mysql_query( $query );
 	if (!$result){
 		die ("user_exist_check() failed. Could not query the database: <br />". mysql_error());
@@ -107,7 +107,7 @@ function message_user($fromUsername, $toUsername, $message)
 	else {
 		$row = mysql_fetch_assoc($result);
 		if($row == 0){
-		echo "<br> <br> User does not Exist!";
+		echo "<br> <br> No contanct Found! ALERT you user must be a contact to send message!";
 		}
 		else{
 			$query2 = "INSERT INTO message (`username_fk`, `sentFrom`, `message_content`) VALUES ('$toUsername','$fromUsername','$message')";
