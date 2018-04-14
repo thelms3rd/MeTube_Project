@@ -384,6 +384,11 @@ function most_views()
 	}
 }
 
+function browse_files($category, $type)
+{
+	
+}
+
 
 	
 	
