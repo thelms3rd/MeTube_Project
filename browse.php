@@ -187,39 +187,44 @@ include_once "function.php";
 	*/ ?>
 <br>
 <div class="container">
-<div class = "card" style="width: 600px;">
+<div class = "card" style="width: 550px;">
 	<div class = "card-body">
 		<div class="row">
 			<div class="col">
-		<div class = "card" style="width: 225px;">
-			<div class = "card-body">
-				<h5 style="margin-bottom:0px; margin-top: 20px;">Category</h5>
-				<select name="category"class="form-control" style="width: 175px;">
-				<option>Comedy</option>
-				<option>Music</option>
-				<option>Sports</option>
-				<option>Educational</option>
-				<option>Other</option>
-				</select>
+				<div class = "card" style="width: 225px;">
+					<div class = "card-body">
+						<h5 style="margin-bottom:0px; margin-top: 20px;">Category</h5>
+						<select name="category"class="form-control" style="width: 175px;">
+							<option>All</option>
+							<option>Comedy</option>
+							<option>Music</option>
+							<option>Sports</option>
+							<option>Educational</option>
+							<option>Other</option>
+						</select>
+					</div>
+				</div>
+			</div>
+			<div class = "card" style="width: 225px;">
+				<div class="col">
+					<div class = "card-body">
+						<h5 style="margin-bottom:0px; margin-top: 20px;">Media File Type</h5>
+						<select name="category"class="form-control" style="width: 175px;">
+							<option>All</option>
+							<option>Image</option>
+							<option>Audio</option>
+							<option>Video</option>
+						</select>
+					</div>
+				</div>
 			</div>
 		</div>
-	</div>
-		<div class = "card" style="width: 225px;">
-			<div class="col">
-			<div class = "card-body">
-				<h5 style="margin-bottom:0px; margin-top: 20px;">Media File Type</h5>
-				<select name="category"class="form-control" style="width: 175px;">
-				<option>Image</option>
-				<option>Audio</option>
-				<option>Video</option>
-				</select>
-			</div>
-			</div>
+		<!--- Button Form Group -->
+		<div class="form-group">
+		<button name="submit" type="submit" class="btn btn-primary btn-md" style="width: 125px; margin-right: 15px">Filter</button>
 		</div>
-	</div>
 </div>
-	</div>
-	</div>
+</div>
 
 	
 	
