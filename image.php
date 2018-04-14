@@ -116,9 +116,47 @@ include_once "function.php";
 </nav>
 </div>
 <!------------- END OF NAVIGATION BAR ----------->
+
 <?php
+session_start();
+include_once "function.php";	
+
+<br>
 $id = $_GET['id'];
-echo $id;	
+$query = "SELECT * FROM media WHERE mediaid='$id'";
+echo $query;
+
+$result = mysql_query( $query );
+if (!$result){
+		die ("media query failed. Could not query the database: <br />". mysql_error());
+	} else {
+	
+	$row = mysql_fetch_row($result);
+	$mediaid = $row[3];
+	$filename = $row[0];
+	$filenpath = $row[4];
+	$title = $row[5];
+	$date = $row[6];
+	$description = $row[7];
+	$category = $row[8];
+	$keywords = $row[9];
+	$views = $row[10];
+	
+	?>
+	<div class="col">
+						<div class = "panel panel-default">
+							<div class="img-thumbnail"> <a href="<?php echo $filenpath;?>"><img src="<?php echo $filenpath;?>" class="img-responsive" width = "400" height="200"><onclick="javascript:saveDownload(<?php echo $result_row[4];?>);">Download</onclick></a></div>
+							<p> <?php echo $title ?> </p>
+                    	<h6>views: <?php echo $views ?></h6>
+                    	<h6>upload date: <?php echo $date ?> </h6>
+							<h6>keywords: <?php echo $keywords ?></h6>
+                    	<h6>description: <?php echo $description ?> </h6>
+                    	<h6>category: <?php echo $category ?> </h6>
+                  </div>
+            	</div>
+	<?php
+}
+
 ?>
 <!---------------------------------------------------------------------->
 
