@@ -26,82 +26,14 @@ text-align: center;
 
 	
 <!------------------ Beginning of Body ---------->
+	<body>
 <?php
 session_start();
 include_once "function.php";
+nav_bar();
 
 ?>
 	
-<!---------------- Navigation Bar --------->
-<body>
-	
- <div id="Navigation_Bar">
-  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-  <div class="container-fluid">
-		
-  
- 
-  <!-- Links that are located on the Navagation Bar -->
-  
-	<!-- Left Nav Bar Elements -->
-		
-  <ul class="navbar-nav navbar-left">
-	  <a class="navbar-brand" href="index.php">MeTube</a>
-    <li class="nav-item">
-      <a class="nav-link" href="https://webapp.cs.clemson.edu/~jlhelms/MeTube_Project/index.php">Image</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Video</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Audio</a>
-    </li>
-	  <li class="nav-item">
-      <a class="nav-link" href="browse.php">Browse</a>
-    </li>
-   </ul>
-	    
-	
-	  <!-- Right Nav Bar Elements -->
-	<ul class="nav navbar-nav navbar-right">
-		
-		<!-- Search bar -->
-		<form class="navbar-form navbar-right" action="#" style="padding-right: 20px; width: 450px">
-      <div class="input-group">
-        <input type="text" class="form-control" placeholder="Search" name="search">
-        <div class="input-group-btn">
-          <button class="btn btn-default" type="submit">
-				 <i class="fas fa-search"></i>
-       	 </button>
-        </div>
-      </div>
-    </form>
-
-		<li class="nav-item">
-		  <div class="dropdown">
-    			<button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
-      			Account
-    			</button>
-    			<div class="dropdown-menu">
-      			<a class="dropdown-item" href="accountSettings.php" name="accountSetting">Update Account</a>
-      			<a class="dropdown-item" href="media_upload.php">Upload</a>
-					<a class="dropdown-item" href="addContacts.php">Contacts</a>
-      			<a class="dropdown-item" href="message.php">Message</a>
-    			</div>
-  			</div>
-		</li>
-		<li class="nav-item">
-		  <a class="nav-link" href="logout.php" name="logout"> Logout</a>
-		</li>
-
-
-			
- </ul>
-	
-</div>
-</nav>
-</div>
-<!------------- END OF NAVIGATION BAR ----------->
 
 
 <!------------------ MIDDLE HTML Code ----------------------->
