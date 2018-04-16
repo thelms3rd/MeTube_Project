@@ -656,7 +656,6 @@ function file_comments($fileid)
 {
 	$query = "select * from comment where file_id='$fileid'";
 	$result = mysql_query( $query );
-	echo $query;
 	
 	if (!$result){
 		die ("user_exist_check() failed. Could not query the database: <br />". mysql_error());

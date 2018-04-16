@@ -128,7 +128,7 @@ if (!$result){
 				
 				<!--- Button Form Group -->
 				<div class="form-group">
-					<button name="submit_comment" type="submit" class="btn btn-primary btn-md" style="width: 125px; margin-right: 15px">Submit</button>
+					<button name="submit_comment" type="submit" onClick="history.go(0)" VALUE="Refresh" class="btn btn-primary btn-md" style="width: 125px; margin-right: 15px">Submit</button>
 					<button name="reset" type="reset" class="btn btn-danger btn-md" style="width: 125px">Reset</button>
 				</div>
 			</div>
