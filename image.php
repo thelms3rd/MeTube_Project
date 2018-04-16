@@ -128,7 +128,7 @@ if (!$result){
 				
 				<!--- Button Form Group -->
 				<div class="form-group">
-					<button name="submit_comment" type="submit" onclick="send_comment($_SESSION['loggedIn'], $_GET['id'], $_GET['comment']);" class="btn btn-primary btn-md" style="width: 125px; margin-right: 15px">Submit</button>
+					<button name="submit_comment" type="submit" onclick="call_send_comment()" class="btn btn-primary btn-md" style="width: 125px; margin-right: 15px">Submit</button>
 					<button name="reset" type="reset" class="btn btn-danger btn-md" style="width: 125px">Reset</button>
 				</div>
 			</div>
@@ -143,11 +143,16 @@ if (!$result){
 
 }
 	
-if(isset($_GET['submit_comment'])) {
-	
-		//send_comment($_SESSION['loggedIn'], $_GET['id'], $_GET['comment']);
+//if(isset($_GET['submit_comment'])) {
+
+//send_comment($_SESSION['loggedIn'], $_GET['id'], $_GET['comment']);
 		
-		}
+		//}
+
+function call_send_comment()
+{
+	send_comment($_SESSION['loggedIn'], $_GET['id'], $_GET['comment']);
+}
 ?>
 	
 
