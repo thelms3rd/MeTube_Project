@@ -42,17 +42,14 @@ nav_bar();
 
 <!-------------------------- MIDDLE OF PHP------------------->
 <?php
+$id = $_GET['id'];
+$query = "SELECT * FROM media WHERE mediaid='$id'";
+//echo $query;
+
+//increment the files number of views	
+increment_view($id);
 	
-if($_SERVER["REQUEST_METHOD"] == "GET") {
-	$_SESSION['fileid'] = $_GET['id'];
-}
-	$query = "SELECT * FROM media WHERE mediaid='$_SESSION['fileid']'";
-	//echo $query;
-
-	//increment the files number of views	
-	increment_view($_SESSION['fileid']);
-
-	$result = mysql_query( $query );
+$result = mysql_query( $query );
 if (!$result){
 		die ("media query failed. Could not query the database: <br />". mysql_error());
 	} else {
@@ -101,7 +98,7 @@ if (!$result){
 					</tr>
 				 </thead>
 				 <tbody>
-					<?php file_comments($_SESSION['fileid']);	?>
+					<?php file_comments($id);	?>
 				  </tbody>
 				</table>
 			  </div>	
@@ -117,7 +114,7 @@ if (!$result){
 				
 				
 				<!---- HIDDEN INPUT --->
-				<input name="id" type="hidden" value="<?php echo $_SESSION['fileid'] ?>">
+				<input name="id" type="hidden" value="<?php echo $id ?>">
 		
 			</form>
 			<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">	
@@ -150,11 +147,8 @@ if (!$result){
 }
 	
 if(isset($_POST['submit_comment'])) {
-	
-	echo $_SESSION['loggedIn']; 
-	echo $_SESSION['fileid'];
-	echo $_POST['comment'];
-	send_comment($_SESSION['loggedIn'], $_SESSION['fileid'], $_POST['comment']);
+
+	send_comment($_SESSION['loggedIn'], $_GET['id'], $_POST['comment']);
 		
 }
 
