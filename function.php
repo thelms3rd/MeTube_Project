@@ -766,7 +766,7 @@ function file_owner($username, $fileid)
 	}	
 	else {
 		
-		$row=mysql_fetch_row($result)
+		$row=mysql_fetch_row($result);
 		
 		//return true if loggedin user equals username on file
 		if($username == $row[0])
