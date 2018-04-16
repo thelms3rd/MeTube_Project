@@ -130,7 +130,7 @@ if (!$result){
 				
 			</div>
 		<?php
-		}
+		} ?>
 		</div>
 		</div>
 <?php
