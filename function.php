@@ -381,6 +381,54 @@ function most_views()
 	}
 }
 
+
+function new_uploads()
+{
+	$query = "SELECT * FROM media ORDER BY date DESC";
+	$result = mysql_query( $query );
+	if (!$result){
+		die ("query failed. Could not query the database: <br />". mysql_error());
+	}
+	else {
+		
+		$count = 0;
+		
+		?>
+		<div class="container">
+			<div class="row">
+		<?php		
+		while ($count < 3)
+		{
+			$row = mysql_fetch_row($result);
+			$mediaid = $row[3];
+			$filename = $row[0];
+			$filenpath = $row[4];
+			$title = $row[5];
+			$date = $row[6];
+			$description = $row[7];
+			$category = $row[8];
+			$keywords = $row[9];
+			$views = $row[10];
+			
+			$url = 'https://webapp.cs.clemson.edu/~jlhelms/MeTube_Project/image.php?id='.$mediaid;
+			
+			?> 
+					<div class="col">
+						<div class = "panel panel-default">
+							<h5> <?php echo $title ?> </h5>
+							<div class="img-thumbnail"> <a href="<?php echo $url;?>"><img src="<?php echo $filenpath;?>" class="img-responsive" width = "250" height="200"></a></div>
+                  </div>
+            	</div>
+			<?php
+			$count++;
+		}
+	?> 
+			</div>
+		</div>
+	<?php
+	}
+}
+
 function browse_files($category, $type)
 {
 		
