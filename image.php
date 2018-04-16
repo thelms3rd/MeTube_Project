@@ -43,11 +43,12 @@ nav_bar();
 <!-------------------------- MIDDLE OF PHP------------------->
 <?php
 $_SESSION['fileid'] = $_GET['id'];
+$id = $_GET['id'];
 $query = "SELECT * FROM media WHERE mediaid='$id'";
 //echo $query;
 
 //increment the files number of views	
-increment_view($id);
+increment_view($_SESSION['fileid']);
 	
 $result = mysql_query( $query );
 if (!$result){
