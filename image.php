@@ -43,6 +43,9 @@ nav_bar();
 <!-------------------------- MIDDLE OF PHP------------------->
 <?php
 $id = $_GET['id'];
+	
+$_SESSION['mediaid'] = $id;
+	
 $query = "SELECT * FROM media WHERE mediaid='$id'";
 //echo $query;
 
