@@ -106,7 +106,7 @@ if (!$result){
 			<?php if((isset($_SESSION['loggedIn']))) { ?>
 			<div class="col">
 		
-				<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+				<form method="get" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 				<h5 class="text-center">Add a Comment</h5>
 
 			<!------- This is the style of the shadowed box containing username and password ---->	
