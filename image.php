@@ -150,7 +150,7 @@ if(isset($_GET['submit_comment'])) {
 		echo $_GET['id'];
 		echo $_GET['comment'];
 	
-		//send_comment($_SESSION['loggedIn'], $_GET['id'], $_GET['comment']);
+		send_comment($_SESSION['loggedIn'], $_GET['id'], $_GET['comment']);
 		
 		
 		}
