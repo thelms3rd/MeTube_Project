@@ -43,12 +43,17 @@ $addCommenturl = 'https://webapp.cs.clemson.edu/~jlhelms/MeTube_Project/addComme
 	
 <div class="container"> 
 	<br>
+	
+<?php if(isset($_SESSION['loggedIn'])) { ?>
 	<div class="container">
   		<ul class="pagination"  class="text-center">
     		<li class="page-item"><a class="page-link" href="<?php echo $imageurl ?>" style="width: 300px">Current File</a></li>
     		<li class="page-item"><a class="page-link" href="<?php echo $addCommenturl ?>" style="width: 300px">Add Comment</a></li>
   		</ul>
 	</div>
+
+<?php } ?>
+	
 	<br>
 	<br>
 	<div class="row">

@@ -73,12 +73,14 @@ if (!$result){
 	
 	?>
 <div class="container">
+<?php if(isset($_SESSION['loggedIn'])) { ?>
 	<div class="container">
   		<ul class="pagination"  class="text-center">
     		<li class="page-item"><a class="page-link" href="<?php echo $imageurl ?>" style="width: 300px">Current File</a></li>
     		<li class="page-item"><a class="page-link" href="<?php echo $addCommenturl ?>" style="width: 300px">Add Comment</a></li>
   		</ul>
 	</div>
+<?php } ?>	
 	<h4> <?php echo $title ?> </h4>
 	<div class="row text-center">
             <div class="col-sm-4 col-md-4 col-lg-4 col-xs-6">
