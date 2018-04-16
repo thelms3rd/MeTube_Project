@@ -139,7 +139,7 @@ if (!$result){
 	
 if(isset($_POST['submit_comment'])) {
 	
-		header('Location: https://webapp.cs.clemson.edu/~jlhelms/MeTube_Project/image.php?id='.$mediaid;');
+		header('Location: https://webapp.cs.clemson.edu/~jlhelms/MeTube_Project/image.php?id='.$mediaid;'');
 		echo $_SESSION['loggedIn'];
 		echo $_GET['id'];
 		echo $_POST['comment'];
