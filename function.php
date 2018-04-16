@@ -738,13 +738,9 @@ function my_uploads($username, $category, $type)
 
             <div class="col-sm-4 col-md-4 col-lg-4 col-xs-6">
                 <div class = "panel panel-default">
-						 <div class="img-thumbnail"> <a href="<?php echo $url;?>"><img src="<?php echo $filenpath;?>" class="img-responsive" width = "250" height="200"></a></div>
-      			   <p> <?php echo $title ?> </p>
-                    <h6>views: <?php echo $views ?></h6>
-                    <h6>upload date: <?php echo $date ?> </h6>
-							<h6>keywords: <?php echo $keywords ?></h6>
-                    <h6>description: <?php echo $description ?> </h6>
-                    <h6>category: <?php echo $category ?> </h6>
+						 
+						 <h6> <?php echo $title ?> </h6>
+						 <div class="img-thumbnail"> <a href="<?php echo $url;?>"><img src="<?php echo $filenpath;?>" class="img-responsive" width = "250" height="200"></a></div>   
                   <br>
                   <br>
     		  </div>
