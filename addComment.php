@@ -61,55 +61,19 @@ $addCommenturl = 'https://webapp.cs.clemson.edu/~jlhelms/MeTube_Project/addComme
 			<!------- This is the style of the shadowed box containing username and password ---->	
 			<div style="width: 300px; height: 320px; padding: 15px; background-color: #f1f1f1; box-shadow: 1px 1px 1px 1px grey; margin: auto;">
 
-				<!---- Add Contact Form Group --->
+				<!---- Add Comment Form Group --->
 				<div class="form-group">
-					<label>Add Contact:</label>
-					<input type="username" class="form-control" name="username" required>
+					<label>Add Comment:</label>
+					<textarea class="form-control" rows="5" name="comment" required></textarea>
 				</div>
-
-				<!----- Contact Organization --->
-				<div class="form-group">
-					<label>Contact Organization (select one):</label>
-					<select class="form-control" name="contact_organization">
-						<option>Favorite</option>
-						<option>Family</option>
-						<option>Friend</option>
-						<option>Other</option>
-					</select>
-				</div>
-				<br>
 
 				<!--- Button Form Group -->
 				<div class="form-group">
-					<button name="submit_contact" type="submit" class="btn btn-primary btn-md" style="width: 125px; margin-right: 15px">Submit</button>
+					<button name="submit_comment" type="submit" class="btn btn-primary btn-md" style="width: 125px; margin-right: 15px">Submit</button>
 					<button name="reset" type="reset" class="btn btn-danger btn-md" style="width: 125px">Reset</button>
 				</div>
 			</div>
 			</form>
-		</div>
-		
-		<!------------- Delete a contact ------------->
-		<div class="col">
-			<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-			<h4 class="text-center">Delete a Contact</h4>
-
-			<!------- This is the style of the shadowed box containing username and password ---->	
-			<div style="width: 300px; height: 320px; padding: 15px; background-color: #f1f1f1; box-shadow: 1px 1px 1px 1px grey; margin: auto;">
-
-				<!---- Delete contact Form Group --->
-				<div class="form-group">
-					<label>Delete Contact:</label>
-					<input type="username" class="form-control" name="user_delete" required>
-				</div>
-
-				<br>
-
-				<!--- Button Form Group -->
-				<div class="form-group">
-					<button name="submit_delete" type="submit" class="btn btn-primary btn-md" style="width: 125px; margin-right: 15px">Submit</button>
-				</div>
-			</div>
-		</form>
 		</div>
 	</div>
 </div>
@@ -121,11 +85,10 @@ $addCommenturl = 'https://webapp.cs.clemson.edu/~jlhelms/MeTube_Project/addComme
 	if($_SERVER["REQUEST_METHOD"] == "POST") {
 		if(isset($_POST['submit_contact'])) {
 			//call the add_contact function
-			echo "Add Contact: $_POST[username]";
-			echo "<br>";
-			echo "Organization: $_POST[contact_organization]";
+			echo "Add Contact: $_POST[comment]";
+	
 		
-			add_contact($_SESSION['username'],$_POST['username'], $_POST['contact_organization']);
+			send_comment($_SESSION['username'], $_GET['id]', $_POST['comment']);
 		}
 		if(isset($_POST['submit_delete'])) {
 			
