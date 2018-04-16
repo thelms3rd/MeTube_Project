@@ -88,11 +88,7 @@ $addCommenturl = 'https://webapp.cs.clemson.edu/~jlhelms/MeTube_Project/addComme
 			echo "Add Contact: $_POST[comment]";
 	
 		
-			send_comment($_SESSION['username'], $_GET['id]', $_POST['comment']);
-		}
-		if(isset($_POST['submit_delete'])) {
-			
-			delete_contact($_SESSION['username'],$_POST['user_delete']);
+			send_comment($_SESSION['username'], $_GET['id'], $_POST['comment']);
 		}
 		if(isset($_GET['search']))
 		{
