@@ -79,13 +79,14 @@ if (!$result){
                     	<h6>category: <?php echo $category ?> </h6>
                   </div>
            		</div>
-		<div class="row text-center">
-			
-			
+		
+		<!---------- Second Row (Comments) -------->
+		<br>
+		<div class="row text-center">	
 			<div class="col">
 		
 				<div class="container">
-			  	<h4 class="text-center">Your Messages:</h4>          
+			  	<h5 class="text-center">Comments:</h5>          
 			  	<table class="table">
 				 <thead>
 					<tr>
@@ -98,6 +99,33 @@ if (!$result){
 				  </tbody>
 				</table>
 			  </div>	
+			</div>
+			
+			<!-------------- ADD a Comment ------>
+			<div class="col">
+		
+				<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+				<h5 class="text-center">Add a Comment</h5>
+
+			<!------- This is the style of the shadowed box containing username and password ---->	
+			<div style="width: 300px; height: 320px; padding: 15px; background-color: #f1f1f1; box-shadow: 1px 1px 1px 1px grey; margin: auto;">
+
+				<!---- Add Contact Form Group --->
+				<div class="form-group">
+					<input type="text" class="form-control" name="comment" required>
+				</div>
+
+				
+				<br>
+				
+				<!--- Button Form Group -->
+				<div class="form-group">
+					<button name="submit_contact" type="submit" class="btn btn-primary btn-md" style="width: 125px; margin-right: 15px">Submit</button>
+					<button name="reset" type="reset" class="btn btn-danger btn-md" style="width: 125px">Reset</button>
+				</div>
+			</div>
+			</form>
+				
 			</div>
 		
 		</div>
