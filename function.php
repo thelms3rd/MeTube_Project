@@ -743,7 +743,6 @@ function my_uploads($username, $category, $type)
 						 
 						 <h6> <?php echo $title ?> </h6>
 						 <div class="img-thumbnail"> <a href="<?php echo $url;?>"><img src="<?php echo $filenpath;?>" class="img-responsive" width = "250" height="200"></a></div>  
-						 <button name="delete-<?php echo $mediaid ?>" type="button" class="btn btn-danger">Delete</button>
                   <br>
                   <br>
     		  </div>
@@ -754,12 +753,6 @@ function my_uploads($username, $category, $type)
 			
 			<?php
 		}
-		
-		if(isset($_POST["delete-<?php echo $mediaid?>"]))
-		{
-			echo "DELETE FILE: $mediaid";
-		}
-	
 	}
 }
 	
