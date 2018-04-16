@@ -147,8 +147,8 @@ if (!$result){
 	
 if($_GET['submit_comment']=='yes') {
 
-	send_comment($_SESSION['loggedIn'], $_GET['id'], $_POST['comment']);
-		
+	send_comment($_SESSION['loggedIn'], $_GET['id'], $_GET['comment']);
+	$_GET['submit_comment'] = 'no';	
 }
 
 ?>
