@@ -95,7 +95,7 @@ if (!$result){
 					</tr>
 				 </thead>
 				 <tbody>
-					<?php file_comments($_SESSION['username']);	?>
+					<?php file_comments($id);	?>
 				  </tbody>
 				</table>
 			  </div>	
