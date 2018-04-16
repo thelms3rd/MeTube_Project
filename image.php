@@ -143,7 +143,7 @@ if (!$result){
 </div>
 <?php
 
-}
+
 	
 if($_GET['submit_comment']=='yes') {
 
@@ -151,6 +151,9 @@ if($_GET['submit_comment']=='yes') {
 	$_GET['submit_comment'] = 'no';	
 }
 
+	
+	
+}
 ?>
 	
 
