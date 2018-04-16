@@ -30,6 +30,11 @@ text-align: center;
 session_start();
 include_once "function.php";
 nav_bar();
+
+$mediaid = $_GET['id'];
+	
+$imageurl = 'https://webapp.cs.clemson.edu/~jlhelms/MeTube_Project/image.php?id='.$mediaid;
+$addCommenturl = 'https://webapp.cs.clemson.edu/~jlhelms/MeTube_Project/addComment.php?id='.$mediaid;
 ?>
 	
 
@@ -40,8 +45,8 @@ nav_bar();
 	<br>
 	<div class="container">
   		<ul class="pagination"  class="text-center">
-    		<li class="page-item"><a class="page-link" href="addContacts.php" style="width: 300px">Add Contact/Delete Contact</a></li>
-    		<li class="page-item"><a class="page-link" href="myContacts.php" style="width: 300px">My Contacts</a></li>
+    		<li class="page-item"><a class="page-link" href="<?php echo $imageurl ?>" style="width: 300px">Current File</a></li>
+    		<li class="page-item"><a class="page-link" href="<?php echo $addCommenturl ?>" style="width: 300px">Add Comment</a></li>
   		</ul>
 	</div>
 	<br>
