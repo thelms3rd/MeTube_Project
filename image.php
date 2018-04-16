@@ -132,12 +132,20 @@ if (!$result){
 		<?php
 		} ?>
 		</div>
-		</div>
+</div>
 <?php
 
+	
+	
+if($_SERVER["REQUEST_METHOD"] == "POST") {
+	
+	
+		send_comment($_SESSION['loggedIn'], $mediaid, $_POST['comment']);
+		
+		
+		}
+
 }
-
-
 ?>
 	
 
