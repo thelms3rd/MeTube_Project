@@ -122,7 +122,7 @@ if (!$result){
 				
 				<!--- Button Form Group -->
 				<div class="form-group">
-					<button name="submit_contact" type="submit" class="btn btn-primary btn-md" style="width: 125px; margin-right: 15px">Submit</button>
+					<button name="submit_comment" type="submit" class="btn btn-primary btn-md" style="width: 125px; margin-right: 15px">Submit</button>
 					<button name="reset" type="reset" class="btn btn-danger btn-md" style="width: 125px">Reset</button>
 				</div>
 			</div>
@@ -137,8 +137,7 @@ if (!$result){
 
 }
 	
-if($_SERVER["REQUEST_METHOD"] == "POST") {
-	
+if(isset($_POST['submit_comment'])) {
 	
 		send_comment($_SESSION['loggedIn'], $_GET['id'], $_POST['comment']);
 		
