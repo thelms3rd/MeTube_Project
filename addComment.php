@@ -31,8 +31,8 @@ session_start();
 include_once "function.php";
 nav_bar();
 
-$mediaid = $_GET['id'];
-	
+//$mediaid = $_GET['id'];
+$mediaid = $_SESSION['mediaid'];	
 $imageurl = 'https://webapp.cs.clemson.edu/~jlhelms/MeTube_Project/image.php?id='.$mediaid;
 $addCommenturl = 'https://webapp.cs.clemson.edu/~jlhelms/MeTube_Project/addComment.php?id='.$mediaid;
 ?>
@@ -88,7 +88,7 @@ $addCommenturl = 'https://webapp.cs.clemson.edu/~jlhelms/MeTube_Project/addComme
 			echo "Add Contact: $_POST[comment]";
 	
 		
-			send_comment($_SESSION['username'], $_GET['id'], $_POST['comment']);
+			send_comment($_SESSION['username'], $_SESSION['mediaid'], $_POST['comment']);
 		}
 		if(isset($_GET['search']))
 		{
