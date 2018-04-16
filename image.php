@@ -43,8 +43,8 @@ nav_bar();
 <!-------------------------- MIDDLE OF PHP------------------->
 <?php
 $_SESSION['fileid'] = $_GET['id'];
-$id = $_GET['id'];
-$query = "SELECT * FROM media WHERE mediaid='$id'";
+
+$query = "SELECT * FROM media WHERE mediaid='$_SESSION['fileid']'";
 //echo $query;
 
 //increment the files number of views	
@@ -99,7 +99,7 @@ if (!$result){
 					</tr>
 				 </thead>
 				 <tbody>
-					<?php file_comments($id);	?>
+					<?php file_comments($_SESSION['fileid']);	?>
 				  </tbody>
 				</table>
 			  </div>	
@@ -115,7 +115,7 @@ if (!$result){
 				
 				
 				<!---- HIDDEN INPUT --->
-				<input name="id" type="hidden" value="<?php echo $id ?>">
+				<input name="id" type="hidden" value="<?php echo $_SESSION['fileid'] ?>">
 		
 			</form>
 			<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">	
@@ -148,7 +148,10 @@ if (!$result){
 }
 	
 if(isset($_POST['submit_comment'])) {
-
+	
+	echo $_SESSION['loggedIn']; 
+	echo $_SESSION['fileid'];
+	echo $_POST['comment'];
 	send_comment($_SESSION['loggedIn'], $_SESSION['fileid'], $_POST['comment']);
 		
 }
