@@ -34,6 +34,12 @@ text-align: center;
 session_start();
 include_once "function.php";	
 nav_bar();
+	
+	
+function call_send_comment()
+{
+	send_comment($_SESSION['loggedIn'], $_GET['id'], $_GET['comment']);
+}
 ?>	
 <br>
 
@@ -149,10 +155,6 @@ if (!$result){
 		
 		//}
 
-function call_send_comment()
-{
-	send_comment($_SESSION['loggedIn'], $_GET['id'], $_GET['comment']);
-}
 ?>
 	
 
