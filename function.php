@@ -528,15 +528,6 @@ function nav_bar()
 
   <ul class="navbar-nav navbar-left">
 	  <a class="navbar-brand" href="index.php">MeTube</a>
-    <li class="nav-item">
-      <a class="nav-link" href="https://webapp.cs.clemson.edu/~jlhelms/MeTube_Project/index.php">Image</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Video</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Audio</a>
-    </li>
 	  <li class="nav-item">
       <a class="nav-link" href="browse.php">Browse</a>
     </li>
