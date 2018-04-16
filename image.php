@@ -65,12 +65,15 @@ if (!$result){
 	$keywords = $row[9];
 	$views = $row[10];
 	
+	$imageurl = 'https://webapp.cs.clemson.edu/~jlhelms/MeTube_Project/image.php?id='.$mediaid;
+	$addCommenturl = 'https://webapp.cs.clemson.edu/~jlhelms/MeTube_Project/addComment.php?id='.$mediaid;
+	
 	?>
 <div class="container">
 	<div class="container">
   		<ul class="pagination"  class="text-center">
-    		<li class="page-item"><a class="page-link" href="image.php" style="width: 300px">Add Comment</a></li>
-    		<li class="page-item"><a class="page-link" href="addComment.php" style="width: 300px">Current File</a></li>
+    		<li class="page-item"><a class="page-link" href="$imageurl" style="width: 300px">Add Comment</a></li>
+    		<li class="page-item"><a class="page-link" href="$addCommenturl" style="width: 300px">Current File</a></li>
   		</ul>
 	</div>
 	<h4> <?php echo $title ?> </h4>
