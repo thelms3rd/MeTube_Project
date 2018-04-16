@@ -652,6 +652,34 @@ function send_comment($username, $fileid, $comment)
 	}	
 }
 
-	
+function file_comments($fileid)
+{
+	$query = "select * from message where file_id='$fileid'";
+	$result = mysql_query( $query );
+
+	if (!$result){
+		die ("user_exist_check() failed. Could not query the database: <br />". mysql_error());
+	}	
+	else {
+		
+		//cycle through the rows to print
+		while ($row=mysql_fetch_row($result))
+		{
+			?> 
+			<tr> 
+				<td>  
+					<?php echo "$row[3]"; ?> 
+				
+				</td> 
+				<td> 
+					<?php echo "$row[2]"; ?> 
+				</td> 
+			<tr>
+			
+			<?php
+		}
+		
+	}
+}
 	
 ?>

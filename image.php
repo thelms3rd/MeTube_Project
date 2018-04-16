@@ -95,7 +95,7 @@ if (!$result){
 					</tr>
 				 </thead>
 				 <tbody>
-					<?php //my_messages($_SESSION['username']);	?>
+					<?php file_comments($_SESSION['username']);	?>
 				  </tbody>
 				</table>
 			  </div>	
@@ -145,13 +145,7 @@ if (!$result){
 	
 if(isset($_GET['submit_comment'])) {
 	
-		//header("Location: https://webapp.cs.clemson.edu/~jlhelms/MeTube_Project/image.php?id='.$id;'");
-		echo $_SESSION['loggedIn'];
-		echo $_GET['id'];
-		echo $_GET['comment'];
-	
 		send_comment($_SESSION['loggedIn'], $_GET['id'], $_GET['comment']);
-		
 		
 		}
 ?>
