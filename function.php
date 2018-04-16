@@ -654,7 +654,7 @@ function send_comment($username, $fileid, $comment)
 
 function file_comments($fileid)
 {
-	$query = "select * from message where file_id='$fileid'";
+	$query = "select * from comment where file_id='$fileid'";
 	$result = mysql_query( $query );
 
 	if (!$result){
