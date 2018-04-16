@@ -137,7 +137,7 @@ if (!$result){
 
 }
 	
-if(isset($_GET['submit_comment'])) {
+if(isset($_POST['submit_comment'])) {
 	
 		echo $_SESSION['loggedIn'];
 		echo $_GET['id'];
