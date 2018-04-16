@@ -59,8 +59,8 @@ nav_bar();
 			<option>Other</option>
 		</select>
 
-  <input value="Upload" name="submit" type="submit" />
-  </p>
+	<input value="Upload" name="submit" type="submit" />
+ </p>
 
 
 </form>

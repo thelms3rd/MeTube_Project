@@ -78,7 +78,29 @@ if (!$result){
                     	<h6>description: <?php echo $description ?> </h6>
                     	<h6>category: <?php echo $category ?> </h6>
                   </div>
-            	</div>
+           		</div>
+		<div class="row text-center">
+			
+			
+			<div class="col">
+		
+				<div class="container">
+			  	<h4 class="text-center">Your Messages:</h4>          
+			  	<table class="table">
+				 <thead>
+					<tr>
+					  <th>Username</th>
+					  <th>Comment</th>
+					</tr>
+				 </thead>
+				 <tbody>
+					<?php //my_messages($_SESSION['username']);	?>
+				  </tbody>
+				</table>
+			  </div>	
+			</div>
+		
+		</div>
 		</div>
 <?php
 
