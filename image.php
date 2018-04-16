@@ -112,7 +112,7 @@ if (!$result){
 
 				<!---- Add Contact Form Group --->
 				<div class="form-group">
-					<input type="text" class="form-control" name="comment" required>
+					<textarea type="text" class="form-control" name="comment" rows='4' required>
 				</div>
 
 				
