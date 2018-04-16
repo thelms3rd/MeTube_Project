@@ -106,9 +106,15 @@ if (!$result){
 			<?php if((isset($_SESSION['loggedIn']))) { ?>
 			<div class="col">
 		
-				<form method="get" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+			<form method="get" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 				<h5 class="text-center">Add a Comment</h5>
-
+				
+				
+				<!---- HIDDEN INPUT --->
+				<input name="id" type="hidden" value="<?php echo $id ?>">
+		
+				
+				
 			<!------- This is the style of the shadowed box containing username and password ---->	
 			<div style="width: 300px; height: 320px; padding: 15px; background-color: #f1f1f1; box-shadow: 1px 1px 1px 1px grey; margin: auto;">
 
@@ -137,14 +143,14 @@ if (!$result){
 
 }
 	
-if(isset($_POST['submit_comment'])) {
+if(isset($_GET['submit_comment'])) {
 	
 		//header("Location: https://webapp.cs.clemson.edu/~jlhelms/MeTube_Project/image.php?id='.$id;'");
 		echo $_SESSION['loggedIn'];
 		echo $_GET['id'];
 		echo $_POST['comment'];
 	
-		send_comment($_SESSION['loggedIn'], $_GET['id'], $_GET['comment']);
+		//send_comment($_SESSION['loggedIn'], $_GET['id'], $_GET['comment']);
 		
 		
 		}
