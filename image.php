@@ -148,7 +148,7 @@ if(isset($_GET['submit_comment'])) {
 		//header("Location: https://webapp.cs.clemson.edu/~jlhelms/MeTube_Project/image.php?id='.$id;'");
 		echo $_SESSION['loggedIn'];
 		echo $_GET['id'];
-		echo $_POST['comment'];
+		echo $_GET['comment'];
 	
 		//send_comment($_SESSION['loggedIn'], $_GET['id'], $_GET['comment']);
 		
