@@ -140,10 +140,10 @@ if (!$result){
 if(isset($_POST['submit_comment'])) {
 	
 		echo $_SESSION['loggedIn'];
-		echo $_GET['id'];
-		echo $_GET['comment'];
+		echo $_POST['id'];
+		echo $_POST['comment'];
 	
-		send_comment($_SESSION['loggedIn'], $_GET['id'], $_GET['comment']);
+		send_comment($_SESSION['loggedIn'], $_POST['id'], $_POST['comment']);
 		
 		
 		}
