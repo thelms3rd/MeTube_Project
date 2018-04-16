@@ -70,7 +70,7 @@ if (!$result){
 	
 	$imageurl = 'https://webapp.cs.clemson.edu/~jlhelms/MeTube_Project/image.php?id='.$mediaid;
 	$addCommenturl = 'https://webapp.cs.clemson.edu/~jlhelms/MeTube_Project/addComment.php?id='.$mediaid;
-	
+	$ownedFile = 'https://webapp.cs.clemson.edu/~jlhelms/MeTube_Project/ownedFile.php?id='.$mediaid;
 	?>
 <div class="container">
 <?php if(isset($_SESSION['loggedIn'])) { ?>
@@ -78,7 +78,15 @@ if (!$result){
   		<ul class="pagination"  class="text-center">
     		<li class="page-item"><a class="page-link" href="<?php echo $imageurl ?>" style="width: 300px">Current File</a></li>
     		<li class="page-item"><a class="page-link" href="<?php echo $addCommenturl ?>" style="width: 300px">Add Comment</a></li>
-  		</ul>
+  		
+			<!------ if user owns file ----->
+			<?php 
+			if (file_owner($_SESSION['username'], $mediaid))
+			{ ?>
+				
+				<li class="page-item"><a class="page-link" href="<?php echo $ownedFile ?>" style="width: 300px">Delete File</a></li>
+			<?php } ?>
+		</ul>
 	</div>
 <?php } ?>	
 	<h4> <?php echo $title ?> </h4>
@@ -94,6 +102,7 @@ if (!$result){
 							<h6>keywords: <?php echo $keywords ?></h6>
                     	<h6>description: <?php echo $description ?> </h6>
                     	<h6>category: <?php echo $category ?> </h6>
+							<br>
                   </div>
            		</div>
 		
@@ -125,9 +134,6 @@ if (!$result){
 }
 ?>
 	
-
-
-
 <!---------------------------------------------------------------------->
 
 

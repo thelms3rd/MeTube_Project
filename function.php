@@ -755,5 +755,32 @@ function my_uploads($username, $category, $type)
 		}
 	}
 }
+
+function file_owner($username, $fileid)
+{
+	$query = "select username from media where mediaid='$fileid'";
+	$result = mysql_query( $query );
+	
+	if (!$result){
+		die ("user_exist_check() failed. Could not query the database: <br />". mysql_error());
+	}	
+	else {
+		
+		$row=mysql_fetch_row($result)
+		
+		//return true if loggedin user equals username on file
+		if($username == $row[0])
+		{
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+}
+function delete_file()
+{
+	
+}
 	
 ?>
