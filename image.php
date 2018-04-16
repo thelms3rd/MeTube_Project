@@ -115,9 +115,8 @@ if (!$result){
 				
 				<!---- HIDDEN INPUT --->
 				<input name="id" type="hidden" value="<?php echo $id ?>">
-		
-			</form>
-			<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">	
+			
+				
 			<!------- This is the style of the shadowed box containing username and password ---->	
 			<div style="width: 300px; height: 320px; padding: 15px; background-color: #f1f1f1; box-shadow: 1px 1px 1px 1px grey; margin: auto;">
 
@@ -131,7 +130,7 @@ if (!$result){
 				
 				<!--- Button Form Group -->
 				<div class="form-group">
-					<button name="submit_comment" type="submit" class="btn btn-primary btn-md" style="width: 125px; margin-right: 15px">Submit</button>
+					<button name="submit_comment" type="submit" value="yes" class="btn btn-primary btn-md" style="width: 125px; margin-right: 15px">Submit</button>
 					<button name="reset" type="reset" class="btn btn-danger btn-md" style="width: 125px">Reset</button>
 				</div>
 			</div>
@@ -146,7 +145,7 @@ if (!$result){
 
 }
 	
-if(isset($_POST['submit_comment'])) {
+if($_GET['submit_comment']) {
 
 	send_comment($_SESSION['loggedIn'], $_GET['id'], $_POST['comment']);
 		
