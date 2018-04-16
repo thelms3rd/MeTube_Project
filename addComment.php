@@ -83,7 +83,7 @@ $addCommenturl = 'https://webapp.cs.clemson.edu/~jlhelms/MeTube_Project/addComme
 <?php
 
 	if($_SERVER["REQUEST_METHOD"] == "POST") {
-		if(isset($_POST['submit_contact'])) {
+		if(isset($_POST['submit_comment'])) {
 			//call the add_contact function
 			echo "Add Contact: $_POST[comment]";
 	
