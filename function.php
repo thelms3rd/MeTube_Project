@@ -645,7 +645,7 @@ function nav_bar()
 
 function send_comment($username, $fileid, $comment)
 {
-	$query = "INSERT INTO `comment`(`file_id`, `comment_content`, `username_fk`) VALUES ($fileid,$comment,$username)";
+	$query = "INSERT INTO comment(`file_id`, `comment_content`, `username_fk`) VALUES ($fileid,$comment,$username)";
 	$result = mysql_query( $query );
 	if (!$result){
 		die ("user_exist_check() failed. Could not query the database: <br />". mysql_error());
