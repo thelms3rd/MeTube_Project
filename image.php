@@ -137,9 +137,9 @@ if (!$result){
 
 }
 	
-if(isset($_POST['submit_comment'])) {
+if(isset($_GET['submit_comment'])) {
 	
-		send_comment($_SESSION['loggedIn'], $_GET['id'], $_POST['comment']);
+		send_comment($_SESSION['loggedIn'], $_GET['id'], $_GET['comment']);
 		
 		
 		}
