@@ -102,6 +102,8 @@ if (!$result){
 			</div>
 			
 			<!-------------- ADD a Comment ------>
+			
+			<?php if((isset($_SESSION['loggedIn']))) { ?>
 			<div class="col">
 		
 				<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
@@ -127,7 +129,8 @@ if (!$result){
 			</form>
 				
 			</div>
-		
+		<?php
+		}
 		</div>
 		</div>
 <?php
