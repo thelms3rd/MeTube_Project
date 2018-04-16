@@ -529,6 +529,9 @@ function nav_bar()
   <ul class="navbar-nav navbar-left">
 	  <a class="navbar-brand" href="index.php">MeTube</a>
 	  <li class="nav-item">
+      <a class="nav-link" href="index.php">Home</a>
+    </li>
+	  <li class="nav-item">
       <a class="nav-link" href="browse.php">Browse</a>
     </li>
    </ul>
