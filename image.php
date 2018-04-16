@@ -104,55 +104,10 @@ if (!$result){
 			  </div>	
 			</div>
 			
-			<!-------------- ADD a Comment ------>
-			
-			<?php if((isset($_SESSION['loggedIn']))) { ?>
-			<div class="col">
-		
-			<form method="get" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-				<h5 class="text-center">Add a Comment</h5>
-				
-				
-				<!---- HIDDEN INPUT --->
-				<input name="id" type="hidden" value="<?php echo $id ?>">
-			
-				
-			<!------- This is the style of the shadowed box containing username and password ---->	
-			<div style="width: 300px; height: 320px; padding: 15px; background-color: #f1f1f1; box-shadow: 1px 1px 1px 1px grey; margin: auto;">
-
-				<!---- Add Contact Form Group --->
-				<div class="form-group">
-					<textarea type="text" class="form-control" name="comment" rows='4' required></textarea>
-				</div>
-
-				
-				<br>
-				
-				<!--- Button Form Group -->
-				<div class="form-group">
-					<button name="submit_comment" type="submit" value="yes" class="btn btn-primary btn-md" style="width: 125px; margin-right: 15px">Submit</button>
-					<button name="reset" type="reset" class="btn btn-danger btn-md" style="width: 125px">Reset</button>
-				</div>
-			</div>
-			</form>
-				
-			</div>
-		<?php
-		} ?>
 		</div>
 </div>
 <?php
 
-
-	
-if($_GET['submit_comment']=='yes') {
-
-	send_comment($_SESSION['loggedIn'], $_GET['id'], $_GET['comment']);
-	$_GET['submit_comment'] = 'no';	
-}
-
-	
-	
 }
 ?>
 	
