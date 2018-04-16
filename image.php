@@ -67,6 +67,12 @@ if (!$result){
 	
 	?>
 <div class="container">
+	<div class="container">
+  		<ul class="pagination"  class="text-center">
+    		<li class="page-item"><a class="page-link" href="image.php" style="width: 300px">Add Comment</a></li>
+    		<li class="page-item"><a class="page-link" href="addComment.php" style="width: 300px">Current File</a></li>
+  		</ul>
+	</div>
 	<h4> <?php echo $title ?> </h4>
 	<div class="row text-center">
             <div class="col-sm-4 col-md-4 col-lg-4 col-xs-6">
