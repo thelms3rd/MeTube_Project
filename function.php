@@ -887,7 +887,7 @@ function find_playlist_id($username, $filename)
 	}
 	else {
 		$row=mysql_fetch_row($result);
-		//echo "row:".$row[1];
+		
 		return $row[0];
 	}
 }
@@ -918,7 +918,75 @@ function insert_playlistMedia($playlist_id, $mediaid)
 }
 
 
+function find_mediaid($playlist_id)
+{
+	//find the media_id attached to playlist
+	$query2 = "select mediaid_fk from playlist_media where playlist_id_fk='$playlist_id'";
+	$result2 = mysql_query( $query2 );
+	echo $query2; 
+		
+	if (!$result2){
+		die ("find_playlist query failed. Could not query the database: <br />". mysql_error());
+	}
+	else {
+		
+		while($row2=mysql_fetch_row($result2))
+		{
+			//find all attributes from each media file
+			$query = "select * from media where mediaid='$row2[0]'";
+			$result = mysql_query( $query );
+			echo $query;
+			
+			if (!$result){
+				die ("find_playlist query failed. Could not query the database: <br />". mysql_error());
+			}
+			
+			else {
+				
+				
+					?>
 
+					<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+					<div class="container">
+
+					<?php
+					while ($row = mysql_fetch_row($result))
+					{
+						//$row = mysql_fetch_row($result);
+						$mediaid = $row[3];
+						$filename = $row[0];
+						$filenpath = $row[4];
+						$title = $row[5];
+						$date = $row[6];
+						$description = $row[7];
+						$category = $row[8];
+						$keywords = $row[9];
+						$views = $row[10];
+
+						$url = 'https://webapp.cs.clemson.edu/~jlhelms/MeTube_Project/image.php?id='.$mediaid;
+
+						?>
+						<div class="row text-center">
+
+							<div class="col-sm-4 col-md-4 col-lg-4 col-xs-6">
+								 <div class = "panel panel-default">
+
+									 <h6> <?php echo $title ?> </h6>
+									 <div class="img-thumbnail"> <a href="<?php echo $url;?>"><img src="<?php echo $filenpath;?>" class="img-responsive" width = "250" height="200"></a></div>
+									<br>
+									<br>
+						  </div>
+           			</div>
+						</div>
+					</div>
+				</form>
+
+			<?php
+				}
+			}
+		}
+	}
+}
 
 
 

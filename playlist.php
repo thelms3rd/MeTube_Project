@@ -80,7 +80,21 @@ nav_bar();
 	</div>
 	</form>
 	
-			
+<?php
+if($_SERVER["REQUEST_METHOD"] == "POST") {
+
+	if(isset($_POST['filter'])) {
+
+		//convert the playlist_name to playlist_id
+		$playlist_id = find_playlist_id($_SESSION['username'], $_POST['select_playlist']);
+		
+		//retrieve the media_id within the playlist and then print the file attached to the playlist
+		find_mediaid($playlist_id);
+		
+}
+
+	
+?>
 			
 			
 			
