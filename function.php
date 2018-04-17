@@ -780,6 +780,20 @@ function file_owner($username, $fileid)
 }
 function delete_file($fileid)
 {
+	//delete comments related to file
+	$query1 = "DELETE FROM comment where file_id='$fileid'";
+	$result = mysql_query( $query );
+	echo $query;
+	
+	if (!$result){
+		die ("delete_file() failed. Could not query the database: <br />". mysql_error());
+	}	
+	else {
+		
+		echo "Comments have been deleted!";
+	
+	
+	//delete file
 	$query = "DELETE FROM media where mediaid='$fileid'";
 	$result = mysql_query( $query );
 	echo $query;
@@ -791,6 +805,7 @@ function delete_file($fileid)
 		
 		echo "File has been deleted!";
 	}
+}
 }
 	
 ?>
