@@ -65,7 +65,14 @@ $ownedFile = 'https://webapp.cs.clemson.edu/~jlhelms/MeTube_Project/ownedFile.ph
 	</form>
 	</div>
 
+  <?php
+  	if(isset($_POST['deleteFile']))
+  	{
+  		echo $mediaid;
+  		delete_file($mediaid);
 
+  	}
+  ?>
 
 
 
@@ -76,41 +83,38 @@ $ownedFile = 'https://webapp.cs.clemson.edu/~jlhelms/MeTube_Project/ownedFile.ph
 
 
 
-<form method="post" action="media_update_process.php" enctype="multipart/form-data" >
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+<?php if(isset($_SESSION['loggedIn'])) { ?>
+	<div class="container">
+  		<ul class="pagination"  class="text-center">
+    		<li class="page-item"><a class="page-link" href="<?php echo $imageurl ?>" style="width: 300px">Current File</a></li>
+    		<li class="page-item"><a class="page-link" href="<?php echo $addCommenturl ?>" style="width: 300px">Add Comment</a></li>
 
-  <p style="margin:0; padding:0">
-  <input type="hidden" name="MAX_FILE_SIZE" value="10485760" />
-   Add a Media: <label style="color:#663399"><em> (Each file limit 10M)</em></label><br/>
-   <input  name="file" type="file" size="50">
+			<!------ if user owns file ----->
+			<?php
+			if (file_owner($_SESSION['username'], $mediaid))
+			{ ?>
 
-<h4 style="margin-bottom:0px; margin-top: 20px;">Title</h4><input maxlength="40" id="title" name="title" type="text" class="form-control" style="width: 550px;">
-<br>
-	<select name="mediaType"class="form-control" style="width: 175px;">
-			<option>Image</option>
-			<option>Audio</option>
-			<option>Video</option>
-		</select>
+				<li class="page-item"><a class="page-link" href="<?php echo $ownedFile ?>" style="width: 300px">Update/Delete File</a></li>
+			<?php } ?>
+		<?php } ?>
+		</ul>
+		</div>
+		<br>
 
-	<h4 style="margin-bottom:0px; margin-top: 20px;">Keywords</h4><input maxlength="40" id="keywords" name="keywords" type="text" class="form-control" style="width: 550px;">
-<br>
+		<button name="updateFile" type="submit" class="btn btn-lg btn-outline-danger">UPDATE FILE</button>
+	</form>
+	</div>
 
-	<h4 style="margin-bottom:0px; margin-top: 20px;">Description (500 character max)</h5><input maxlength="500" id="description" name="description" type="text" class="form-control" rows="5" style="resize: none; width: 550px;"></h4>
-<br>
+  <?php
+  	if(isset($_POST['updateFile']))
+  	{
+  		echo $mediaid;
+  		update_file($mediaid);
 
-<h5 style="margin-bottom:0px; margin-top: 20px;">Category</h5>
-		<select name="category"class="form-control" style="width: 175px;">
-			<option>Comedy</option>
-			<option>Music</option>
-			<option>Sports</option>
-			<option>Educational</option>
-			<option>Other</option>
-		</select>
+  	}
+  ?>
 
-	<input value="Upload" name="submit" type="submit" />
- </p>
-
-
-</form>
 
 
 

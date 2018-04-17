@@ -810,4 +810,28 @@ function delete_file($fileid)
 }
 }
 
+function update_file($fileid)
+{
+
+	//delete file
+	$query = "UPDATE media SET title="updatetesting" where mediaid='$fileid'";
+	$result = mysql_query( $query );
+	echo $query;
+
+	if (!$result){
+		die ("delete_file() failed. Could not query the database: <br />". mysql_error());
+	}
+	else {
+
+		echo "File has been updated!";
+	}
+
+}
+
+
+
+
+
+
+
 ?>
