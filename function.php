@@ -782,10 +782,10 @@ function delete_file($fileid)
 {
 	//delete comments related to file
 	$query1 = "DELETE FROM comment where file_id='$fileid'";
-	$result = mysql_query( $query );
-	echo $query;
+	$result1 = mysql_query( $query1 );
+	echo $query1;
 	
-	if (!$result){
+	if (!$result1){
 		die ("delete_file() failed. Could not query the database: <br />". mysql_error());
 	}	
 	else {
