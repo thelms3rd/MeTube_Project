@@ -998,7 +998,7 @@ function add_favorite($username, $fileid)
 		die ("add_favorites failed. Could not query the database: <br />". mysql_error());
 	}
 	else{
-		$row = mysql_fetch_assoc($result1);
+		$row = mysql_fetch_assoc($result2);
 		if($row == 0){	
 	
 			$query = "INSERT INTO `favorites`(`username_fk`, `mediaid_fk`) VALUES ('$username','$fileid')";
