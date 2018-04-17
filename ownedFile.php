@@ -42,7 +42,7 @@ $ownedFile = 'https://webapp.cs.clemson.edu/~jlhelms/MeTube_Project/ownedFile.ph
 	
 <div class="container"> 
 	<br>
-	
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 <?php if(isset($_SESSION['loggedIn'])) { ?>
 	<div class="container">
   		<ul class="pagination"  class="text-center">
@@ -62,6 +62,7 @@ $ownedFile = 'https://webapp.cs.clemson.edu/~jlhelms/MeTube_Project/ownedFile.ph
 		<br>
 		
 		<button name="delete" type="button" class="btn btn-lg btn-outline-danger">DELETE FILE</button>
+	</form>
 	</div>
 	
 <?php 
