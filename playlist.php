@@ -53,7 +53,7 @@ nav_bar();
 	<div class = "card-body">
 		<div class="row">
 			<div class="col">
-				<div class = "card" style="width: 350px;">
+				<div class = "card" style="width: 400px;">
 					<div class = "card-body">
 						<div class="col">
 						<h5 style="margin-bottom:0px; margin-top: 20px;">Choose</h5>
