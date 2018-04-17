@@ -55,7 +55,10 @@ nav_bar();
 			<div class="col">
 				<div class = "card" style="width: 350px;">
 					<div class = "card-body">
+						<div class="col">
 						<h5 style="margin-bottom:0px; margin-top: 20px;">Choose</h5>
+						</div>
+						<div class="col">
 						<select name="select_playlist"class="form-control" style="width: 175px;"> 
 							<option>All</option>
 							<option>Comedy</option>
@@ -64,6 +67,7 @@ nav_bar();
 							<option>Educational</option>
 							<option>Other</option>
 						</select>
+						</div>
 					</div>
 				</div>
 			</div>
