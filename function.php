@@ -832,11 +832,11 @@ function create_playlist($username, $playlist_name)
 {
 	$selectQuery = "SELECT * FROM playlist WHERE username_fk='$username' AND playlist_name='$playlist_name'";
 	$result1 = mysql_query( $selectQuery );
-	if (!$result){
+	if (!$result1){
 		die ("send_comment failed. Could not query the database: <br />". mysql_error());
 	}
 	else{
-		$row = mysql_fetch_assoc($result);
+		$row = mysql_fetch_assoc($result1);
 		if($row == 0){	
 		
 			$query = "INSERT INTO playlist (`username_fk`, `playlist_name`) VALUES ('$username','$playlist_name')";
