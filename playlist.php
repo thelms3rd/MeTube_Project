@@ -91,6 +91,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 		//retrieve the media_id within the playlist and then print the file attached to the playlist
 		find_mediaid($playlist_id);
 		
+	}
 }
 
 	
