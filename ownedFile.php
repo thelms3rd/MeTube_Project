@@ -58,9 +58,11 @@ $ownedFile = 'https://webapp.cs.clemson.edu/~jlhelms/MeTube_Project/ownedFile.ph
 			<?php } ?>
 		<?php } ?>
 		</ul>
+		</div>
 		<br>
+		
 		<button name="delete" type="button" class="btn btn-lg btn-outline-danger">DELETE FILE</button>
-</div>
+	</div>
 	
 <?php 
 	if(isset($_SESSION['delete']))
