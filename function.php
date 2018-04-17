@@ -778,9 +778,18 @@ function file_owner($username, $fileid)
 		}
 	}
 }
-function delete_file()
+function delete_file($fileid)
 {
-	
+	$query = "DELETE FROM media where mediaid='$fileid'";
+	$result = mysql_query( $query );
+
+	if (!$result){
+		die ("delete_file() failed. Could not query the database: <br />". mysql_error());
+	}	
+	else {
+		
+		echo "File has been deleted!";
+	}
 }
 	
 ?>

@@ -84,7 +84,7 @@ if (!$result){
 			if (file_owner($_SESSION['username'], $mediaid))
 			{ ?>
 				
-				<li class="page-item"><a class="page-link" href="<?php echo $ownedFile ?>" style="width: 300px">Delete File</a></li>
+				<li class="page-item"><a class="page-link" href="<?php echo $ownedFile ?>" style="width: 300px">Update/Delete File</a></li>
 			<?php } ?>
 		</ul>
 	</div>
