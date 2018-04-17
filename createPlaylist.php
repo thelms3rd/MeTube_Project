@@ -55,7 +55,7 @@ nav_bar();
 <!---- Playlist name Form Group --->
 <div class="form-group">
   <label>Name:</label>
-  <input type="text" class="form-control" name="password1" required>
+  <input type="text" class="form-control" name="playlist_name" required>
 </div>
 	
 <!--- Button Form Group -->
@@ -66,6 +66,19 @@ nav_bar();
 </div>
 </div>
 </form>
+
+<?php 
+
+if(isset($_POST['submit'])) {	
+	
+	insert_playlist($_POST['playlist_name'], $_SESSION['username'], NULL);
+	
+}
+	
+?>
+	
+	
+	
 	
 <!---------------------------------------------------------------------->
 

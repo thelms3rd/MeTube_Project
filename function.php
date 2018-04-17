@@ -828,6 +828,17 @@ function update_file($fileid)
 
 }
 
+function insert_playlist($name, $username, $fileid)
+{
+	$query = "INSERT INTO playlist (`playlist_name`, `username_fk`, `mediaid_fk`) VALUES ('$name','$username','$fileid')";
+	$result = mysql_query( $query );
+	echo $query;
+	if (!$result){
+		die ("send_comment failed. Could not query the database: <br />". mysql_error());
+	}
+}
+
+
 
 
 
