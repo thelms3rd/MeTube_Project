@@ -880,12 +880,14 @@ function find_playlist_id($username, $filename)
 {
 	$query = "select playlist_name from playlist where username_fk='$username' AND playlist_name='$filename'";
 	$result = mysql_query( $query );
-
+	echo $query; 
+		
 	if (!$result){
 		die ("find_playlist query failed. Could not query the database: <br />". mysql_error());
 	}
 	else {
 		$row=mysql_fetch_row($result);
+		echo "row:".$row[0];
 		return $row[0];
 	}
 }
