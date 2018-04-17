@@ -136,7 +136,7 @@ $ownedFile = 'https://webapp.cs.clemson.edu/~jlhelms/MeTube_Project/ownedFile.ph
 			$playlist_id = find_playlist_id($_SESSION['username'], $_POST['select_playlist']);
 			
 			echo "playlist_id: " .$playlist_id;
-			//insert_playlistMedia($playlist_id, $mediaid);
+			insert_playlistMedia($playlist_id, $mediaid);
 		}
 		
 		

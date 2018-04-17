@@ -878,7 +878,7 @@ function select_playlist($username)
 
 function find_playlist_id($username, $filename)
 {
-	$query = "select playlist_name from playlist where username_fk='$username' AND playlist_name='$filename'";
+	$query = "select playlist_id from playlist where username_fk='$username' AND playlist_name='$filename'";
 	$result = mysql_query( $query );
 	echo $query; 
 		
