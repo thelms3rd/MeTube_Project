@@ -89,6 +89,7 @@ $ownedFile = 'https://webapp.cs.clemson.edu/~jlhelms/MeTube_Project/ownedFile.ph
 			</form>
 		</div>
 		
+		
 			<!---- Add File to playlist ----->
 		<div class="col">
 			<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
@@ -105,10 +106,11 @@ $ownedFile = 'https://webapp.cs.clemson.edu/~jlhelms/MeTube_Project/ownedFile.ph
 							?>
 							
 					</select>
-
+				<br>
+				
 				<!--- Button Form Group -->
 				<div class="form-group">
-					<button name="submit_playlist" type="submit" class="btn btn-primary btn-md" style="width: 250px; margin-right: 15px">Submit</button>
+					<button name="submit_playlist" type="submit" class="btn btn-primary btn-md" style="width: 265px; margin-right: 15px">Submit</button>
 				</div>
 			</div>
 			</form>
