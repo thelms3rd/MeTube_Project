@@ -77,8 +77,6 @@ $ownedFile = 'https://webapp.cs.clemson.edu/~jlhelms/MeTube_Project/ownedFile.ph
 
 <!-- Update section -->
 
-
-
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 		<button name="updateFile" type="submit" class="btn btn-lg btn-outline-danger">UPDATE (test) FILE</button>
     <h4 style="margin-bottom:0px; margin-top: 20px;">Title</h4><input maxlength="40" id="title" name="title" type="text" class="form-control" style="width: 550px;">

@@ -70,14 +70,13 @@ $ownedFile = 'https://webapp.cs.clemson.edu/~jlhelms/MeTube_Project/ownedFile.ph
 		<!---- Add a contact ----->
 		<div class="col">
 			<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-			<h4 class="text-center">Add a Contact</h4>
+			<h4 class="text-center">Add Comment</h4>
 
 			<!------- This is the style of the shadowed box containing username and password ---->	
 			<div style="width: 300px; height: 320px; padding: 15px; background-color: #f1f1f1; box-shadow: 1px 1px 1px 1px grey; margin: auto;">
 
 				<!---- Add Comment Form Group --->
 				<div class="form-group">
-					<label>Add Comment:</label>
 					<textarea class="form-control" rows="5" name="comment" required></textarea>
 				</div>
 
@@ -85,6 +84,20 @@ $ownedFile = 'https://webapp.cs.clemson.edu/~jlhelms/MeTube_Project/ownedFile.ph
 				<div class="form-group">
 					<button name="submit_comment" type="submit" class="btn btn-primary btn-md" style="width: 125px; margin-right: 15px">Submit</button>
 					<button name="reset" type="reset" class="btn btn-danger btn-md" style="width: 125px">Reset</button>
+				</div>
+			</div>
+			</form>
+			
+			<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+			<h4 class="text-center">Add File to Playlist</h4>
+
+			<!------- This is the style of the shadowed box containing username and password ---->	
+			<div style="width: 300px; height: 320px; padding: 15px; background-color: #f1f1f1; box-shadow: 1px 1px 1px 1px grey; margin: auto;">
+
+				<!--- Button Form Group -->
+				<div class="form-group">
+					<button name="submit_comment" type="submit" class="btn btn-primary btn-md" style="width: 225px; height: 185px; margin-right: 15px">Submit</button>
+					
 				</div>
 			</div>
 			</form>
