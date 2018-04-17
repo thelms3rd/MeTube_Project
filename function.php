@@ -838,6 +838,28 @@ function create_playlist($username, $playlist_name)
 	}
 }
 
+function select_playlist($username)
+{
+	$query = "select playlist_name from playlist where username_fk='$username'";
+	$result = mysql_query( $query );
+
+	if (!$result){
+		die ("user_exist_check() failed. Could not query the database: <br />". mysql_error());
+	}
+	else {
+
+		while($row=mysql_fetch_row($result))
+		{
+			?>
+			<option>    
+					<?php echo "$row[0]"; ?>
+			</option>
+			
+			<?php
+		}
+	}
+}
+
 
 
 

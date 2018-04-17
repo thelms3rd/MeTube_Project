@@ -57,12 +57,12 @@ nav_bar();
 					<div class = "card-body">
 						<h5 style="margin-bottom:0px; margin-top: 20px;">Choose</h5>
 						<select name="select_playlist"class="form-control" style="width: 175px;"> 
-							<option>All</option>
-							<option>Comedy</option>
-							<option>Music</option>
-							<option>Sports</option>
-							<option>Educational</option>
-							<option>Other</option>
+							
+							<?php 
+							
+							select_playlist($_SESSION['username']);
+							?>
+							
 						</select>
 					</div>
 				</div>
