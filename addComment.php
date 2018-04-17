@@ -49,7 +49,7 @@ $ownedFile = 'https://webapp.cs.clemson.edu/~jlhelms/MeTube_Project/ownedFile.ph
 	<div class="container">
   		<ul class="pagination"  class="text-center">
     		<li class="page-item"><a class="page-link" href="<?php echo $imageurl ?>" style="width: 300px">Current File</a></li>
-    		<li class="page-item"><a class="page-link" href="<?php echo $addCommenturl ?>" style="width: 300px">Add Comment</a></li>
+    		<li class="page-item"><a class="page-link" href="<?php echo $addCommenturl ?>" style="width: 300px">Add Comment/Add to Playlist</a></li>
   		
 			<!------ if user owns file ----->
 			<?php 
@@ -70,7 +70,7 @@ $ownedFile = 'https://webapp.cs.clemson.edu/~jlhelms/MeTube_Project/ownedFile.ph
 		<!---- Add Comment ----->
 		<div class="col">
 			<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-			<h4 class="text-center">Add comment/Add to Playlist</h4>
+			<h4 class="text-center">Add comment</h4>
 
 			<!------- This is the style of the shadowed box containing username and password ---->	
 			<div style="width: 300px; height: 320px; padding: 15px; background-color: #f1f1f1; box-shadow: 1px 1px 1px 1px grey; margin: auto;">
@@ -110,7 +110,7 @@ $ownedFile = 'https://webapp.cs.clemson.edu/~jlhelms/MeTube_Project/ownedFile.ph
 				
 				<!--- Button Form Group -->
 				<div class="form-group">
-					<button name="submit_playlist" type="submit" class="btn btn-primary btn-md" style="width: 265px; margin-right: 15px">Submit</button>
+					<button name="submit_playlistMedia" type="submit" class="btn btn-primary btn-md" style="width: 265px; margin-right: 15px">Submit</button>
 				</div>
 			</div>
 			</form>
@@ -130,11 +130,20 @@ $ownedFile = 'https://webapp.cs.clemson.edu/~jlhelms/MeTube_Project/ownedFile.ph
 		
 			send_comment($_SESSION['username'], $_SESSION['mediaid'], $_POST['comment']);
 		}
+		
+		if(isset($_POST['submit_playlistMedia'])) {
+			$playlist_id = find_playlist_id($_SESSION['username'], $mediaid);
+			insert_playlistMedia($playlist_id, $mediaid);
+		}
+		
+		
 		if(isset($_GET['search']))
 		{
 			$searchValue = $_GET['search'];
 			header('Location: https://webapp.cs.clemson.edu/~jlhelms/MeTube_Project/browse.php?search='.$searchValue);
 		}
+		
+		
 	}
 	
 

@@ -830,11 +830,26 @@ function update_file($fileid)
 
 function create_playlist($username, $playlist_name)
 {
-	$query = "INSERT INTO playlist (`username_fk`, `playlist_name`) VALUES ('$username','$playlist_name')";
-	$result = mysql_query( $query );
-	echo $query;
+	$selectQuery = "SELECT * FROM playlist WHERE username_fk='$username' AND playlist_name='$playlist_name'";
+	$result1 = mysql_query( $selectQuery );
 	if (!$result){
 		die ("send_comment failed. Could not query the database: <br />". mysql_error());
+	}
+	else{
+		$row = mysql_fetch_assoc($result);
+		if($row == 0){	
+		
+			$query = "INSERT INTO playlist (`username_fk`, `playlist_name`) VALUES ('$username','$playlist_name')";
+			$result = mysql_query( $query );
+			echo $query;
+			if (!$result){
+			die ("send_comment failed. Could not query the database: <br />". mysql_error());
+			}
+		}
+		else {
+			echo "Choose another Playlist Name!";
+		}
+	
 	}
 }
 
@@ -857,6 +872,31 @@ function select_playlist($username)
 			
 			<?php
 		}
+	}
+}
+
+
+function find_playlist_id($username, $filename)
+{
+	$query = "select playlist_name from playlist where username_fk='$username' AND playlist_name='$filename'";
+	$result = mysql_query( $query );
+
+	if (!$result){
+		die ("find_playlist query failed. Could not query the database: <br />". mysql_error());
+	}
+	else {
+		$row=mysql_fetch_row($result);
+		return $row[0];
+	}
+}
+
+function insert_playlistMedia($playlist_id, $mediaid)
+{
+	$query = "INSERT INTO `playlist_media`(`playlist_id_fk`, `mediaid_fk`) VALUES ('$playlist_id','$mediaid')";
+	$result = mysql_query( $query );
+	echo $query;
+	if (!$result){
+		die ("send_comment failed. Could not query the database: <br />". mysql_error());
 	}
 }
 
