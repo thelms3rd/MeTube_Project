@@ -814,7 +814,7 @@ function update_file($fileid)
 {
 
 	//delete file
-	$query = "UPDATE media SET title="updatetesting" where mediaid='$fileid'";
+	$query = "UPDATE media SET title='updatetesting' where mediaid='$fileid'";
 	$result = mysql_query( $query );
 	echo $query;
 
