@@ -828,9 +828,9 @@ function update_file($fileid)
 
 }
 
-function insert_playlist($name, $username, $fileid)
+function create_playlist($username, $playlist_name)
 {
-	$query = "INSERT INTO playlist (`playlist_name`, `username_fk`, `mediaid_fk`) VALUES ('$name','$username','$fileid')";
+	$query = "INSERT INTO playlist (`username_fk`, `playlist_name`) VALUES ($username,$playlist_name)";
 	$result = mysql_query( $query );
 	echo $query;
 	if (!$result){

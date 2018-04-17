@@ -71,7 +71,7 @@ nav_bar();
 
 if(isset($_POST['submit'])) {	
 	
-	insert_playlist($_POST['playlist_name'], $_SESSION['username'], NULL);
+	create_playlist($_SESSION['username'], $_POST['playlist_name']);
 	
 }
 	
