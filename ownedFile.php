@@ -83,9 +83,7 @@ $ownedFile = 'https://webapp.cs.clemson.edu/~jlhelms/MeTube_Project/ownedFile.ph
 
 
 
-<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-<?php if(isset($_SESSION['loggedIn'])) { ?>
-
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"> 
 		<button name="updateFile" type="submit" class="btn btn-lg btn-outline-danger">UPDATE.... FILE</button>
 	</form>
 
