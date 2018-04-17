@@ -912,6 +912,7 @@ function insert_playlistMedia($playlist_id, $mediaid)
 		}
 		else {
 			echo "File has been already added to Playlist!";
+		}
 	}
 }
 
