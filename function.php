@@ -894,11 +894,24 @@ function find_playlist_id($username, $filename)
 
 function insert_playlistMedia($playlist_id, $mediaid)
 {
-	$query = "INSERT INTO `playlist_media`(`playlist_id_fk`, `mediaid_fk`) VALUES ('$playlist_id','$mediaid')";
-	$result = mysql_query( $query );
-	echo $query;
-	if (!$result){
+	//select statement is to make sure that a file isnt added to same playlist more than once
+	$selectQuery = "SELECT * FROM playlist_media WHERE playlist_id_fk='$playlist_id' AND mediaid_fk='$mediaid'";
+	$result1 = mysql_query( $selectQuery );
+	if (!$result1){
 		die ("send_comment failed. Could not query the database: <br />". mysql_error());
+	}
+	else{
+		$row = mysql_fetch_assoc($result1);
+		if($row == 0){	
+			$query = "INSERT INTO `playlist_media`(`playlist_id_fk`, `mediaid_fk`) VALUES ('$playlist_id','$mediaid')";
+			$result = mysql_query( $query );
+			echo $query;
+			if (!$result){
+				die ("send_comment failed. Could not query the database: <br />". mysql_error());
+			}
+		}
+		else {
+			echo "File has been already added to Playlist!";
 	}
 }
 
