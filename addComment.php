@@ -79,10 +79,10 @@ $ownedFile = 'https://webapp.cs.clemson.edu/~jlhelms/MeTube_Project/ownedFile.ph
 				<div class="form-group">
 					<textarea class="form-control" rows="5" name="comment" required></textarea>
 				</div>
-				<br>
+
 				<!--- Button Form Group -->
 				<div class="form-group">
-					<button name="submit_comment" type="submit" class="btn btn-primary btn-md" style="width: 285px; margin-right: 15px">Submit</button>
+					<button name="submit_comment" type="submit" class="btn btn-primary btn-md" style="width: 125px; margin-right: 15px">Submit</button>
 					<button name="reset" type="reset" class="btn btn-danger btn-md" style="width: 125px">Reset</button>
 				</div>
 			</div>
@@ -108,7 +108,7 @@ $ownedFile = 'https://webapp.cs.clemson.edu/~jlhelms/MeTube_Project/ownedFile.ph
 
 				<!--- Button Form Group -->
 				<div class="form-group">
-					<button name="submit_playlist" type="submit" class="btn btn-primary btn-md" style="width: 125px; margin-right: 15px">Submit</button>
+					<button name="submit_playlist" type="submit" class="btn btn-primary btn-md" style="width: 250px; margin-right: 15px">Submit</button>
 				</div>
 			</div>
 			</form>
