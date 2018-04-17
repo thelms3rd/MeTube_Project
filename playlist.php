@@ -43,18 +43,17 @@ nav_bar();
 <div class="container">
   <ul class="pagination"  class="text-center">
     <li class="page-item"><a class="page-link" href="playlist.php" style="width: 300px">My Playlist</a></li>
-    <li class="page-item"><a class="page-link" href="addPlaylist.php" style="width: 300px">Add Playlist</a></li>
+    <li class="page-item"><a class="page-link" href="createPlaylist.php" style="width: 300px">Create Playlist</a></li>
   </ul>
 	</div>
 <br>
 <h4 class="text-center">Your Playlist </h4>
-<br>
 <div class="container">
-<div class = "card" style="width: 700px;">
+<div class = "card" style="width: 500px;">
 	<div class = "card-body">
 		<div class="row">
 			<div class="col">
-				<div class = "card" style="width: 225px;">
+				<div class = "card" style="width: 350px;">
 					<div class = "card-body">
 						<h5 style="margin-bottom:0px; margin-top: 20px;">Choose</h5>
 						<select name="select_playlist"class="form-control" style="width: 175px;"> 
