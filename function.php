@@ -887,7 +887,7 @@ function find_playlist_id($username, $filename)
 	}
 	else {
 		$row=mysql_fetch_row($result);
-		echo "row:".$row[1];
+		//echo "row:".$row[1];
 		return $row[0];
 	}
 }
