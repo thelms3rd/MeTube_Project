@@ -61,7 +61,7 @@ $ownedFile = 'https://webapp.cs.clemson.edu/~jlhelms/MeTube_Project/ownedFile.ph
 		</div>
 		<br>
 		
-		<button name="deleteFile" type="button" class="btn btn-lg btn-outline-danger">DELETE FILE</button>
+		<button name="deleteFile" type="submit" class="btn btn-lg btn-outline-danger">DELETE FILE</button>
 	</form>
 	</div>
 	
