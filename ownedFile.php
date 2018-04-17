@@ -61,12 +61,12 @@ $ownedFile = 'https://webapp.cs.clemson.edu/~jlhelms/MeTube_Project/ownedFile.ph
 		</div>
 		<br>
 		
-		<button name="delete" type="button" class="btn btn-lg btn-outline-danger">DELETE FILE</button>
+		<button name="deleteFile" type="button" class="btn btn-lg btn-outline-danger">DELETE FILE</button>
 	</form>
 	</div>
 	
 <?php 
-	if(isset($_POST['delete']))
+	if(isset($_POST['deleteFile']))
 	{
 		echo $mediaid;
 		delete_file($mediaid);
