@@ -53,7 +53,7 @@ nav_bar();
 	<div class = "card-body">
 		<div class="row">
 			<div class="col">
-				<div class = "card" style="width: 350px;">
+				<div class = "card" style="width: 225px;">
 					<div class = "card-body">
 						<h5 style="margin-bottom:0px; margin-top: 20px;">Choose</h5>
 						<select name="select_playlist"class="form-control" style="width: 175px;"> 
