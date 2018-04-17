@@ -68,6 +68,7 @@ $ownedFile = 'https://webapp.cs.clemson.edu/~jlhelms/MeTube_Project/ownedFile.ph
 	if(isset($_POST['delete']))
 	{
 		delete_file($mediaid);
+		
 	}
 ?>
 
