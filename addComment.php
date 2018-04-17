@@ -67,10 +67,10 @@ $ownedFile = 'https://webapp.cs.clemson.edu/~jlhelms/MeTube_Project/ownedFile.ph
 	<br>
 	<div class="row">
 		
-		<!---- Add a contact ----->
+		<!---- Add Comment ----->
 		<div class="col">
 			<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-			<h4 class="text-center">Add Comment</h4>
+			<h4 class="text-center">Add comment</h4>
 
 			<!------- This is the style of the shadowed box containing username and password ---->	
 			<div style="width: 300px; height: 320px; padding: 15px; background-color: #f1f1f1; box-shadow: 1px 1px 1px 1px grey; margin: auto;">
@@ -87,17 +87,28 @@ $ownedFile = 'https://webapp.cs.clemson.edu/~jlhelms/MeTube_Project/ownedFile.ph
 				</div>
 			</div>
 			</form>
-			
+		</div>
+		
+			<!---- Add File to playlist ----->
+		<div class="col">
 			<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 			<h4 class="text-center">Add File to Playlist</h4>
 
 			<!------- This is the style of the shadowed box containing username and password ---->	
 			<div style="width: 300px; height: 320px; padding: 15px; background-color: #f1f1f1; box-shadow: 1px 1px 1px 1px grey; margin: auto;">
 
+				<select name="select_playlist"class="form-control" style="width: 175px;"> 
+							
+							<?php 
+							
+							select_playlist($_SESSION['username']);
+							?>
+							
+					</select>
+
 				<!--- Button Form Group -->
 				<div class="form-group">
-					<button name="submit_comment" type="submit" class="btn btn-primary btn-md" style="width: 225px; height: 185px; margin-right: 15px">Submit</button>
-					
+					<button name="submit_playlist" type="submit" class="btn btn-primary btn-md" style="width: 125px; margin-right: 15px">Submit</button>
 				</div>
 			</div>
 			</form>
