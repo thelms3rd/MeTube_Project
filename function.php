@@ -7,7 +7,7 @@ function user_exist_check ($username, $password){
 	$result = mysql_query( $query );
 	if (!$result){
 		die ("user_exist_check() failed. Could not query the database: <br />". mysql_error());
-	}	
+	}
 	else {
 		$row = mysql_fetch_assoc($result);
 		if($row == 0){
@@ -17,7 +17,7 @@ function user_exist_check ($username, $password){
 			if($insert)
 				return 1;
 			else
-				die ("Could not insert into the database: <br />". mysql_error());		
+				die ("Could not insert into the database: <br />". mysql_error());
 		}
 		else{
 			return 2;
@@ -28,11 +28,11 @@ function user_exist_check ($username, $password){
 
 function user_pass_check($username, $password)
 {
-	
+
 	$query = "select * from account where username='$username'";
 	echo  $query;
 	$result = mysql_query( $query );
-		
+
 	if (!$result)
 	{
 	   die ("user_pass_check() failed. Could not query the database: <br />". mysql_error());
@@ -41,9 +41,9 @@ function user_pass_check($username, $password)
 		$row = mysql_fetch_row($result);
 		if(strcmp($row[1],$password))
 			return 2; //wrong password
-		else 
+		else
 			return 0; //Checked.
-	}	
+	}
 }
 
 function updateMediaTime($mediaid)
@@ -85,14 +85,14 @@ function update_Account($username, $updatedPassword)
 	$query = "UPDATE account SET password='$updatedPassword' WHERE username='$username'";
 	echo  $query;
 	$result = mysql_query( $query );
-		
+
 	if (!$result)
 	{
 	   die ("User_Update failed. Could not query the database: <br />". mysql_error());
 	}
 	else
 	{
-		
+
 		echo "<br> <br> Your Account has been Updated!";
 	}
 }
@@ -103,7 +103,7 @@ function message_user($fromUsername, $toUsername, $message)
 	$result = mysql_query( $query );
 	if (!$result){
 		die ("user_exist_check() failed. Could not query the database: <br />". mysql_error());
-	}	
+	}
 	else {
 		$row = mysql_fetch_assoc($result);
 		if($row == 0){
@@ -116,10 +116,10 @@ function message_user($fromUsername, $toUsername, $message)
 			if($insert)
 				echo "<br> <br> Message Sent!";
 			else
-				die ("Could not insert into the database: <br />". mysql_error());		
+				die ("Could not insert into the database: <br />". mysql_error());
 		}
 	}
-	
+
 }
 
 function my_messages($username)
@@ -129,26 +129,26 @@ function my_messages($username)
 
 	if (!$result){
 		die ("user_exist_check() failed. Could not query the database: <br />". mysql_error());
-	}	
+	}
 	else {
-		
+
 		//cycle through the rows to print
 		while ($row=mysql_fetch_row($result))
 		{
-			?> 
-			<tr> 
-				<td>  
-					<?php echo "$row[2]"; ?> 
-				
-				</td> 
-				<td> 
-					<?php echo "$row[3]"; ?> 
-				</td> 
+			?>
 			<tr>
-			
+				<td>
+					<?php echo "$row[2]"; ?>
+
+				</td>
+				<td>
+					<?php echo "$row[3]"; ?>
+				</td>
+			<tr>
+
 			<?php
 		}
-		
+
 	}
 }
 
@@ -159,9 +159,9 @@ function delete_messages($username)
 
 	if (!$result){
 		die ("user_exist_check() failed. Could not query the database: <br />". mysql_error());
-	}	
+	}
 	else {
-		
+
 		echo "Messages have been deleted!";
 	}
 }
@@ -172,7 +172,7 @@ function add_contact($fromUser, $contact, $organization)
 	$query2 = "select * from contact where username_fk='$fromUser' AND mycontact='$contact'";
 	$result = mysql_query( $query );
 	$result2 = mysql_query( $query2 );
-	
+
 	if (!$result){
 		die ("query1 failed. Could not query the database: <br />". mysql_error());
 	}
@@ -182,7 +182,7 @@ function add_contact($fromUser, $contact, $organization)
 	else {
 		$row_result = mysql_fetch_assoc($result);
 		$row_result2 = mysql_fetch_assoc($result2);
-		
+
 		if($row_result == 0){
 		echo "<br> <br> User does not Exist!";
 		}
@@ -196,7 +196,7 @@ function add_contact($fromUser, $contact, $organization)
 			if($insert)
 				echo "<br> <br> Contact Added!";
 			else
-				die ("Could not insert into the database: <br />". mysql_error());		
+				die ("Could not insert into the database: <br />". mysql_error());
 		}
 	}
 }
@@ -209,21 +209,21 @@ function my_favorites($username)
 	if (!$result){
 		die ("my_favorites query failed. Could not query the database: <br />". mysql_error());
 	} else {
-			
+
 		//cycle through the rows to print
 		while ($row=mysql_fetch_row($result))
 		{
-			?> 
-			<tr> 
-				<td>  
-					<?php echo "$row[2]"; ?> 
-				
-				</td> 
+			?>
 			<tr>
-			
+				<td>
+					<?php echo "$row[2]"; ?>
+
+				</td>
+			<tr>
+
 			<?php
 		}
-	}		
+	}
 }
 
 function my_family($username)
@@ -234,21 +234,21 @@ function my_family($username)
 	if (!$result){
 		die ("my_family query failed. Could not query the database: <br />". mysql_error());
 	} else {
-			
+
 		//cycle through the rows to print
 		while ($row=mysql_fetch_row($result))
 		{
-			?> 
-			<tr> 
-				<td>  
-					<?php echo "$row[2]"; ?> 
-				
-				</td> 
+			?>
 			<tr>
-			
+				<td>
+					<?php echo "$row[2]"; ?>
+
+				</td>
+			<tr>
+
 			<?php
 		}
-	}		
+	}
 }
 
 function my_friends($username)
@@ -259,21 +259,21 @@ function my_friends($username)
 	if (!$result){
 		die ("my_friends query failed. Could not query the database: <br />". mysql_error());
 	} else {
-			
+
 		//cycle through the rows to print
 		while ($row=mysql_fetch_row($result))
 		{
-			?> 
-			<tr> 
-				<td>  
-					<?php echo "$row[2]"; ?> 
-				
-				</td> 
+			?>
 			<tr>
-			
+				<td>
+					<?php echo "$row[2]"; ?>
+
+				</td>
+			<tr>
+
 			<?php
 		}
-	}		
+	}
 }
 
 function my_others($username)
@@ -284,21 +284,21 @@ function my_others($username)
 	if (!$result){
 		die ("my_others query failed. Could not query the database: <br />". mysql_error());
 	} else {
-			
+
 		//cycle through the rows to print
 		while ($row=mysql_fetch_row($result))
 		{
-			?> 
-			<tr> 
-				<td>  
-					<?php echo "$row[2]"; ?> 
-				
-				</td> 
+			?>
 			<tr>
-			
+				<td>
+					<?php echo "$row[2]"; ?>
+
+				</td>
+			<tr>
+
 			<?php
 		}
-	}		
+	}
 }
 
 function delete_contact($logged_user, $delete_user)
@@ -310,20 +310,20 @@ function delete_contact($logged_user, $delete_user)
 	}
 	else {
 		$row_result = mysql_fetch_assoc($result);
-		
+
 		if($row_result == 0){
 		echo "<br> <br> Contact Not Found!";
 		}
 		else{
 			$query2 = "DELETE FROM contact WHERE username_fk='$logged_user' AND mycontact='$delete_user'";
 			$delete = mysql_query( $query2 );
-	
+
 			if($delete)
 				echo "<br> <br> Contact Deleted!";
 			else
-				die ("Could not delete record in the database: <br />". mysql_error());		
-			
-			
+				die ("Could not delete record in the database: <br />". mysql_error());
+
+
 		}
 	}
 }
@@ -342,13 +342,13 @@ function most_views()
 		die ("query failed. Could not query the database: <br />". mysql_error());
 	}
 	else {
-		
+
 		$count = 0;
-		
+
 		?>
 		<div class="container">
 			<div class="row">
-		<?php		
+		<?php
 		while ($count < 3)
 		{
 			$row = mysql_fetch_row($result);
@@ -361,10 +361,10 @@ function most_views()
 			$category = $row[8];
 			$keywords = $row[9];
 			$views = $row[10];
-			
+
 			$url = 'https://webapp.cs.clemson.edu/~jlhelms/MeTube_Project/image.php?id='.$mediaid;
-			
-			?> 
+
+			?>
 					<div class="col">
 						<div class = "panel panel-default">
 							<h5> <?php echo $title ?> </h5>
@@ -374,7 +374,7 @@ function most_views()
 			<?php
 			$count++;
 		}
-	?> 
+	?>
 			</div>
 		</div>
 	<?php
@@ -390,13 +390,13 @@ function new_uploads()
 		die ("query failed. Could not query the database: <br />". mysql_error());
 	}
 	else {
-		
+
 		$count = 0;
-		
+
 		?>
 		<div class="container">
 			<div class="row">
-		<?php		
+		<?php
 		while ($count < 3)
 		{
 			$row = mysql_fetch_row($result);
@@ -409,10 +409,10 @@ function new_uploads()
 			$category = $row[8];
 			$keywords = $row[9];
 			$views = $row[10];
-			
+
 			$url = 'https://webapp.cs.clemson.edu/~jlhelms/MeTube_Project/image.php?id='.$mediaid;
-			
-			?> 
+
+			?>
 					<div class="col">
 						<div class = "panel panel-default">
 							<h5> <?php echo $title ?> </h5>
@@ -422,7 +422,7 @@ function new_uploads()
 			<?php
 			$count++;
 		}
-	?> 
+	?>
 			</div>
 		</div>
 	<?php
@@ -431,7 +431,7 @@ function new_uploads()
 
 function browse_files($category, $type)
 {
-		
+
 	if (($category=='All') and ($type=='All'))
 	{
 		$query = "SELECT * FROM media";
@@ -453,16 +453,16 @@ function browse_files($category, $type)
 		$query = "SELECT * FROM media WHERE category='$category' AND media_type='$type'";
 		echo $query;
 	}
-	
+
 	$result = mysql_query( $query );
 	if (!$result){
 		die ("query failed. Could not query the database: <br />". mysql_error());
 	}
 	else {
-	
+
 		?>
 		<div class="container">
-		
+
 		<?php
 		while ($row = mysql_fetch_row($result))
 		{
@@ -476,9 +476,9 @@ function browse_files($category, $type)
 			$category = $row[8];
 			$keywords = $row[9];
 			$views = $row[10];
-			
+
 			$url = 'https://webapp.cs.clemson.edu/~jlhelms/MeTube_Project/image.php?id='.$mediaid;
-			
+
 			?>
 			<div class="row text-center">
 
@@ -496,10 +496,10 @@ function browse_files($category, $type)
     		  </div>
            </div>
 			</div>
-			
+
 			<?php
 		}
-	
+
 	}
 }
 
@@ -507,16 +507,16 @@ function search_files($search)
 {
 	$query = "SELECT * FROM media WHERE title LIKE '%$search%' OR description LIKE '%$search%' OR keywords LIKE '%$search%'";
 	$result = mysql_query( $query );
-	
+
 	if(!$result)
 	{
-		die ("query failed. Could not query the database: <br />". mysql_error());	
+		die ("query failed. Could not query the database: <br />". mysql_error());
 	}
 	else{
-		
+
 		?>
 		<div class="container">
-		
+
 		<?php
 		while ($row = mysql_fetch_row($result))
 		{
@@ -530,9 +530,9 @@ function search_files($search)
 			$category = $row[8];
 			$keywords = $row[9];
 			$views = $row[10];
-			
+
 			$url = 'https://webapp.cs.clemson.edu/~jlhelms/MeTube_Project/image.php?id='.$mediaid;
-			
+
 			?>
 			<div class="row text-center">
 
@@ -550,12 +550,12 @@ function search_files($search)
     		  </div>
            </div>
 			</div>
-			
+
 			<?php
 		}
-		
+
 	}
-	
+
 }
 
 function nav_bar()
@@ -651,42 +651,42 @@ function send_comment($username, $fileid, $comment)
 	$result = mysql_query( $query );
 	if (!$result){
 		die ("send_comment failed. Could not query the database: <br />". mysql_error());
-	}	
+	}
 }
 
 function file_comments($fileid)
 {
 	$query = "select * from comment where file_id='$fileid'";
 	$result = mysql_query( $query );
-	
+
 	if (!$result){
 		die ("user_exist_check() failed. Could not query the database: <br />". mysql_error());
-	}	
+	}
 	else {
-		
+
 		//cycle through the rows to print
 		while ($row=mysql_fetch_row($result))
 		{
-			?> 
-			<tr> 
-				<td>  
-					<?php echo "$row[3]"; ?> 
-				
-				</td> 
-				<td> 
-					<?php echo "$row[2]"; ?> 
-				</td> 
+			?>
 			<tr>
-			
+				<td>
+					<?php echo "$row[3]"; ?>
+
+				</td>
+				<td>
+					<?php echo "$row[2]"; ?>
+				</td>
+			<tr>
+
 			<?php
 		}
-		
+
 	}
 }
 
 function my_uploads($username, $category, $type)
 {
-		
+
 	if (($category=='All') and ($type=='All'))
 	{
 		$query = "SELECT * FROM media WHERE username='$username'";
@@ -708,18 +708,18 @@ function my_uploads($username, $category, $type)
 		$query = "SELECT * FROM media WHERE category='$category' AND media_type='$type' AND username='$username'";
 		echo $query;
 	}
-	
+
 	$result = mysql_query( $query );
 	if (!$result){
 		die ("query failed. Could not query the database: <br />". mysql_error());
 	}
 	else {
-	
+
 		?>
 
 		<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 		<div class="container">
-		
+
 		<?php
 		while ($row = mysql_fetch_row($result))
 		{
@@ -733,17 +733,17 @@ function my_uploads($username, $category, $type)
 			$category = $row[8];
 			$keywords = $row[9];
 			$views = $row[10];
-			
+
 			$url = 'https://webapp.cs.clemson.edu/~jlhelms/MeTube_Project/image.php?id='.$mediaid;
-			
+
 			?>
 			<div class="row text-center">
 
             <div class="col-sm-4 col-md-4 col-lg-4 col-xs-6">
                 <div class = "panel panel-default">
-						 
+
 						 <h6> <?php echo $title ?> </h6>
-						 <div class="img-thumbnail"> <a href="<?php echo $url;?>"><img src="<?php echo $filenpath;?>" class="img-responsive" width = "250" height="200"></a></div>  
+						 <div class="img-thumbnail"> <a href="<?php echo $url;?>"><img src="<?php echo $filenpath;?>" class="img-responsive" width = "250" height="200"></a></div>
                   <br>
                   <br>
     		  </div>
@@ -751,7 +751,7 @@ function my_uploads($username, $category, $type)
 			</div>
 			</div>
 			</form>
-			
+
 			<?php
 		}
 	}
@@ -761,14 +761,14 @@ function file_owner($username, $fileid)
 {
 	$query = "select username from media where mediaid='$fileid'";
 	$result = mysql_query( $query );
-	
+
 	if (!$result){
 		die ("user_exist_check() failed. Could not query the database: <br />". mysql_error());
-	}	
+	}
 	else {
-		
+
 		$row=mysql_fetch_row($result);
-		
+
 		//return true if loggedin user equals username on file
 		if($username == $row[0])
 		{
@@ -779,34 +779,35 @@ function file_owner($username, $fileid)
 		}
 	}
 }
+
 function delete_file($fileid)
 {
 	//delete comments related to file
 	$query1 = "DELETE FROM comment where file_id='$fileid'";
 	$result1 = mysql_query( $query1 );
 	echo $query1;
-	
+
 	if (!$result1){
 		die ("delete_file() failed. Could not query the database: <br />". mysql_error());
-	}	
+	}
 	else {
-		
+
 		echo "Comments have been deleted!";
-	
-	
+
+
 	//delete file
 	$query = "DELETE FROM media where mediaid='$fileid'";
 	$result = mysql_query( $query );
 	echo $query;
-	
+
 	if (!$result){
 		die ("delete_file() failed. Could not query the database: <br />". mysql_error());
-	}	
+	}
 	else {
-		
+
 		echo "File has been deleted!";
 	}
 }
 }
-	
+
 ?>
