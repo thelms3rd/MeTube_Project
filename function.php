@@ -815,12 +815,12 @@ function update_file($fileid)
 {
 
 	//delete file
-	$query = "UPDATE media SET title='".$_POST["title"]."' where mediaid='$fileid'";
+	$query = "UPDATE media SET title='".$_POST["title"]."',media_type='".$_POST["mediaType"]."',keywords='".$_POST["keywords"]."',description='".$_POST["description"]."' where mediaid='$fileid'";
 	$result = mysql_query( $query );
 	echo $query;
 
 	if (!$result){
-		die ("delete_file() failed. Could not query the database: <br />". mysql_error());
+		die ("update_file() failed. Could not query the database: <br />". mysql_error());
 	}
 	else {
 
@@ -838,8 +838,8 @@ function create_playlist($username, $playlist_name)
 	}
 	else{
 		$row = mysql_fetch_assoc($result1);
-		if($row == 0){	
-		
+		if($row == 0){
+
 			$query = "INSERT INTO playlist (`username_fk`, `playlist_name`) VALUES ('$username','$playlist_name')";
 			$result = mysql_query( $query );
 			echo $query;
@@ -850,7 +850,7 @@ function create_playlist($username, $playlist_name)
 		else {
 			echo "Choose another Playlist Name!";
 		}
-	
+
 	}
 }
 
@@ -867,10 +867,10 @@ function select_playlist($username)
 		while($row=mysql_fetch_row($result))
 		{
 			?>
-			<option>    
+			<option>
 					<?php echo "$row[0]"; ?>
 			</option>
-			
+
 			<?php
 		}
 	}
@@ -881,14 +881,14 @@ function find_playlist_id($username, $filename)
 {
 	$query = "select playlist_id from playlist where username_fk='$username' AND playlist_name='$filename'";
 	$result = mysql_query( $query );
-	echo $query; 
-		
+	echo $query;
+
 	if (!$result){
 		die ("find_playlist query failed. Could not query the database: <br />". mysql_error());
 	}
 	else {
 		$row=mysql_fetch_row($result);
-		
+
 		return $row[0];
 	}
 }
@@ -903,7 +903,7 @@ function insert_playlistMedia($playlist_id, $mediaid)
 	}
 	else{
 		$row = mysql_fetch_assoc($result1);
-		if($row == 0){	
+		if($row == 0){
 			$query = "INSERT INTO `playlist_media`(`playlist_id_fk`, `mediaid_fk`) VALUES ('$playlist_id','$mediaid')";
 			$result = mysql_query( $query );
 			echo $query;
@@ -924,27 +924,27 @@ function find_mediaid($playlist_id)
 	//find the media_id attached to playlist
 	$query2 = "select mediaid_fk from playlist_media where playlist_id_fk='$playlist_id'";
 	$result2 = mysql_query( $query2 );
-	echo $query2; 
-		
+	echo $query2;
+
 	if (!$result2){
 		die ("find_playlist query failed. Could not query the database: <br />". mysql_error());
 	}
 	else {
-		
+
 		while($row2=mysql_fetch_row($result2))
 		{
 			//find all attributes from each media file
 			$query = "select * from media where mediaid='$row2[0]'";
 			$result = mysql_query( $query );
 			echo $query;
-			
+
 			if (!$result){
 				die ("find_playlist query failed. Could not query the database: <br />". mysql_error());
 			}
-			
+
 			else {
-				
-				
+
+
 					?>
 
 					<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
@@ -999,8 +999,8 @@ function add_favorite($username, $fileid)
 	}
 	else{
 		$row = mysql_fetch_assoc($result2);
-		if($row == 0){	
-	
+		if($row == 0){
+
 			$query = "INSERT INTO `favorites`(`username_fk`, `mediaid_fk`) VALUES ('$username','$fileid')";
 			$result = mysql_query( $query );
 			echo $query;
@@ -1013,7 +1013,7 @@ function add_favorite($username, $fileid)
 			echo "File has been already added to Favorites!";
 		}
 	}
-			
+
 }
 
 function display_favorites($username)
@@ -1024,13 +1024,13 @@ function display_favorites($username)
 		die ("find mediaid_fk failed. Could not query the database: <br />". mysql_error());
 	}
 	else{
-	
+
 		while($row1=mysql_fetch_row($result1))
 		{
 			$query = "select * from media where mediaid='$row1[0]'";
 			$result = mysql_query( $query );
 			echo $query;
-			
+
 			if (!$result){
 				die ("find_media query failed. Could not query the database: <br />". mysql_error());
 			}
