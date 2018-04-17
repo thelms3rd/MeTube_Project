@@ -782,7 +782,8 @@ function delete_file($fileid)
 {
 	$query = "DELETE FROM media where mediaid='$fileid'";
 	$result = mysql_query( $query );
-
+	echo $query;
+	
 	if (!$result){
 		die ("delete_file() failed. Could not query the database: <br />". mysql_error());
 	}	
