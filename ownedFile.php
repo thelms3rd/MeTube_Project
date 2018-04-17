@@ -61,7 +61,7 @@ $ownedFile = 'https://webapp.cs.clemson.edu/~jlhelms/MeTube_Project/ownedFile.ph
 		</div>
 		<br>
 
-		<button name="deleteFile" type="submit" class="btn btn-lg btn-outline-danger">DELETE test FILE</button>
+		<button name="deleteFile" type="submit" class="btn btn-lg btn-outline-danger">DELETE FILE</button>
 	</form>
 	</div>
 
@@ -84,7 +84,7 @@ $ownedFile = 'https://webapp.cs.clemson.edu/~jlhelms/MeTube_Project/ownedFile.ph
 
 
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-		<button name="updateFile" type="submit" class="btn btn-lg btn-outline-danger">UPDATE.... FILE</button>
+		<button name="updateFile" type="submit" class="btn btn-lg btn-outline-danger">UPDATE ssss FILE</button>
 	</form>
 
   <?php
