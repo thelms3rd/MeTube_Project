@@ -85,26 +85,9 @@ $ownedFile = 'https://webapp.cs.clemson.edu/~jlhelms/MeTube_Project/ownedFile.ph
 
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 <?php if(isset($_SESSION['loggedIn'])) { ?>
-	<div class="container">
-  		<ul class="pagination"  class="text-center">
-    		<li class="page-item"><a class="page-link" href="<?php echo $imageurl ?>" style="width: 300px">Current File</a></li>
-    		<li class="page-item"><a class="page-link" href="<?php echo $addCommenturl ?>" style="width: 300px">Add Comment</a></li>
-
-			<!------ if user owns file ----->
-			<?php
-			if (file_owner($_SESSION['username'], $mediaid))
-			{ ?>
-
-				<li class="page-item"><a class="page-link" href="<?php echo $ownedFile ?>" style="width: 300px">Update/Delete File</a></li>
-			<?php } ?>
-		<?php } ?>
-		</ul>
-		</div>
-		<br>
 
 		<button name="updateFile" type="submit" class="btn btn-lg btn-outline-danger">UPDATE FILE</button>
 	</form>
-	</div>
 
   <?php
   	if(isset($_POST['updateFile']))
@@ -114,32 +97,3 @@ $ownedFile = 'https://webapp.cs.clemson.edu/~jlhelms/MeTube_Project/ownedFile.ph
 
   	}
   ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<?php
-	if(isset($_POST['deleteFile']))
-	{
-		echo $mediaid;
-		delete_file($mediaid);
-
-	}
-?>
