@@ -991,12 +991,29 @@ function find_mediaid($playlist_id)
 
 function add_favorite($username, $fileid)
 {
-	$query = "INSERT INTO `favorites`(`username_fk`, `mediaid_fk`) VALUES ('$username','$fileid')";
-	$result = mysql_query( $query );
-	echo $query;
-	if (!$result){
-		die ("send_comment failed. Could not query the database: <br />". mysql_error());
+	//Make sure that the file is not already in favorites table
+	$query2 = "SELECT * FROM favorites WHERE username_fk='$username' AND mediaid_fk='$fileid'";
+	$result2 = mysql_query( $query2 );
+	if (!$result2){
+		die ("add_favorites failed. Could not query the database: <br />". mysql_error());
 	}
+	else{
+		$row = mysql_fetch_assoc($result1);
+		if($row == 0){	
+	
+			$query = "INSERT INTO `favorites`(`username_fk`, `mediaid_fk`) VALUES ('$username','$fileid')";
+			$result = mysql_query( $query );
+			echo $query;
+			if (!$result){
+					die ("send_comment failed. Could not query the database: <br />". mysql_error());
+			}
+		}
+		else {
+			?> <br> <?php
+			echo "File has been already added to Favorites!";
+		}
+	}
+			
 }
 
 
