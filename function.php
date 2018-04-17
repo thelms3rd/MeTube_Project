@@ -622,6 +622,7 @@ function nav_bar()
       			<a class="dropdown-item" href="media_upload.php">Upload</a>
 					<a class="dropdown-item" href="channel.php">Channel</a>
 					<a class="dropdown-item" href="playlist.php">Playlist</a>
+					<a class="dropdown-item" href="favorites.php">Favorites</a>
 					<a class="dropdown-item" href="addContacts.php">Contacts</a>
       			<a class="dropdown-item" href="message.php">Message</a>
     			</div>

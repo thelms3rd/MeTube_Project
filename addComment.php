@@ -90,7 +90,7 @@ $ownedFile = 'https://webapp.cs.clemson.edu/~jlhelms/MeTube_Project/ownedFile.ph
 		</div>
 		
 		
-			<!---- Add File to playlist ----->
+			<!------------------ Add File to playlist --------------------->
 		<div class="col">
 			<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 			<h4 class="text-center">Add File to Playlist</h4>
@@ -114,6 +114,22 @@ $ownedFile = 'https://webapp.cs.clemson.edu/~jlhelms/MeTube_Project/ownedFile.ph
 				</div>
 			</div>
 			</form>
+		</div>
+		<!------------------ Add File to Favorites --------------------->
+		<div class="col">
+		<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+			<h4 class="text-center">Add File to Favorites</h4>
+
+			<!------- This is the style of the shadowed box containing username and password ---->	
+			<div style="width: 300px; height: 150px; padding: 15px; background-color: #f1f1f1; box-shadow: 1px 1px 1px 1px grey; margin: auto;">
+			
+			<!--- Button Form Group -->
+			<div class="form-group">
+				<button name="submit_playlistMedia" type="submit" class="btn btn-primary btn-md" style="width: 265px; margin-right: 15px">Submit</button>
+				</div>
+			</div>
+			</form>
+		
 		</div>
 	</div>
 </div>
