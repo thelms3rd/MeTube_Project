@@ -49,11 +49,11 @@ nav_bar();
 <br>
 <h4 class="text-center">Your Playlist </h4>
 <div class="container">
-<div class = "card" style="width: 500px;">
+<div class = "card" style="width: 600px;">
 	<div class = "card-body">
 		<div class="row">
 			<div class="col">
-				<div class = "card" style="width: 400px;">
+				<div class = "card" style="width: 500px;">
 					<div class = "card-body">
 						<div class="col">
 						<h5 style="margin-bottom:0px; margin-top: 20px;">Choose</h5>
