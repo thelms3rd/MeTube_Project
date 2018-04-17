@@ -989,6 +989,16 @@ function find_mediaid($playlist_id)
 	}
 }
 
+function add_favorite($username, $fileid)
+{
+	$query = "INSERT INTO `favorites`(`username_fk`, `mediaid_fk`) VALUES ('$username','$fileid')";
+	$result = mysql_query( $query );
+	echo $query;
+	if (!$result){
+		die ("send_comment failed. Could not query the database: <br />". mysql_error());
+	}
+}
+
 
 
 

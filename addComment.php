@@ -125,7 +125,7 @@ $ownedFile = 'https://webapp.cs.clemson.edu/~jlhelms/MeTube_Project/ownedFile.ph
 			
 			<!--- Button Form Group -->
 			<div class="form-group">
-				<button name="submit_playlistMedia" type="submit" class="btn btn-primary btn-md" style="width: 265px; margin-right: 15px">Submit</button>
+				<button name="submit_favorites" type="submit" class="btn btn-primary btn-md" style="width: 265px; margin-right: 15px">Submit</button>
 				</div>
 			</div>
 			</form>
@@ -155,7 +155,12 @@ $ownedFile = 'https://webapp.cs.clemson.edu/~jlhelms/MeTube_Project/ownedFile.ph
 			//insert media to the playlist
 			insert_playlistMedia($playlist_id, $mediaid);
 		}
+		if(isset($_POST['submit_favorites'])) {
+			
+			//if button is clicked, add file to favorites table
+			add_favorite($_SESSION['username'], $mediaid);
 		
+		}
 		
 		if(isset($_GET['search']))
 		{
