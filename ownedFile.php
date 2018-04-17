@@ -93,7 +93,7 @@ $ownedFile = 'https://webapp.cs.clemson.edu/~jlhelms/MeTube_Project/ownedFile.ph
 
     <h4 style="margin-bottom:0px; margin-top: 20px;">Description (500 character max)</h5><input maxlength="500" id="description" name="description" type="text" class="form-control" rows="5" style="resize: none; width: 550px;"></h4>
   <br>
-	  <button name="updateFile" type="submit" class="btn btn-lg btn-outline-danger">UPDATE FILE</button>
+	  <button name="updateFile" type="submit" class="btn btn-lg btn-outline-danger">UPDATE () FILE</button>
 	</form>
 
   <?php
