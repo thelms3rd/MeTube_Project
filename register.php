@@ -26,6 +26,12 @@
 session_start();
 include_once "function.php";
 nav_bar();
+if(isset($_GET['search']))
+	{
+		$searchValue = $_GET['search'];
+		header('Location: https://webapp.cs.clemson.edu/~jlhelms/MeTube_Project/browse.php?search='.$searchValue);
+	}		
+
 
 if(isset($_POST['submit'])) {
 	if( $_POST['password1'] != $_POST['password2']) {
@@ -89,11 +95,6 @@ if(isset($_POST['submit'])) {
   if(isset($register_error))
    {  echo "<div id='passwd_result'> register_error:".$register_error."</div>";}
 	
-	if(isset($_GET['search']))
-	{
-		$searchValue = $_GET['search'];
-		header('Location: https://webapp.cs.clemson.edu/~jlhelms/MeTube_Project/browse.php?search='.$searchValue);
-	}
 ?>
 
 <!-- Optional JavaScript -->
