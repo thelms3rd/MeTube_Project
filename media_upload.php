@@ -22,11 +22,13 @@ session_start();
 
 include_once "function.php";
 nav_bar();
+if(!(isset($_POST['submit']))){
 if(isset($_GET['search']))
 	{
 		$searchValue = $_GET['search'];
 		header('Location: https://webapp.cs.clemson.edu/~jlhelms/MeTube_Project/browse.php?search='.$searchValue);
 	}
+}
 ?>
 
 
@@ -69,7 +71,7 @@ if(isset($_GET['search']))
 	
 	<!--- Button Form Group -->
 		<div class="form-group">
-			<button value="Upload" name="submit" type="submit" class="btn btn-primary btn-md" style="width: 125px; margin-right: 15px">Filter</button>
+			<button value="Upload" name="submit" type="submit" class="btn btn-primary btn-md" style="width: 125px; margin-right: 15px">Upload</button>
 		</div>
 	</form>
 	</body>
