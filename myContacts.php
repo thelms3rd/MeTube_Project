@@ -47,7 +47,7 @@ if(isset($_GET['search']))
 <br>
 <div class="container">
   <ul class="pagination"  class="text-center">
-    <li class="page-item"><a class="page-link" href="addContacts.php" style="width: 300px">Add Contact</a></li>
+    <li class="page-item"><a class="page-link" href="addContacts.php" style="width: 300px">Add Contact/Delete Contact</a></li>
     <li class="page-item"><a class="page-link" href="myContacts.php" style="width: 300px">My Contacts</a></li>
   </ul>
 	</div>
