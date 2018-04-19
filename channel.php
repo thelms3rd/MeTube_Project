@@ -39,7 +39,6 @@ if(isset($_GET['search']))
 	header('Location: https://webapp.cs.clemson.edu/~jlhelms/MeTube_Project/browse.php?search='.$searchValue);	
 }
 ?>
-?>
 	
 
 <!----------- HTML MIDDLE ------------>
