@@ -68,19 +68,18 @@ nav_bar();
 			<button value="Upload" name="submit" type="submit" class="btn btn-primary btn-md" style="width: 125px; margin-right: 15px">Upload</button>
 		</div>
 	</form>
-	</body>
+
 	
 <?php
-	if(!(isset($_POST['submit']))){
 		if(isset($_GET['search']))
 		{
-			$searchValue = $_GET['search'];
+			//$searchValue = $_GET['search'];
 			//header('Location: https://webapp.cs.clemson.edu/~jlhelms/MeTube_Project/browse.php?search='.$searchValue);
 		}
 }
 	?>
 
-
+	</body>
 <!---------------------------------------------------------------------->
 
 
@@ -91,5 +90,4 @@ nav_bar();
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-</body>
 </html>

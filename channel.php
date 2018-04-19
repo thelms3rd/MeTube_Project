@@ -106,10 +106,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 			//header('Location: https://webapp.cs.clemson.edu/~jlhelms/MeTube_Project/browse.php');
 		}
 }
-if(isset($_GET['search']))
-{
-	search_files($_GET['search']);
-}
+
 
 ?>	
 <!---------------------------------------------------------------------->
