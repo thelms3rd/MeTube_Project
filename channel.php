@@ -33,6 +33,12 @@
 session_start();
 include_once "function.php";
 nav_bar();
+if(isset($_GET['search']))
+{
+	$searchValue = $_GET['search'];
+	header('Location: https://webapp.cs.clemson.edu/~jlhelms/MeTube_Project/browse.php?search='.$searchValue);	
+}
+?>
 ?>
 	
 
