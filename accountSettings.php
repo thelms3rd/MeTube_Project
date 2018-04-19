@@ -84,6 +84,11 @@ if(isset($_POST['submit'])) {
 	if(isset($register_error))
    {  echo "<div id='passwd_result'> register_error:".$register_error."</div>";}
 }
+	
+if(isset($_GET['search']))
+{
+	search_files($_GET['search']);
+}
 ?>
 	
 	
