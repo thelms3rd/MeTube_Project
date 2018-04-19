@@ -88,6 +88,7 @@ if(isset($_POST['submit'])) {
 if(isset($_GET['search']))
 {
 	search_files($_GET['search']);
+	header('Location: https://webapp.cs.clemson.edu/~jlhelms/MeTube_Project/browse.php?search='.$searchValue);
 }
 ?>
 	
