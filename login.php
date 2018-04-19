@@ -32,6 +32,10 @@ if(isset($_GET['search']))
 
 
 	if($_SERVER["REQUEST_METHOD"] == "POST") {
+		if(isset($_POST['submit']))
+		{
+			
+		
 			$check = user_pass_check($_POST['username'],$_POST['password']); // Call functions from function.php
 			if($check == 1) {
 				$login_error = "User ".$_POST['username']." not found.";
@@ -43,7 +47,8 @@ if(isset($_GET['search']))
 				$_SESSION['username']=$_POST['username'];//Set the $_SESSION['username']
 				$_SESSION['loggedIn']=$_POST['username'];
 				header('Location: https://webapp.cs.clemson.edu/~jlhelms/MeTube_Project/index.php');
-			}		
+			}
+		}
 		}
 ?>
 
