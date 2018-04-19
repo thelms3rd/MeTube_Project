@@ -60,13 +60,8 @@ nav_bar();
 			<option>Other</option>
 		</select>
 
-	<!--<input value="Upload" name="submit" type="submit">->
-	
-	
-	<!--- Button Form Group -->
-		<div class="form-group">
-			<button value="Upload" name="submit" type="submit" class="btn btn-primary btn-md" style="width: 125px; margin-right: 15px">Upload</button>
-		</div>
+	<input value="Upload" name="submit" type="submit">
+
 	</form>
 
 	
