@@ -49,7 +49,7 @@ $ownedFile = 'https://webapp.cs.clemson.edu/~jlhelms/MeTube_Project/ownedFile.ph
 	<div class="container">
   		<ul class="pagination"  class="text-center">
     		<li class="page-item"><a class="page-link" href="<?php echo $imageurl ?>" style="width: 300px">Current File</a></li>
-    		<li class="page-item"><a class="page-link" href="<?php echo $addCommenturl ?>" style="width: 300px">Add Comment/Add to Playlist</a></li>
+    		<li class="page-item"><a class="page-link" href="<?php echo $addCommenturl ?>" style="width: 300px">Add Comment/Playlist/Favorites</a></li>
   		
 			<!------ if user owns file ----->
 			<?php 
@@ -141,7 +141,7 @@ $ownedFile = 'https://webapp.cs.clemson.edu/~jlhelms/MeTube_Project/ownedFile.ph
 	if($_SERVER["REQUEST_METHOD"] == "POST") {
 		if(isset($_POST['submit_comment'])) {
 			//call the add_contact function
-			echo "Add Contact: $_POST[comment]";
+			echo "Add Comment: $_POST[comment]";
 	
 		
 			send_comment($_SESSION['username'], $_SESSION['mediaid'], $_POST['comment']);

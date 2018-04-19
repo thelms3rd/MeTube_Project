@@ -77,7 +77,7 @@ if (!$result){
 	<div class="container">
   		<ul class="pagination"  class="text-center">
     		<li class="page-item"><a class="page-link" href="<?php echo $imageurl ?>" style="width: 300px">Current File</a></li>
-    		<li class="page-item"><a class="page-link" href="<?php echo $addCommenturl ?>" style="width: 300px">Add Comment/Add to Playlist</a></li>
+    		<li class="page-item"><a class="page-link" href="<?php echo $addCommenturl ?>" style="width: 300px">Add Comment/Playlist/Favorites</a></li>
   		
 			<!------ if user owns file ----->
 			<?php 
